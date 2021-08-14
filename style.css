@@ -134,6 +134,14 @@ margin: 0 auto;
       color:grey;
   }
 
+/* ------------------- CAROUSEL ------------------- */
+
+
+.carousel-item{
+  max-height: 500px;
+}
+
+
 /* ------------------- FAQ ------------------- */
 
 .faq > ul > li {
