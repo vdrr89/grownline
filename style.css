@@ -193,7 +193,7 @@ margin: 0 auto;
 
 /* ------------------- CONTACTO ------------------- */
 
-.msg-input{
+#contacto > .form-floating {
   margin-top: 10px;
 }
 
