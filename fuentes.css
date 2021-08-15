@@ -98,20 +98,30 @@ li{
 /* ---------------------- AS ---------------------- */
 
 a{
-  color: #2eaaff;
   font-size: 1.2rem;
+}
+
+.small-a{
+  font-size: 0.7rem;
+}
+
+a, 
+.small-a{
+  color: #2eaaff;
   line-height: 1.8rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-decoration: none;
 }
 
-a:visited {
+a:visited, 
+.small-a:visited {
   text-decoration: none;
   color: #0c1c53;
 }
 
-a:hover {
+a:hover, 
+.small-a:hover {
   text-decoration: none;
   color:#d93b95;
 }

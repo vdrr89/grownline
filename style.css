@@ -87,6 +87,44 @@ margin: 0 auto;
       transform: translateY(7px);
   }
 
+  .btn-more-info{
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    max-width: 20vw;
+  }
+
+  .btn-left{
+    float: left;
+    margin-top: 10px;
+    min-width: 100px;
+  }
+
+  .btn-right{
+    float: right;
+    margin-top: 10px;
+    min-width: 100px;
+  }
+
+/* ------------------- FORMULARIOS ------------------- */
+
+/* para que el formulario no ocupe toda la pantalla */
+.all-form {
+  margin:0 auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+/* ------------------- SECCIONES ENCUADRADAS ------------------- */
+
+.section {
+  border: solid black 1px;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 5%;
+  max-width: 1000px;
+}
+
 /* ------------------- TITULO ------------------- */
 
   .title{
@@ -141,7 +179,6 @@ margin: 0 auto;
   max-height: 500px;
 }
 
-
 /* ------------------- FAQ ------------------- */
 
 .faq > ul > li {
@@ -152,6 +189,12 @@ margin: 0 auto;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 2%;
+}
+
+/* ------------------- CONTACTO ------------------- */
+
+.msg-input{
+  margin-top: 10px;
 }
 
 /* ------------------- FOOTER ------------------- */
