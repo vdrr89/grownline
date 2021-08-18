@@ -36,3 +36,18 @@
 #gestion-ventas{
     display: none;
 }
+
+.prod-grid-container {
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    padding: 10px;
+  }
+  
+
+.prod-grid-header {
+    grid-area: header;
+}
+
+.prod-grid-item {
+padding: 20px;
+}
