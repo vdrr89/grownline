@@ -1,4 +1,5 @@
 <?php
+//hola
 //ALTER TABLE `usuarios` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 
 header("Content-Type: application/json");
