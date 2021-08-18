@@ -1,0 +1,53 @@
+#login-form > .send{
+    float: right;
+    margin-top: 10px;
+}
+
+#login-form > .cancel{
+    float: left;
+    margin-top: 10px;
+}
+
+.forget{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#login-form{
+    display: block;
+}
+
+#gestion-tabs{
+    display: none;
+}
+
+#gestion-productos{
+    display: none;
+}
+
+#gestion-usuarios{
+    display: none;
+}
+
+#gestion-mensajes{
+    display: none;
+}
+
+#gestion-ventas{
+    display: none;
+}
+
+.prod-grid-container {
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    padding: 10px;
+  }
+  
+
+.prod-grid-header {
+    grid-area: header;
+}
+
+.prod-grid-item {
+padding: 20px;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grownline</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Icons: 1 Bootstrap - 2 Fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a9f99944df.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/fuentes.css" type="text/css">
+    <link rel="stylesheet" href="gestion.css" type="text/css">
+</head>
+<body>
+
+    <!-- ------------------- Titulo ------------------- -->
+    <div id="titulo" class="title">
+        <h1 class="title-txt"><a href="/index.html">Grownline</a></h1>
+        <p class="subtitle">Tu tienda de cultivo online!</p>
+    </div>
+
+
+    <!-- ------------------- NavBar ------------------- -->
+
+    <nav class="vr-navbar">
+        <ul>
+            <li>Growline</li>
+
+            <li><a class="vr-nav-link active" href="/index.html#about">Quienes somos</a></li>
+
+            <li class="vr-nav-item dropdown">
+                <a class="vr-nav-link dropdown-toggle" href="/index.html#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="vr-nav-item dropdown-item" href="#">Categoria1</a></li>
+                  <li><a class="vr-nav-item dropdown-item" href="#">Categoria2</a></li>
+                  <li><a class="vr-nav-item dropdown-item" href="#">Categoria3</a></li>
+                </ul>
+              </li>
+
+            <li><a href="/index.html#contacto">Contacto</a></li>
+            <li><a href="/index.html#faq">FAQ</a></li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <button onclick="location.href='gestion/gestion.html'" type="button" class="btn btn-outline-success"><i class="fas fa-user"></i></button>
+        </form>
+    </nav>
+
+    <!-- ------------------- Login Form ------------------- -->    
+    <div id="login-form" class="all-form section">
+        <div id="login-form">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                <label for="floatingPassword">Contraseña</label>
+            </div>
+        </div> 
+        <div class="forget">
+            <p class="small"><a class="small-a" href="#">Olvidé mi contraseña</a></p>
+            <p class="small">No tienes usuario? puedes <a class="small-a" href="#">registrarte aquí</a></p>
+        </div>  
+        <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success"><i class="fas fa-paper-plane"></i></button>
+        <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+    </div>
+
+    <div id="gestion-all">
+
+        <!-- ------------------- Tabs ------------------- -->
+        <div id="gestion-tabs">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a onclick="tabProductos()" class="nav-link active" aria-current="page">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="tabUsuarios()" class="nav-link">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="tabMensajes()" class="nav-link">Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="tabVentas()" class="nav-link" href="#">Ventas</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ------------------- Productos ------------------- -->
+        <div id="gestion-productos" class="section">
+            <div id="card-productos" class="prod-grid-container">
+                <table id="prod-title">
+                </table>
+                <table id="prod-content">
+                </table>
+            </div>
+        </div>
+
+
+        <!-- ------------------- Usuarios ------------------- -->
+        <div id="gestion-usuarios" class="section">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">username</th>
+                        <th scope="col">mail</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">categoria</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">direccion</th>
+                        <th scope="col">otros datos</th>
+                        <th scope="col"><button class="btn btn-outline-success"><i class="fas fa-plus"></i></button></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
+                        <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ------------------- Mensajes ------------------- -->
+        <div id="gestion-mensajes" class="section">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">leído/no leído</th>
+                    <th scope="col">fecha</th>
+                    <th scope="col">user</th>
+                    <th scope="col">mensaje breve</th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-outline-success"><i class="fas fa-paper-plane"></i></button></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>                
+                        <th scope="col"><button class="btn btn-outline-info"><i class="fas fa-plus"></i> info</button></th>
+                        <th scope="col"><button class="btn btn-outline-success"><i class="fas fa-reply"></i></button></th>
+                        <th scope="col"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ------------------- Ventas ------------------- -->
+        <div id="gestion-ventas" class="section">
+            <table class="table" >
+            <thead>
+                <tr>
+                    <th scope="col">enviado retirado / no enviado retirado</th>
+                    <th scope="col">fecha envío</th>
+                    <th scope="col">fecha compra</th>
+                    <th scope="col">user</th>
+                    <th scope="col">telefono</th>
+                    <th scope="col">productos</th>
+                    <th scope="col">precio total</th>
+                    <th scope="col">retira o envia</th>
+                    <th></th>
+                    <th><button class="btn btn-outline-success"><i class="fas fa-plus"></i></button></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Check here</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>                
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
+                        <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Mis scripts -->
+    <script src="gestion.js"></script>
+
+</body>
+</html>

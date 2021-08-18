@@ -1,0 +1,170 @@
+<html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grownline</title>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!-- Icons: 1 Bootstrap - 2 Fontawesome-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://kit.fontawesome.com/a9f99944df.js" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="fuentes.css" type="text/css">
+
+    </head>
+    <body>
+        <!-- Titulo -->
+        <div id="titulo" class="title">
+            <h1 id="titulo-txt" class="title-txt"></h1>
+            <p id="titulo-subtitulo" class="subtitle"></p>
+        </div>
+
+
+        <!-- NavBar -->
+
+        <nav class="vr-navbar">
+            <ul>
+                <li>Growline</li>
+
+                <li><a class="vr-nav-link active" href="#about">Quienes somos</a></li>
+
+                <li class="vr-nav-item dropdown">
+                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="vr-nav-item dropdown-item" href="#">Categoria1</a></li>
+                      <li><a class="vr-nav-item dropdown-item" href="#">Categoria2</a></li>
+                      <li><a class="vr-nav-item dropdown-item" href="#">Categoria3</a></li>
+                    </ul>
+                  </li>
+
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button onclick="location.href='gestion/gestion.html'" type="button" class="btn btn-outline-success"><i class="fas fa-user"></i></button>
+            </form>
+        </nav>
+
+        <!-- Carousel -->
+        <div id="carousel">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        
+        
+        <!-- Quienes Somos -->
+        <div id="about" class="about">
+        </div>
+
+        <!-- Productos -->
+        <div id="productos">
+
+            <h3>Nuestros Productos</h3>
+
+            <div  id="icon-productos" class="cat-group">
+            </div>
+
+            <div class="btn-more-info cat-btn btn">
+                <p><a href="productos/productos.html">+ productos</a></p>
+            </div> 
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" class="faq">
+
+            <h3>Preguntas Frecuentes</h3>
+
+            <ul id="faq-list">
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div id="contacto" class="contacto">
+
+            <h3>Escribinos!</h3>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                <label for="floatingName">Nombre</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefono / Celular">
+                <label for="exampleFormControlInput1">Teléfono / Celular</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="email@ejemplo.com">
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating msg-input">
+                <textarea class="form-control" placeholder="Escriba su mensaje aqui" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Mensje</label>
+            </div>
+
+            <button class="btn-left btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+            <button class="btn-right btn btn-outline-success"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer" class="flex-waves-content content-waves">
+
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="footer-content">
+                <h3 class="footer-title">Seguinos en nuestras redes!</h3><br>
+                <ul id="social-networks" class="footer-ul">
+                </ul>  
+            </div>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+        <!-- Mis scripts -->
+        <script src="main.js"></script>
+        <script src="gestion/gestion.js"></script>
+    </body>
+</html>
