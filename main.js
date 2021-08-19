@@ -1,9 +1,5 @@
 // ------------------- INFO -------------------
 
-// TITULO
-var tituloTxt = document.getElementById("titulo-txt");
-tituloTxt.innerHTML = "Grownline";
-
 var tituloSubtitulo = document.getElementById("titulo-subtitulo");
 tituloSubtitulo.innerHTML = "Tu tienda de cultivo online!";
 
