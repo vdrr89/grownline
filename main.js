@@ -164,6 +164,35 @@ function openComidaSlides(){
     }
 }
 
+// scroll horizontal para categorias del home  
+
+function scrollHorizontally(e) {
+    e = window.event || e;
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); // Delta vale 1 en scroll hacia arriba y -1 en scroll hacia abajo
+    
+    sectionGroup.scrollLeft -= (delta*40); // De cuantos pixeles haremos el scroll lateral;
+    console.log("Delta: " + delta); 
+    console.log("sectionGroup ScrollLeft: " + sectionGroup.scrollLeft);
+    console.log("sectionGroup offsetWidth: " + sectionGroup.offsetWidth);
+    console.log("ScrollLeft + offsetWidht: " + (sectionGroup.scrollLeft + sectionGroup.offsetWidth));
+    console.log("sectionGroup offsetWidth: " + sectionGroup.offsetWidth);
+    console.log("sectionGroup scrollWidth: " + sectionGroup.scrollWidth);
+    if ((delta > 0 && sectionGroup.scrollLeft > 0) || (delta < 0 && (sectionGroup.offsetWidth + sectionGroup.scrollLeft) < (sectionGroup.scrollWidth - 1))) {
+      e.preventDefault();
+    }
+  }
+  
+  // Si hay event listener quiere decir que no estamos en IE
+  //if (container.addEventListener) {
+    // IE9, Chrome, Safari, Opera
+    sectionGroup.addEventListener("mousewheel", scrollHorizontally, false);
+    // Firefox
+    sectionGroup.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+  // } else {
+    // IE 6/7/8
+    sectionGroup.attachEvent("onmousewheel", scrollHorizontally);
+  // }
+
 
 // ------------------- FAQ -------------------
 var faqList = document.getElementById("faq-list");
