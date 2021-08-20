@@ -14,7 +14,7 @@ var aboutTxt = document.getElementById("about");
 aboutTxt.innerHTML = '<h3>Sobre Nosotros</h3><p><b>Grownline</b> surge de la idea de que a tod@s nos interesa el cultivo, y por lo tanto acceder a insumos, asesoría, experiencia de gente <span style="color: #1abc9c;">"delaplanta"</span>.<br><br>Como cultivador tuve dificultades para encontrar un "Grow" de cabecera, es entonces cuando decidí convertirme en uno.<br><br>Con más de 15 años de experiencia en el cultivo de Ganjah, decidí acercarme a los cultivadores con precios accesibles, interés real, y respuestas a sus necesidades. Sin local comercial, por vía digital.<br><br>Quienes han confiado en <b>Grownline</b> saben y recomiendan la calidad de nuestros servicios. En resumen, todos somos <b>Grownline</b>. Gracias por apoyar y ser parte de esto.<br><br>Buenos Humos...!</p>';
 
 // ------------------- PRODUCTOS: ICONOS -------------------
-var iconProducts = document.getElementById("icon-productos");
+// serie de iconos
 var iconsProducts = [
     { 
         nombre: "cannabis", 
@@ -38,10 +38,67 @@ var iconsProducts = [
      }
 ]; 
 
+var iconProducts = document.getElementById("icon-productos");
+var iconsProductsLength = iconsProducts.length;
+
+for( let i = 0; i < iconsProductsLength; i++ ){
+    iconProducts.innerHTML +=
+    '<div class="cat-btn"><i onclick="' + iconsProducts[i].function + '()" class="cat-i ' + iconsProducts[i].icon + '"></i></div>'
+  }
+
+// secciones 
+// grupo de secciones desplegable
+var sectionGroup = document.getElementById("section-group");
+
+// cada seccion 
 var cannabisSection = document.getElementById("cannabis-section");
 var tierraSection = document.getElementById("tierra-section");
 var complementosSection = document.getElementById("complementos-section");
 var comidaSection = document.getElementById("comida-section");
+
+var cannabisSlides = [
+    { name:'cannabis1', src: 'img/img1.jpg' },
+    { name:'cannabis2', src: 'img/img2.jpg' }, 
+    { name:'cannabis3', src: 'img/img3.jpg' },
+]
+
+var tierraSlides = [
+    { name:'tierra1', src: 'img/img1.jpg' },
+    { name:'tierra2', src: 'img/img2.jpg' }, 
+    { name:'tierra3', src: 'img/img3.jpg' },
+]
+
+var complementosSlides = [
+    { name:'complementos1', src: 'img/img1.jpg' },
+    { name:'complementos2', src: 'img/img2.jpg' }, 
+    { name:'complementos3', src: 'img/img3.jpg' },
+]
+
+var comidaSlides = [
+    { name:'comida1', src: 'img/img1.jpg' },
+    { name:'comida2', src: 'img/img2.jpg' }, 
+    { name:'comida3', src: 'img/img3.jpg' },
+]
+
+for( let i = 0; i < cannabisSlides.length; i++ ){
+    cannabisSection.innerHTML += 
+    '<div class="products-slide"><img src="' + cannabisSlides[i].src + '" alt="' + cannabisSlides[i].name + '"></div>'
+}
+
+for( let i = 0; i < tierraSlides.length; i++ ){
+    tierraSection.innerHTML += 
+    '<div class="products-slide"><img src="' + tierraSlides[i].src + '" alt="' + tierraSlides[i].name + '"></div>'
+}
+
+for( let i = 0; i < complementosSlides.length; i++ ){
+    complementosSection.innerHTML += 
+    '<div class="products-slide"><img src="' + complementosSlides[i].src + '" alt="' + complementosSlides[i].name + '"></div>'
+}
+
+for( let i = 0; i < comidaSlides.length; i++ ){
+    comidaSection.innerHTML += 
+    '<div class="products-slide"><img src="' + comidaSlides[i].src + '" alt="' + comidaSlides[i].name + '"></div>'
+}
 
 function openCannabisSlides(){
     if(cannabisSection.style.display === "none"){
@@ -49,11 +106,13 @@ function openCannabisSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openCannabisSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openCannabisSlides else")
     }
 }
 
@@ -63,11 +122,13 @@ function openTierraSlides(){
         tierraSection.style.display = "inline-block";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openTierraSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openTierraSlides else")
     }
 }
 
@@ -77,11 +138,13 @@ function openComplementosSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "inline-block";
         comidaSection.style.display = "none";
+        console.log("openComplementosSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openComplementosSlides else")
     }
 }
 
@@ -91,27 +154,15 @@ function openComidaSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "inline-block";
+        console.log("openComidaSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
+        console.log("openComidaSlides else")
     }
 }
-
-// for para crear iconos con funcion a abrir sección la cual también se crea en el mismo for
-var iconsProductsLength = iconsProducts.length;
-var sectionGroup = document.getElementById("section-group");
-
-for( let i = 0; i < iconsProductsLength; i++ ){
-    iconProducts.innerHTML +=
-    '<div class="cat-btn"><i onclick="' + iconsProducts[i].function + '()" class="cat-i ' + iconsProducts[i].icon + '"></i></div>';
-    sectionGroup.innerHTML += 
-    '<div id="' + iconProducts[i].nombre + '-section" class="section"></div>'
-  }
-
-// crear el contenido de cada seccion
-
 
 
 // ------------------- FAQ -------------------

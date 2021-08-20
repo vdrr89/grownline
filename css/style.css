@@ -146,12 +146,36 @@ margin: 0 auto;
 
 /* ------------------- SECCIONES ENCUADRADAS ------------------- */
 
-.section {
-  border: solid black 1px;
+.section-group{
+  background-color: green;
+  max-height: 500px;
+  display:flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.products-slide{
+  padding: 0%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  display: inline-block;
+  background-color: green;
+  border: 6px solid black;
   border-radius: 10px;
-  margin: 2%;
-  padding: 5%;
-  max-width: 1000px;
+  margin: 0 1%;
+}
+
+#cannabis-section, 
+#tierra-section, 
+#complementos-section, 
+#comida-section {
+  display: none;
+}
+
+.products-slide > img {
+  height: 300px;
+  border-radius: 3px;
 }
 
 /* ------------------- TITULO ------------------- */
