@@ -14,15 +14,15 @@
     <script src="https://kit.fontawesome.com/a9f99944df.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/fuentes.css" type="text/css">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/fuentes.css" type="text/css">  <!-- acá -->
+    <link rel="stylesheet" href="css/style.css" type="text/css"> <!-- acá -->
     <link rel="stylesheet" href="gestion.css" type="text/css">
 </head>
 <body>
 
     <!-- ------------------- Titulo ------------------- -->
     <div id="titulo" class="title">
-        <a href="/index.html">
+        <a href="index.html"> <!-- acá -->
             <div class="title-txt"></div>
         </a>
         <p id="titulo-subtitulo" class="subtitle special"></p>
@@ -32,12 +32,12 @@
 
     <nav class="vr-navbar">
         <ul>
-            <a href="/index.html"><li class="navbar-logo"></li></a>
+            <a href="index.html"><li class="navbar-logo"></li></a> <!-- acá -->
 
-            <li><a class="vr-nav-link active special" href="/index.html#about">Quienes somos</a></li>
+            <li><a class="vr-nav-link active special" href="index.html#about">Quienes somos</a></li> <!-- acá -->
 
             <li class="vr-nav-item dropdown">
-                <a class="vr-nav-link dropdown-toggle special" href="/index.html#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="vr-nav-link dropdown-toggle special" href="index.html#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- acá -->
                   Productos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -47,8 +47,8 @@
                 </ul>
               </li>
 
-            <li><a class="special" href="/index.html#contacto">Contacto</a></li>
-            <li><a class="special" href="/index.html#faq">FAQ</a></li>
+            <li><a class="special" href="index.html#contacto">Contacto</a></li> <!-- acá -->
+            <li><a class="special" href="index.html#faq">FAQ</a></li> <!-- acá -->
         </ul>
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
@@ -56,10 +56,6 @@
             <a href="#"><button type="button" class="btn btn-outline-success"><i class="fas fa-user"></i></button></a>
         </form>
     </nav>
-
-    <!-- ------------------- HEADER Y NAVBAR ------------------- -->
-
-    <link rel="import" href="header-navbar.html">
 
     <!-- ------------------- Login Form ------------------- -->
     <div id="login-form" class="all-form section">
@@ -81,6 +77,7 @@
         <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
     </div>
 
+    <!-- ------------------- Gestión All ------------------- -->
     <div id="gestion-all">
 
         <!-- ------------------- Tabs ------------------- -->
@@ -104,13 +101,12 @@
         <!-- ------------------- Productos ------------------- -->
         <div id="gestion-productos" class="section">
             <div id="card-productos" class="prod-grid-container">
-                <table id="prod-title">
-                </table>
-                <table id="prod-content">
+                <table class="table">
+                    <thead id="prod-title"></thead>
+                    <tbody id="prod-content"></tbody>
                 </table>
             </div>
         </div>
-
 
         <!-- ------------------- Usuarios ------------------- -->
         <div id="gestion-usuarios" class="section">
@@ -208,7 +204,7 @@
     </div>
 
     <!-- Mis scripts -->
-    <script src="/main.js"></script>
+    <script src="main.js"></script> <!-- acá -->
     <script src="gestion.js"></script>
 
 </body>

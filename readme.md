@@ -7,4 +7,4 @@ Lo podés ver funcionando a través de [vdrr89.github.io/grownline](https://vdrr
 
 Lo hicimos con HTML, CSS, JS, PHP 
 
-Por cualquier duda, comentario o sugerencia podés escribirnos a [growline@hotmail.com](mailto:growline@hotmail.com), [vdrr89@gmail.com](mailto:vdrr89@gmail.com) ó [usrx336@gmail.com] (mailto:usrx336@gmail.com)
+Por cualquier duda, comentario o sugerencia podés escribirnos a [growline@hotmail.com](mailto:growline@hotmail.com), [vdrr89@gmail.com](mailto:vdrr89@gmail.com) ó [usrx336@gmail.com](mailto:usrx336@gmail.com)

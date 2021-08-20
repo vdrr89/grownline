@@ -61,3 +61,7 @@
 .prod-grid-item {
 padding: 20px;
 }
+
+.table-buttons {
+    position: fixed;
+}

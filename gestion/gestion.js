@@ -78,6 +78,7 @@ function tabVentas(){
 
 // ------------------- CONTENIDO PRODUCTOS -------------------
 
+// titulos productos
 var prodTableTitle = {
     img: 'img',
     video: 'video',
@@ -94,10 +95,11 @@ var prodTableTitle = {
     comp: 'Composición'
 };
 
-//hacer un inner solo para el titulo
+// inner para el título de productos
 var prodTitle = document.getElementById("prod-title");
-prodTitle.innerHTML = '<tr><th>' + prodTableTitle.cod + '</th><th>' + prodTableTitle.img + '</th><th>' + prodTableTitle.title + '</th><th>' + prodTableTitle.cantidad + '</th><th>stock</th><th>' + prodTableTitle.precio + '</th><th></th></tr>';
+prodTitle.innerHTML = '<thead><tr><th scope="col">' + prodTableTitle.cod + '</th><th scope="col">' + prodTableTitle.img + '</th><th scope="col">' + prodTableTitle.video + '</th><th scope="col">' + prodTableTitle.titulo + '</th><th scope="col">' + prodTableTitle.cat + '</th><th scope="col">' + prodTableTitle.precio + '</th><th scope="col">' + prodTableTitle.cantidad + '</th><th scope="col">' + prodTableTitle.med + '</th><th scope="col">' + prodTableTitle.stock + '</th><th scope="col">' + prodTableTitle.medida + '</th><th scope="col">' + prodTableTitle.descBreve + '</th><th scope="col">' + prodTableTitle.descLarga + '</th><th scope="col">' + prodTableTitle.comp + '</th><th></th></tr></thead>';
 
+// textos contenidos
 var prodTableContent = [
     {
         img: 'img\top-crop\top-crop-01.jpg',
@@ -121,13 +123,14 @@ var prodTableContentLength = prodTableContent.length;
 
 for( let i = 0; i < prodTableContentLength; i++ ){
     prodContent.innerHTML +=
-    '<tr><td>' + prodTableContent[i].cod + '</td><td><img src="' + prodTableContent[i].img + '" alt="' + prodTableContent[i].titulo + '"></td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].precio + '</td><td><button class="btn btn-outline-info"><i class="fas fa-plus"></i></button><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><div class="prod-grid-item"><table><tr><th>' + prodTableTitle.cod + '</th><td>' + prodTableContent[i].cod + '</td></tr><tr><th>' + prodTableTitle.title + '</th><td>' + prodTableContent[i].titulo + '</td></tr><tr><th>' + prodTableTitle.cat + '</th><td>' + prodTableContent[i].categoria + '</td></tr><tr><th>' + prodTableTitle.precio + '</th><td>' + prodTableContent[i].precio + '</td></tr><tr><th>' + prodTableTitle.cantidad + '</th><td>' + prodTableContent[i].cantidad + '</td></tr><tr><th>' + prodTableTitle.med + '</th><td>' + prodTableContent[i].med + '</td></tr><tr><th>' + prodTableTitle.stock + '</th><td>' + prodTableContent[i].stock + '</td></tr><tr><th>' + prodTableTitle.medida + '</th><td>' + prodTableContent[i].medida + '</td></tr><tr><th>' + prodTableTitle.descBreve + '</th><td>' + prodTableContent[i].descripcionBreve + '</td></tr><tr><th>' + prodTableTitle.descLarga + '</th><td>' + prodTableContent[i].descripcionLarga + '</td></tr><tr><th>' + prodTableTitle.comp + '</th><td>' + prodTableContent[i].composicion + '</td></tr></table></div><div class="prod-grid-item"><table><tr><td><img src="' + prodTableContent[i].img + '" alt="' + prodTableContent[i].titulo + '"></td></tr><tr><td>Imagen Link: ' + prodTableContent[i].img + '</td></tr><tr><td><video src="' + prodTableContent[i].video + ' alt="' + prodTableContent[i].titulo + '""></video></td></tr><tr><td>Video Link: ' + prodTableContent[i].video + '</td></tr></table></div><div class="prod-grid-item">btns</div></div></tr>' 
+    '<tr><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcionBreve + '</td><td>' + prodTableContent[i].descripcionLarga + '</td><td>' + prodTableContent[i].composicion + '</th><td><button class="btn btn-outline-info table-buttons"><i class="fas fa-plus"></i></button><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button><button class="btn btn-outline-danger table-buttons"><i class="fas fa-trash-alt"></i></button></td></tr>';
+ 
 }
 
-//table 
-//tr cod01 
-//trcod01det
+// fetch api json 
 
-//for tabla cod(01) cod(01)det repeat
+fetch('/productos.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+// hasta acá manda la información al console log, la manda bien
 
-//function open cod(01) click open cod(01)det ;
