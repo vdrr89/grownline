@@ -1,3 +1,5 @@
+/* HEADER */
+
 .title-txt{
     position: absolute;
     left: 25%;
@@ -7,6 +9,8 @@
 .subtitle{
     margin-top: 10%;
 }
+
+/* LOGIN FORM */
 
 #login-form > .send{
     float: right;
@@ -27,30 +31,21 @@
     display: block;
 }
 
-#gestion-tabs{
-    display: none;
-}
+/* GESTION TABS CONTENT */
 
-#gestion-productos{
-    display: none;
-}
-
-#gestion-usuarios{
-    display: none;
-}
-
-#gestion-mensajes{
-    display: none;
-}
-
+#gestion-tabs, 
+#gestion-productos, 
+#gestion-usuarios, 
+#gestion-mensajes, 
 #gestion-ventas{
     display: none;
 }
 
+
+
 .prod-grid-container {
     display: grid;
-    grid-template-columns: 70% 20% 10%;
-    padding: 10px;
+    grid-template-columns: auto 15%;
   }
   
 
@@ -64,4 +59,24 @@ padding: 20px;
 
 .table-buttons {
     position: fixed;
+}
+
+/* la lista que contiene las tabs*/
+.gestion-tabs {
+    margin: 2% auto;
+}
+
+
+/* la tabla de cada tab */
+.table {
+    width: 90%;
+    margin: 0 1%;
+    display: block;
+    width: 90%;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.btns-table {
+    display: block;
 }

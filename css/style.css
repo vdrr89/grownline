@@ -151,9 +151,65 @@ margin: 0 auto;
   max-height: 500px;
   display:flex;
   width: 100%;
+  padding: 1% 0;
   white-space: nowrap;
   overflow-x: scroll;
 }
+
+#cannabis-section::-webkit-scrollbar, 
+#tierra-section::-webkit-scrollbar, 
+#complementos-section::-webkit-scrollbar, 
+#comida-section::-webkit-scrollbar, 
+.section-group::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  margin: 1% auto;
+}
+
+#cannabis-section::-webkit-scrollbar-track, 
+#tierra-section::-webkit-scrollbar-track, 
+#complementos-section::-webkit-scrollbar-track, 
+#comida-section::-webkit-scrollbar-track,
+.section-group::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: darkgreen;
+  margin: 1% auto;
+}
+
+#cannabis-section::-webkit-scrollbar-thumb, 
+#tierra-section::-webkit-scrollbar-thumb, 
+#complementos-section::-webkit-scrollbar-thumb, 
+#comida-section::-webkit-scrollbar-thumb,
+.section-group::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: lightgreen;
+  margin: 1% auto;
+}
+
+/* scroll bar hidden */
+#cannabis-section::-webkit-scrollbar, 
+#tierra-section::-webkit-scrollbar, 
+#complementos-section::-webkit-scrollbar, 
+#comida-section::-webkit-scrollbar, 
+.section-group::-webkit-scrollbar, 
+#cannabis-section::-webkit-scrollbar-track, 
+#tierra-section::-webkit-scrollbar-track, 
+#complementos-section::-webkit-scrollbar-track, 
+#comida-section::-webkit-scrollbar-track,
+.section-group::-webkit-scrollbar-track, 
+#cannabis-section::-webkit-scrollbar-thumb, 
+#tierra-section::-webkit-scrollbar-thumb, 
+#complementos-section::-webkit-scrollbar-thumb, 
+#comida-section::-webkit-scrollbar-thumb,
+.section-group::-webkit-scrollbar-thumb, 
+#cannabis-section::-webkit-scrollbar-button, 
+#tierra-section::-webkit-scrollbar-button, 
+#complementos-section::-webkit-scrollbar-button, 
+#comida-section::-webkit-scrollbar-button, 
+.section-group::-webkit-scrollbar-button {
+  display: none;
+}
+
 
 .products-slide{
   padding: 0%;

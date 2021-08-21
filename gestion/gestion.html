@@ -82,7 +82,7 @@
 
         <!-- ------------------- Tabs ------------------- -->
         <div id="gestion-tabs">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs gestion-tabs">
                 <li class="nav-item">
                     <a onclick="tabProductos()" class="nav-link active" aria-current="page">Productos</a>
                 </li>
@@ -105,6 +105,7 @@
                     <thead id="prod-title"></thead>
                     <tbody id="prod-content"></tbody>
                 </table>
+                <table id="btns-table"  class="btns-table"></table>
             </div>
         </div>
 
@@ -133,11 +134,16 @@
                         <td>Otto</td>
                         <td>@mdo</td>
                         <td>@mdo</td>
-                        <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
-                        <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
                     </tr>
                 </tbody>
             </table>
+            <!-- <table class="btns-table">
+                <tr>
+                    <td><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
+                    <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+            </table> -->
         </div>
 
         <!-- ------------------- Mensajes ------------------- -->

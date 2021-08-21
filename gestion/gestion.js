@@ -123,8 +123,15 @@ var prodTableContentLength = prodTableContent.length;
 
 for( let i = 0; i < prodTableContentLength; i++ ){
     prodContent.innerHTML +=
-    '<tr><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcionBreve + '</td><td>' + prodTableContent[i].descripcionLarga + '</td><td>' + prodTableContent[i].composicion + '</th><td><button class="btn btn-outline-info table-buttons"><i class="fas fa-plus"></i></button><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button><button class="btn btn-outline-danger table-buttons"><i class="fas fa-trash-alt"></i></button></td></tr>';
- 
+    '<tr><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcionBreve + '</td><td>' + prodTableContent[i].descripcionLarga + '</td><td>' + prodTableContent[i].composicion + '</td></tr>';
+}
+
+var btnsTable = document.getElementById("btns-table");
+
+// al for siguiente hay que ponerle una función para cada contenido
+for( let i = 0; i < prodTableContentLength; i++ ){
+    btnsTable.innerHTML +=
+    '<tr><td><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button></td><td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr>'
 }
 
 // fetch api json 
