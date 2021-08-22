@@ -1,0 +1,74 @@
+{
+    "productos": [
+      {
+        "img": "img\top-crop\top-crop-01.jpg",
+        "video": "https://youtu.be/EqeYE2Ms_U0",
+        "cod": "001",
+        "titulo": "Cromplete Mix",
+        "categoria": "Top Crop",
+        "precio": "500",
+        "cantidad": "50",
+        "med": "l",
+        "stock": "10",
+        "medida": "u", 
+        "descripcionBreve": "Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo.",
+        "descripcionLarga": "Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.",
+        "composicion": "Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5"
+ 
+      },
+      {
+        "img": "img\top-crop\top-crop-01.jpg",
+        "video": "https://youtu.be/EqeYE2Ms_U0",
+        "cod": "001",
+        "titulo": "Cromplete Mix",
+        "categoria": "Top Crop",
+        "precio": "500",
+        "cantidad": "50",
+        "med": "l",
+        "stock": "10",
+        "medida": "u", 
+        "descripcionBreve": "Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo.",
+        "descripcionLarga": "Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.",
+        "composicion": "Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5"
+ 
+      }
+    ],
+    "usuarios": [
+      {
+        "id": "1",
+        "usuario": "Mar456",
+        "email": "maria@gmail.com",
+        "telefono": "090123456",
+        "nombre": "Maria",
+        "apellido": "Rodriguez",
+        "direccion": "18 de Julio 1234"
+      },
+      {
+        "id": "eUBvBpg",
+        "usuario": "Oren456",
+        "email": "orencio@gmail.com",
+        "telefono": "090123456",
+        "nombre": "Orencio",
+        "apellido": "Bonachera",
+        "direccion": "enrique figari"
+      },
+      {
+        "id": "HU2HRdy",
+        "usuario": "Fer",
+        "email": "fernand@gmail.com",
+        "telefono": "090101202",
+        "nombre": "Fernand",
+        "apellido": "Gonzalez",
+        "direccion": "Murillo"
+      },
+      {
+        "id": "KrM_KDt",
+        "usuario": "un usuario",
+        "email": "de prueba",
+        "telefono": "123",
+        "nombre": "a ver si",
+        "apellido": "edita",
+        "direccion": "esta vez"
+      }
+    ]
+  }

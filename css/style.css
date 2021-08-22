@@ -1,11 +1,13 @@
 *::selection {
-    background-color: #1abc9c;
+    background-color: #39911b;
     }
 
 html, 
 body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #about, 
@@ -13,6 +15,7 @@ body {
     min-height: 80vh;
 }
 
+/* titulos */
 .about > h3, 
 #productos > h3, 
 #faq >h3, 
@@ -20,9 +23,9 @@ body {
 .footer-content > h1, 
 .faq-tit {
     text-align: center;
-    color: #1abc9c;
 }
 
+/* titulos de igual color que selección o con fondo igual a selección de color */
 .about > h3::selection, 
 #productos > h3::selection, 
 #faq >h3::selection, 
@@ -30,11 +33,23 @@ body {
 .footer-content > h1::selection, 
 .faq-tit::selection {
     background-color: black;
+    text-shadow: none;
 }
 
+/* secciones de de fondo de color */
 #contacto, 
 #productos {
     min-height: 50vh;
+    background-color: #39911b;
+    margin: 0;
+    padding: 5%;
+}
+
+/* titulos de fondo de color */
+#productos h3,
+#contacto h3 {
+  color: white;
+  text-shadow: 3px 3px black;
 }
 
 .about,  
@@ -45,6 +60,20 @@ max-width: 800px;
 margin: 0 auto;
 }
 
+/* ------------------- BACKGROUND IMG DECORACIÓN ------------------- */
+
+.chala-border-up, 
+.chala-border-down {
+  display: inline-grid;
+  background-image: url(/img/chala-c-efecto-04-03.svg);
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 5%;
+}
+
+.chala-border-down{
+  transform: rotate(180deg)
+}
 
 /* ------------------- BOTONES ------------------- */
 
@@ -63,8 +92,8 @@ margin: 0 auto;
     box-shadow: 2px 8px 10px #00000080;
     background-color: transparent;
     border-radius:20px;
-    border: 4px solid #1abc9c;
-    color: #1abc9c;
+    border: 4px solid #fff;
+    color: #fff;
   
     text-shadow:1px 1px 3px #00000080;
   
@@ -72,7 +101,7 @@ margin: 0 auto;
   }
   
   .cat-btn:hover{
-    background-color: #1abc9c;
+    background-color: #fff;
   }
   
   .cat-i {
@@ -83,7 +112,7 @@ margin: 0 auto;
   }
   
   .cat-i:hover {
-      color: #fff;
+      color: #39911b;
       transform: translateY(7px);
   }
 
@@ -117,34 +146,120 @@ margin: 0 auto;
 
 /* ------------------- SECCIONES ENCUADRADAS ------------------- */
 
-.section {
-  border: solid black 1px;
+.section-group{
+  background-color: green;
+  max-height: 500px;
+  display:flex;
+  width: 100%;
+  padding: 1% 0;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+#cannabis-section::-webkit-scrollbar, 
+#tierra-section::-webkit-scrollbar, 
+#complementos-section::-webkit-scrollbar, 
+#comida-section::-webkit-scrollbar, 
+.section-group::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  margin: 1% auto;
+}
+
+#cannabis-section::-webkit-scrollbar-track, 
+#tierra-section::-webkit-scrollbar-track, 
+#complementos-section::-webkit-scrollbar-track, 
+#comida-section::-webkit-scrollbar-track,
+.section-group::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: darkgreen;
+  margin: 1% auto;
+}
+
+#cannabis-section::-webkit-scrollbar-thumb, 
+#tierra-section::-webkit-scrollbar-thumb, 
+#complementos-section::-webkit-scrollbar-thumb, 
+#comida-section::-webkit-scrollbar-thumb,
+.section-group::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: lightgreen;
+  margin: 1% auto;
+}
+
+/* scroll bar hidden */
+#cannabis-section::-webkit-scrollbar, 
+#tierra-section::-webkit-scrollbar, 
+#complementos-section::-webkit-scrollbar, 
+#comida-section::-webkit-scrollbar, 
+.section-group::-webkit-scrollbar, 
+#cannabis-section::-webkit-scrollbar-track, 
+#tierra-section::-webkit-scrollbar-track, 
+#complementos-section::-webkit-scrollbar-track, 
+#comida-section::-webkit-scrollbar-track,
+.section-group::-webkit-scrollbar-track, 
+#cannabis-section::-webkit-scrollbar-thumb, 
+#tierra-section::-webkit-scrollbar-thumb, 
+#complementos-section::-webkit-scrollbar-thumb, 
+#comida-section::-webkit-scrollbar-thumb,
+.section-group::-webkit-scrollbar-thumb, 
+#cannabis-section::-webkit-scrollbar-button, 
+#tierra-section::-webkit-scrollbar-button, 
+#complementos-section::-webkit-scrollbar-button, 
+#comida-section::-webkit-scrollbar-button, 
+.section-group::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+.products-slide{
+  padding: 0%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  display: inline-block;
+  background-color: green;
+  border: 6px solid black;
   border-radius: 10px;
-  margin: 2%;
-  padding: 5%;
-  max-width: 1000px;
+  margin: 0 1%;
+}
+
+#cannabis-section, 
+#tierra-section, 
+#complementos-section, 
+#comida-section {
+  display: none;
+}
+
+.products-slide > img {
+  height: 300px;
+  border-radius: 3px;
 }
 
 /* ------------------- TITULO ------------------- */
 
   .title{
-      margin: 2%;
+    padding: 2%;
+    text-align: center;
+    background-color: #39911b;
   }
 
   .title-txt{
-      text-align: center;
-  }
-
-  .subtitle{
-      text-align: center;
+      display: inline-grid;
+      background-image: url(/img/grownline-logo-02-02.svg); 
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 20%;
   }
 
   /* ------------------- NAVBAR ------------------- */
 
   .vr-navbar {
-    background-color: #1abc9c;
+    background-color: #39911b;
     padding: 1%; 
-    box-shadow: #0005 0px 5px 8px;   
+    box-shadow: #000 0px 5px 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    z-index: 10;
   }
 
   .vr-navbar > ul{
@@ -153,7 +268,7 @@ margin: 0 auto;
   }
 
   .vr-navbar > ul > li{
-    display: inline;
+    display: inline-flex;
     margin: 0 1%;
   } 
 
@@ -162,14 +277,18 @@ margin: 0 auto;
       margin: -5 auto;
   }
 
-  .vr-nav-link,  
-  .vr-nav-link > a {
+  .vr-nav-link, 
+  .vr-nav-link a {
     color: white;
   }
 
-  .vr-nav-link:hover, 
-  .vr-nav-link > a:hover {
-      color:grey;
+  .navbar-logo {
+    display: inline-grid;
+    background-image: url(/img/grownline-logo-02-02.svg); 
+    background-repeat: no-repeat;
+    width: 12%;
+    height: 2%;
+    padding-top: 15px;
   }
 
 /* ------------------- CAROUSEL ------------------- */
@@ -189,6 +308,7 @@ margin: 0 auto;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 2%;
+    color: #39911b;
 }
 
 /* ------------------- CONTACTO ------------------- */
@@ -238,6 +358,10 @@ display: inline-block;
 }
 
 /* FOOTER WAVES */
+
+.waves-background{
+  background-color: #39911b;
+}
 
 .flex-waves-content { /*Flexbox for containers*/
     display: flex;
