@@ -107,14 +107,14 @@ function openCannabisSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "block";
+        scrollBar.style.display = "block";
         console.log("openCannabisSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "none";
+        scrollBar.style.display = "none";
         console.log("openCannabisSlides else")
     }
 }
@@ -125,14 +125,14 @@ function openTierraSlides(){
         tierraSection.style.display = "inline-block";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "block";
+        scrollBar.style.display = "block";
         console.log("openTierraSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "none";
+        scrollBar.style.display = "none";
         console.log("openTierraSlides else")
     }
 }
@@ -143,14 +143,14 @@ function openComplementosSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "inline-block";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "block";
+        scrollBar.style.display = "block";
         console.log("openComplementosSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "block";
+        scrollBar.style.display = "block";
         console.log("openComplementosSlides else")
     }
 }
@@ -161,14 +161,14 @@ function openComidaSlides(){
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "inline-block";
-        // scrollBar.style.display = "block";
+        scrollBar.style.display = "block";
         console.log("openComidaSlides if")
     } else {
         cannabisSection.style.display = "none";
         tierraSection.style.display = "none";
         complementosSection.style.display = "none";
         comidaSection.style.display = "none";
-        // scrollBar.style.display = "none";
+        scrollBar.style.display = "none";
         console.log("openComidaSlides else")
     }
 }

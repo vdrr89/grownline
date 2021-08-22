@@ -41,7 +41,6 @@ body {
 #productos {
     min-height: 50vh;
     background-color: #39911b;
-    margin: 0;
     padding: 5%;
 }
 
@@ -53,7 +52,6 @@ body {
 }
 
 .about,  
-.contacto,
 .faq{
 padding: 5%;
 max-width: 800px;
@@ -65,7 +63,7 @@ margin: 0 auto;
 .chala-border-up, 
 .chala-border-down {
   display: inline-grid;
-  background-image: url(/img/chala-c-efecto-04-03.svg);
+  background-image: url(./img/chala-c-efecto-04-03.svg); /* acá */
   background-repeat: repeat-x;
   width: 100%;
   height: 5%;
@@ -244,7 +242,7 @@ margin: 0 auto;
 
   .title-txt{
       display: inline-grid;
-      background-image: url(/img/grownline-logo-02-02.svg); 
+      background-image: url(./img/grownline-logo-02-02.svg); /* acá */
       background-repeat: no-repeat;
       width: 50%;
       height: 20%;
@@ -284,7 +282,7 @@ margin: 0 auto;
 
   .navbar-logo {
     display: inline-grid;
-    background-image: url(/img/grownline-logo-02-02.svg); 
+    background-image: url(./img/grownline-logo-02-02.svg); /* acá */
     background-repeat: no-repeat;
     width: 12%;
     height: 2%;

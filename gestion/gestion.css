@@ -44,18 +44,19 @@
 
 
 .prod-grid-container {
-    display: grid;
-    grid-template-columns: auto 15%;
+    /* display: grid;
+    grid-template-columns: auto 15%; */
+    display: block;
   }
   
 
-.prod-grid-header {
+/* .prod-grid-header {
     grid-area: header;
 }
 
 .prod-grid-item {
 padding: 20px;
-}
+} */
 
 .table-buttons {
     position: fixed;
@@ -64,6 +65,10 @@ padding: 20px;
 /* la lista que contiene las tabs*/
 .gestion-tabs {
     margin: 2% auto;
+}
+
+.gestion-tabs li {
+    margin: 0 auto;
 }
 
 
@@ -75,6 +80,9 @@ padding: 20px;
     width: 90%;
     white-space: nowrap;
     overflow-x: scroll;
+}
+
+.table::-webkit-scrollbar {
 }
 
 .btns-table {
