@@ -12,14 +12,8 @@
 
 /* LOGIN FORM */
 
-#login-form > .send{
-    float: right;
-    margin-top: 10px;
-}
-
-#login-form > .cancel{
-    float: left;
-    margin-top: 10px;
+.all-login-form {
+    margin: 5% auto;
 }
 
 .forget{
@@ -40,8 +34,6 @@
 #gestion-ventas{
     display: none;
 }
-
-
 
 .prod-grid-container {
     /* display: grid;
@@ -85,6 +77,32 @@ padding: 20px;
 .table::-webkit-scrollbar {
 }
 
-.btns-table {
+.fixed-col {
+    position: absolute;
     display: block;
+    right: 2%;
+    overflow: hidden;
+    padding: 0 50px;
+  }
+
+/* edit button en tabla */
+.fixed-col2, 
+.fixed-col3 {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.fixed-col2{
+    right: 5%;
+}
+
+/* delete button en tabla */
+.fixed-col3{
+    right: 0%;
+}
+
+.table-img {
+    height: 70px;
 }

@@ -63,7 +63,7 @@ margin: 0 auto;
 .chala-border-up, 
 .chala-border-down {
   display: inline-grid;
-  background-image: url(../img/chala-c-efecto-04-03.svg); /* acá */
+  background-image: url(../img/chala-c-efecto-04-03.svg); 
   background-repeat: repeat-x;
   width: 100%;
   height: 5%;
@@ -76,16 +76,14 @@ margin: 0 auto;
 /* ------------------- BOTONES ------------------- */
 
 /* grupo de botones de categorías en el home */
-
 .cat-group {
     column-gap: 5%;
-    margin: 5% 20%;
+    margin: 5% 7%;
     display: inline-flex;
     position: relative;
   }
 
 /* el botón de categorias en home */
-
   .cat-btn{
     box-shadow: 2px 8px 10px #00000080;
     background-color: transparent;
@@ -121,6 +119,7 @@ margin: 0 auto;
     max-width: 20vw;
   }
 
+  /* botones alineados izq o der x ej en formularios */
   .btn-left{
     float: left;
     margin-top: 10px;
@@ -131,6 +130,61 @@ margin: 0 auto;
     float: right;
     margin-top: 10px;
     min-width: 100px;
+  }
+
+  .btn-rounded {
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  .btn-rounded:hover {
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(7px);
+  }
+
+  .btn-full-green {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .btn-full-green:hover {
+    background-color: #367c39;
+    color: lightgrey;
+  }
+
+  .btn-green-inverted {
+    background-color: white;
+    color: #4CAF50;
+  }
+
+  .btn-green-inverted:hover {
+    background-color: lightgrey;
+    color: #367c39;
+  }
+
+  .btn-full-red {
+    background-color: #BF0404;
+    color: white;
+  }
+
+  .btn-full-red:hover {
+    background-color: #a30303;
+    color: lightgray;
+  }
+
+  .btn-red-inverted {
+    background-color: white;
+    color: #BF0404;
+  }
+
+  .btn-red-inverted:hover {
+    background-color: lightgray;
+    color: #a30303;
   }
 
 /* ------------------- FORMULARIOS ------------------- */
@@ -242,7 +296,7 @@ margin: 0 auto;
 
   .title-txt{
       display: inline-grid;
-      background-image: url(../img/grownline-logo-02-02.svg); /* acá */
+      background-image: url(../img/grownline-logo-02-02.svg); 
       background-repeat: no-repeat;
       width: 50%;
       height: 20%;
@@ -275,6 +329,12 @@ margin: 0 auto;
       margin: -5 auto;
   }
 
+  .vr-navbar > form > button, 
+  .vr-navbar > form > a > button {
+    margin: 0 2%;
+    height: 100%;
+  }
+
   .vr-nav-link, 
   .vr-nav-link a {
     color: white;
@@ -282,7 +342,7 @@ margin: 0 auto;
 
   .navbar-logo {
     display: inline-grid;
-    background-image: url(../img/grownline-logo-02-02.svg); /* acá */
+    background-image: url(../img/grownline-logo-02-02.svg); 
     background-repeat: no-repeat;
     width: 12%;
     height: 2%;
@@ -311,10 +371,14 @@ margin: 0 auto;
 
 /* ------------------- CONTACTO ------------------- */
 
-#contacto > .form-floating {
+.contact-form > .form-floating {
   margin-top: 10px;
 }
 
+.contact-form {
+  max-width: 800px;
+  margin: 5% auto;
+}
 /* ------------------- FOOTER ------------------- */
 
 .footer {

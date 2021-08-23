@@ -35,7 +35,12 @@ var iconsProducts = [
         nombre: "comida", 
         icon: "fas fa-utensils", 
         function: "openComidaSlides"
-     }
+    }, 
+    {
+        nombre: "more",
+        icon: "fas fa-plus", 
+        function: ""
+    }
 ]; 
 
 var iconProducts = document.getElementById("icon-productos");
@@ -172,6 +177,13 @@ function openComidaSlides(){
         console.log("openComidaSlides else")
     }
 }
+
+if(cannabisSection.style.display === "none" && tierraSection.style.display === "none" && complementosSection.style.display === "none" && comidaSection.style.display === "none"){
+    sectionGroup.style.display = none;
+} else {
+    sectionGroup.style.display = block;
+}
+
 
 // scroll horizontal para categorias del home  
 

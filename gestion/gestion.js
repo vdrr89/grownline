@@ -102,7 +102,7 @@ prodTitle.innerHTML = '<thead><tr><th scope="col">' + prodTableTitle.cod + '</th
 // textos contenidos
 var prodTableContent = [
     {
-        img: 'img\top-crop\top-crop-01.jpg',
+        img: 'top-crop/top-crop-01.jpg',
         video: 'https://youtu.be/EqeYE2Ms_U0',
         cod: '001',
         titulo: 'Cromplete Mix',
@@ -117,7 +117,7 @@ var prodTableContent = [
         composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
     }, 
     {
-        img: 'img\top-crop\top-crop-01.jpg',
+        img: 'top-crop/top-crop-01.jpg',
         video: 'https://youtu.be/EqeYE2Ms_U0',
         cod: '001',
         titulo: 'Cromplete Mix',
@@ -138,7 +138,7 @@ var prodTableContentLength = prodTableContent.length;
 
 for( let i = 0; i < prodTableContentLength; i++ ){
     prodContent.innerHTML +=
-    '<tr><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcionBreve + '</td><td>' + prodTableContent[i].descripcionLarga + '</td><td>' + prodTableContent[i].composicion + '</td><td class="td-buttons"></td><td><button class="btn btn-outline-success table-buttons"><i class="fas fa-plus"></i></button></td><td class="td-buttons"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="td-buttons"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr>';
+    '<tr><td>' + prodTableContent[i].cod + '</td><td><img class="table-img" src="../img/' + prodTableContent[i].img + '"></td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcionBreve + '</td><td>' + prodTableContent[i].descripcionLarga + '</td><td>' + prodTableContent[i].composicion + '</td><td class="fixed-col1"><button class="btn btn-outline-success table-buttons"><i class="fas fa-plus"></i></button></td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr>';
 }
 
 // fetch api json 

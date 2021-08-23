@@ -14,15 +14,15 @@
     <script src="https://kit.fontawesome.com/a9f99944df.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/fuentes.css" type="text/css"> <!-- acá -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css"> <!-- acá -->
+    <link rel="stylesheet" href="../css/fuentes.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/style.css" type="text/css"> 
     <link rel="stylesheet" href="gestion.css" type="text/css">
 </head>
 <body>
 
     <!-- ------------------- Titulo ------------------- -->
     <div id="titulo" class="title">
-        <a href="../index.html"> <!-- acá -->
+        <a href="../index.html"> 
             <div class="title-txt"></div>
         </a>
         <p id="titulo-subtitulo" class="subtitle special"></p>
@@ -32,49 +32,51 @@
 
     <nav class="vr-navbar">
         <ul>
-            <a href="../index.html"><li class="navbar-logo"></li></a> <!-- acá -->
+            <a href="../index.html"><li class="navbar-logo"></li></a> 
 
             <li><a class="vr-nav-link active special" href="/index.html#about">Quienes somos</a></li> 
 
             <li class="vr-nav-item dropdown">
-                <a class="vr-nav-link dropdown-toggle special" href="./index.html#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- acá -->
+                <a class="vr-nav-link dropdown-toggle special" href="./index.html#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
                   Productos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria1</a></li> <!-- acá -->
-                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria2</a></li> <!-- acá -->
-                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria3</a></li> <!-- acá -->
+                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria1</a></li> 
+                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria2</a></li> 
+                  <li><a class="vr-nav-item dropdown-item special" href="">Categoria3</a></li> 
                 </ul>
               </li>
 
-            <li><a class="special" href="../index.html#contacto">Contacto</a></li> <!-- acá -->
-            <li><a class="special" href="../index.html#faq">FAQ</a></li> <!-- acá -->
+            <li><a class="special" href="../index.html#contacto">Contacto</a></li> 
+            <li><a class="special" href="../index.html#faq">FAQ</a></li> 
         </ul>
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-            <a href=""><button type="button" class="btn btn-outline-success"><i class="fas fa-user"></i></button></a> <!-- acá -->
+            <button class="btn btn-green-inverted" type="submit">Buscar</button>
+            <a href=""><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a> 
         </form>
     </nav>
 
     <!-- ------------------- Login Form ------------------- -->
     <div id="login-form" class="all-form section">
-        <div id="login-form">
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
-                <label for="floatingInput">Email</label>
+        <div class="all-login-form">
+            <div id="login-form">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-                <label for="floatingPassword">Contraseña</label>
+            <div class="forget">
+                <p class="small"><a class="small-a" href="">Olvidé mi contraseña</a></p> 
+                <p class="small">No tienes usuario? puedes <a class="small-a" href="">registrarte aquí</a></p> 
             </div>
+            <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success btn-right"><i class="fas fa-paper-plane"></i></button>
+            <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger btn-left"><i class="fas fa-trash-alt"></i></button>
         </div>
-        <div class="forget">
-            <p class="small"><a class="small-a" href="">Olvidé mi contraseña</a></p> <!-- acá -->
-            <p class="small">No tienes usuario? puedes <a class="small-a" href="">registrarte aquí</a></p> <!-- acá -->
-        </div>
-        <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success"><i class="fas fa-paper-plane"></i></button>
-        <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
     </div>
 
     <!-- ------------------- Gestión All ------------------- -->
@@ -105,7 +107,6 @@
                     <thead id="prod-title"></thead>
                     <tbody id="prod-content"></tbody>
                 </table>
-                <table id="btns-table"  class="btns-table"></table>
             </div>
         </div>
 
