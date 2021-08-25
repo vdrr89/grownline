@@ -106,3 +106,13 @@ padding: 20px;
 .table-img {
     height: 70px;
 }
+
+.td-short {
+    height:  20px;
+    max-width: 400px;
+}
+
+.td-long {
+    height: 100%;
+    max-width: 800px;
+}
