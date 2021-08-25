@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             echo json_encode($linea);
         }
     }
-
+ 
 }elseif($_SERVER['REQUEST_METHOD'] == 'PUT'){
     $put = json_decode(file_get_contents('php://input'), true);
     $sent = "update usuarios set nombre = '" .$put['nombre']. "', 
