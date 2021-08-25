@@ -23,7 +23,7 @@
         <!-- ------------------- Titulo ------------------- -->
         
         <div id="titulo" class="title">
-            <a href="#"> 
+            <a href="">  
                 <div class="title-txt"></div>
             </a>
             <p id="titulo-subtitulo" class="subtitle special"></p>
@@ -33,7 +33,7 @@
 
         <nav class="vr-navbar">
             <ul>
-                <a href="#"><li class="navbar-logo"></li></a> 
+                <a href=""><li class="navbar-logo"></li></a> 
 
                 <li><a class="vr-nav-link active special" href="#about">Quienes somos</a></li>
 
@@ -42,9 +42,9 @@
                       Productos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="vr-nav-item dropdown-item special" href="#">Categoria1</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="#">Categoria2</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="#">Categoria3</a></li> 
+                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria1</a></li> 
+                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria2</a></li> 
+                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria3</a></li> 
                     </ul>
                   </li>
 
@@ -53,8 +53,8 @@
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-                <a href="gestion/gestion.html"><button type="button" class="btn btn-outline-success"><i class="fas fa-user"></i></button></a>
+                <button class="btn btn-green-inverted" type="submit">Buscar</button>
+                <a href="gestion/gestion.html"><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a>
             </form>
         </nav>
 
@@ -103,6 +103,7 @@
                 <div id="tierra-section"></div>
                 <div id="complementos-section"></div>
                 <div id="comida-section"></div>
+                <a href="productos/productos.html"><div id="more-products"></div></a>
             </div>
 
 
@@ -127,27 +128,30 @@
 
         <div id="contacto" class="contacto">
 
-            <h3>Escribinos!</h3>
+            <div class="contact-form">
+                <h3>Escribinos!</h3>
 
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
-                <label for="floatingName">Nombre</label>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                    <label for="floatingName">Nombre</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefono / Celular">
+                    <label for="exampleFormControlInput1">Teléfono / Celular</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="email@ejemplo.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating msg-input">
+                    <textarea class="form-control" placeholder="Escriba su mensaje aqui" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Mensje</label>
+                </div>
+    
+                <button class="btn-left btn-rounded btn-red-inverted"><i class="fas fa-trash-alt"></i></button>
+                <button class="btn-right btn-rounded btn-green-inverted"><i class="fas fa-paper-plane"></i></button>
             </div>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefono / Celular">
-                <label for="exampleFormControlInput1">Teléfono / Celular</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="email@ejemplo.com">
-                <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating msg-input">
-                <textarea class="form-control" placeholder="Escriba su mensaje aqui" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Mensje</label>
-            </div>
-
-            <button class="btn-left btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
-            <button class="btn-right btn btn-outline-success"><i class="fas fa-paper-plane"></i></button>
+            
         </div>
 
         <!-- ------------------- FOOTER ------------------- -->

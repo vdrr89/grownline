@@ -77,6 +77,11 @@ li{
 
 /* ---------------------- AS ---------------------- */
 
+nav a, 
+nav a:hover {
+  text-decoration: none;
+}
+
 a{
   font-size: 1.2rem;
 }
@@ -91,18 +96,18 @@ a,
   line-height: 1.8rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited, 
 .small-a:visited {
-  text-decoration: none;
+  text-decoration: underline;
   color: #375009;
 }
 
 a:hover, 
 .small-a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color:#9ee022;
   text-shadow: none;
 }

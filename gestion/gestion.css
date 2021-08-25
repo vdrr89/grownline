@@ -12,14 +12,8 @@
 
 /* LOGIN FORM */
 
-#login-form > .send{
-    float: right;
-    margin-top: 10px;
-}
-
-#login-form > .cancel{
-    float: left;
-    margin-top: 10px;
+.all-login-form {
+    margin: 5% auto;
 }
 
 .forget{
@@ -41,21 +35,20 @@
     display: none;
 }
 
-
-
 .prod-grid-container {
-    display: grid;
-    grid-template-columns: auto 15%;
+    /* display: grid;
+    grid-template-columns: auto 15%; */
+    display: block;
   }
   
 
-.prod-grid-header {
+/* .prod-grid-header {
     grid-area: header;
 }
 
 .prod-grid-item {
 padding: 20px;
-}
+} */
 
 .table-buttons {
     position: fixed;
@@ -64,6 +57,10 @@ padding: 20px;
 /* la lista que contiene las tabs*/
 .gestion-tabs {
     margin: 2% auto;
+}
+
+.gestion-tabs li {
+    margin: 0 auto;
 }
 
 
@@ -77,6 +74,45 @@ padding: 20px;
     overflow-x: scroll;
 }
 
-.btns-table {
+.table::-webkit-scrollbar {
+}
+
+.fixed-col {
+    position: absolute;
     display: block;
+    right: 2%;
+    overflow: hidden;
+    padding: 0 50px;
+  }
+
+/* edit button en tabla */
+.fixed-col2, 
+.fixed-col3 {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.fixed-col2{
+    right: 5%;
+}
+
+/* delete button en tabla */
+.fixed-col3{
+    right: 0%;
+}
+
+.table-img {
+    height: 70px;
+}
+
+.td-short {
+    height:  20px;
+    max-width: 400px;
+}
+
+.td-long {
+    height: 100%;
+    max-width: 800px;
 }
