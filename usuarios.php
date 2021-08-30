@@ -46,6 +46,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $sent = "select * from usuarios where id = " . $_GET['id'];
         $result = obtener($sent);
         echo json_encode(mysqli_fetch_assoc($result));
+    } elseif (!isset($_GET['id'])){
+        $sent = "select * from usuarios";
+        $result = obtener($sent);
+        
+        $json = array();
+        while($row = mysqli_fetch_array($result)) {
+          $json[] = array(
+            'nombre' => $row['nombre'],
+            'apellido' => $row['apellido'],
+            'fechaNac' => $row['fechaNac'],
+            'pais' => $row['pais']
+          );
+        }
+        $jsonstring = json_encode($json);
+        echo $jsonstring;
     }
 
 }elseif($_SERVER['REQUEST_METHOD'] == 'PUT'){
