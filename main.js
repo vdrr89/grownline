@@ -104,7 +104,7 @@ for( let i = 0; i < comidaSlides.length; i++ ){
     comidaSection.innerHTML += 
     '<div class="products-slide"><img src="' + comidaSlides[i].src + '" alt="' + comidaSlides[i].name + '"></div>'
 }
-
+ 
 function openCannabisSlides(){
     if(cannabisSection.style.display === "none"){
         cannabisSection.style.display = "inline-block";
