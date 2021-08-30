@@ -132,21 +132,34 @@ var prodTableContent = [
 
 var prodContent = document.getElementById("prod-content");   
 
-for(let i=0; i < prodTableContent.length; i++){
+for(let i = 0; i < prodTableContent.length; i++){
     prodContent.innerHTML += 
       '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + prodTableContent[i].cod + '</td><td><img class="gestion-img" src="' + prodTableContent[i].img + '"></td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + prodTableContent[i].descripcion + prodTableContent[i].composicion + '</div></td></tr>';
-      
-    var clickeable = document.getElementById('clickeable' + [i] + '');
-    var collapsable = document.getElementById('collapsable' + [i] + '');
+    
+    let clickeable = document.getElementById('clickeable' + [i] + '');
+    let collapsable = document.getElementById('collapsable' + [i] + '');
       
     // funciona, pero no identifica a cual debe hacer click, el [i], ya quedó cada producto con su id empezando x 0, 1, 2, .. [i]
-    // clickeable[i].addEventListener("click", function(){
-    //     if(collapsable[i].style.display === "none"){
-    //         collapsable[i].style.display = "block";   
+    clickeable[i].addEventListener("click", function(){
+        if(collapsable[i].style.display === "none"){
+            collapsable[i].style.display = "block"; 
+            console.log("clickeable i if", collapsable.style.display)  
+        } else {
+            collapsable[i].style.display ="none";
+            console.log("clickeable i else", collapsable.style.display)  
+        }
+      });
+
+    // funciona pero solo me abre el collapsable1 y no el 0, osea, es como si no usara el [i]
+    // usar con onclick=(openCollapsable())
+    // function openCollapsable(){
+    //     if(collapsable.style.display === "none"){
+    //         collapsable.style.display = "block";   
     //     } else {
-    //         collapsable[i].style.display ="none"
+    //         collapsable.style.display ="none"
     //     }
-    //   });
+    // }
+
 }
 
 // fetch api json 
