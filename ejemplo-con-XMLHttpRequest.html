@@ -13,7 +13,11 @@
             <form class="crud-form">
                 <input type="text" name="nombre" placeholder="nombre" required>
                 <br>
-                <input type="text" name="constelacion" placeholder="constelacion" required>
+                <input type="text" name="apellido" placeholder="ape" required>
+                <br>
+                <input type="text" name="fechaNac" placeholder="fecha" required>
+                <br>
+                <input type="text" name="pais" placeholder="pais" required>
                 <br>
                 <input type="submit" value="Enviar"> 
                 <input type="hidden" name="id">
@@ -25,7 +29,9 @@
                 <thead>
                     <tr>
                         <th>nombre</th>
-                        <th>constelacion</th>
+                        <th>apellido</th>
+                        <th>fechaNac</th>
+                        <th>pais</th>
                         <th>accion</th>
                     </tr>
                 </thead>
@@ -37,8 +43,10 @@
     </section>
     <template id="crud-template" >
         <tr>
-            <td class="name"></td>
-            <td class="constelation"></td>
+            <td class="nombre"></td>
+            <td class="apellido"></td>
+            <td class="fechaNac"></td>
+            <td class="pais"></td>
             <td>
                 <button class="edit">editar</button>
                 <button class="delete">eliminar</button>
@@ -78,15 +86,20 @@
         const getAll = () => {
             ajax({
                 method: "GET",
-                url: "http://localhost:5555/santos",
+                url: "usuarios.php?id=14",
                 success: (res) => {
                     console.log(res)
+                    //console.log(res.nombre)
                     res.forEach(el=>{
-                        $template.querySelector(".name").textContent = el.name
-                        $template.querySelector(".constelation").textContent = el.constelation
+                        $template.querySelector(".nombre").textContent = el.nombre
+                        $template.querySelector(".apellido").textContent = el.apellido
+                        $template.querySelector(".fechaNac").textContent = el.fechaNac
+                        $template.querySelector(".pais").textContent = el.pais
                         $template.querySelector(".edit").dataset.id = el.id
-                        $template.querySelector(".edit").dataset.name = el.name
-                        $template.querySelector(".edit").dataset.constelation = el.constelation
+                        $template.querySelector(".edit").dataset.nombre = el.nombre
+                        $template.querySelector(".edit").dataset.apellido = el.apellido
+                        $template.querySelector(".edit").dataset.fechaNac = el.fechaNac
+                        $template.querySelector(".edit").dataset.pais = el.pais
                         $template.querySelector(".delete").dataset.id = el.id
 
                         let $clone = d.importNode($template, true)
@@ -110,26 +123,30 @@
                 if(!e.target.id.value){
                     //create POST
                     ajax({
-                        url: "http://localhost:5555/santos",
+                        url: "http://localhost/api1/usuarios_resp.php",
                         method: "POST",
                         success: (res) => location.reload(),
                         error: ( ) => $form.insertAdjacentHTML("afterend", ` <p><b> ${err}</b></p>  `),
                         data: {
-                            name: e.target.nombre.value,
-                            constelation: e.target.constelacion.value
+                            nombre: e.target.nombre.value,
+                            apellido: e.target.apellido.value,
+                            fechaNac: e.target.fechaNac.value,
+                            pais: e.target.pais.value
 
                         }
                     })
                 }else{
                     //update PUT
                     ajax({
-                        url: `http://localhost:5555/santos/${e.target.id.value}`,
+                        url: `http://localhost/api1/usuarios.php?id=${e.target.id.value}`,
                         method: "PUT",
                         success: (res) => location.reload(),
                         error: () => $form.insertAdjacentHTML("afterend", `<p><b> ${err} </p></b>`),
                         data: {
-                            name: e.target.nombre.value,
-                            constelation: e.target.constelacion.value
+                            nombre: e.target.nombre.value,
+                            apellido: e.target.apellido.value,
+                            fechaNac: e.target.fechaNac.value,
+                            pais: e.target.pais.value
                         }
                     })
                 }
@@ -140,8 +157,11 @@
             if(e.target.matches(".edit")){
                
                 $title.textContent = "editar santo"
-                $form.nombre.value = e.target.dataset.name
-                $form.constelacion.value = e.target.dataset.constelation
+                $form.nombre.value = e.target.dataset.nombre
+                $form.apellido.value = e.target.dataset.apellido
+                $form.fechaNac.value = e.target.dataset.fechaNac
+                $form.pais.value = e.target.dataset.pais
+
                 $form.id.value = e.target.dataset.id
             }
 
@@ -150,7 +170,7 @@
 
                 if(isDelete){
                     ajax({
-                        url: `http://localhost:5555/santos/${e.target.dataset.id}`,
+                        url: `http://localhost/api1/usuarios.php?id=${e.target.dataset.id}`,
                         method: "DELETE",
                         success: (res) => location.reload(),
                         error: () => alert(err)

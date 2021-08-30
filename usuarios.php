@@ -24,36 +24,30 @@ function obtener($sent){
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
     }
-    if (!$res = mysqli_query($link, $sent)) {
+    if (!$result = mysqli_query($link, $sent)) {
         printf("Errormessage: %s\n", mysqli_error($link));
         echo mysql_errno($link) . ": " . mysql_error($link) . "\n";
         mysqli_close($link);
     } else {
         mysqli_close($link);
-        return $res;
+        return $result;
     }
 }
 
-        
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_POST = json_decode(file_get_contents('php://input'), true);
     $sent = "insert into usuarios (nombre, apellido, fechaNac, pais) values 
     ('".$_POST['nombre']."', '".$_POST['apellido']."', '".$_POST['fechaNac']."', '".$_POST['pais']."') ";
     guardar($sent);
          
-} elseif($_SERVER['REQUEST_METHOD'] == 'GET'){
+}elseif($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(isset($_GET['id'])){
         $sent = "select * from usuarios where id = " . $_GET['id'];
         $result = obtener($sent);
         echo json_encode(mysqli_fetch_assoc($result));
-    }else{
-        $sent = "select * from usuarios";
-        $result = obtener($sent);
-        while($linea = mysqli_fetch_assoc($result)){
-            echo json_encode($linea);
-        }
     }
- //hola
+
 }elseif($_SERVER['REQUEST_METHOD'] == 'PUT'){
     $put = json_decode(file_get_contents('php://input'), true);
     $sent = "update usuarios set nombre = '" .$put['nombre']. "', 
