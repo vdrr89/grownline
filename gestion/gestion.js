@@ -101,7 +101,7 @@ prodTitle.innerHTML = '<div class="prod-title"><ul class="gestion-titles"><li>' 
 // contenidos
 var prodTableContent = [
     {
-        img: 'top-crop/top-crop-01.jpg',
+        img: 'img/top-crop/top-crop-1.jpg',
         video: 'https://youtu.be/EqeYE2Ms_U0',
         cod: '001',
         titulo: 'Cromplete Mix',
@@ -115,7 +115,7 @@ var prodTableContent = [
         composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
     }, 
     {
-        img: 'top-crop/top-crop-01.jpg',
+        img: 'img/top-crop/top-crop-1.jpg',
         video: 'https://youtu.be/EqeYE2Ms_U0',
         cod: '001',
         titulo: 'Cromplete Mix',
