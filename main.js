@@ -174,8 +174,21 @@ function openMoreProducts(){
     window.open("productos/productos.html", "_self");
 }
 
-if(cannabisSection.style.display && tierraSection.style.display && complementosSection.style.display && comidaSection.style.display === "none"){
-    sectionGroup.style.backgroundColor = "transparent";
+if(cannabisSection.style.display = "none"){
+    if( tierraSection.style.display = "none"){
+        if ( complementosSection.style.display = "none"){
+            if ( comidaSection.style.display = "none"){
+                sectionGroup.style.backgroundColor = "transparent";
+
+            }else{
+                sectionGroup.style.backgroundColor = "green";
+            }
+        } else {
+            sectionGroup.style.backgroundColor = "green";
+        }
+    } else {
+        sectionGroup.style.backgroundColor = "green";
+    }
 } else {
     sectionGroup.style.backgroundColor = "green";
 }

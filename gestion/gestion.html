@@ -82,6 +82,15 @@
             <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success btn-right"><i class="fas fa-paper-plane"></i></button>
             <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger btn-left"><i class="fas fa-trash-alt"></i></button>
         </div>
+
+        <div class="alert alert-danger login-incorrect" role="alert">
+            Usuario o contraseña incorrecta. 
+        </div>
+
+        <div class="alert alert-danger login-ghost" role="alert">
+            El usuario no existe, desea <a href=""> crear un usuario nuevo?</a> 
+        </div>
+
     </div>
 
     <!-- ------------------- Gestión All ------------------- -->
@@ -120,7 +129,7 @@
         </div>
 
         <!-- ------------------- Productos ------------------- -->
-        <div id="gestion-productos" class="section">
+        <!-- <div id="gestion-productos" class="section">
             <div id="card-productos" class="prod-grid-container">
                 <div>
                     <table>
@@ -128,6 +137,13 @@
                     </table>
                 </div>
                 <div id="card-content"></div>
+            </div>
+        </div> -->
+
+        <div id="gestion-productos" class="section prod-grid-container table">
+            <div id="prod-title"></div>
+            <div>
+                <table id="prod-content"></table>
             </div>
         </div>
 

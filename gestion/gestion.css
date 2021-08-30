@@ -12,6 +12,15 @@
 
 /* LOGIN FORM */
 
+.alert-primary{
+    margin-top: 2%;
+}
+
+.login-incorrect, 
+.login-ghost {
+    display: none;
+}
+
 .all-login-form {
     margin: 5% auto;
 }
@@ -55,14 +64,6 @@
   }
   
 
-/* .prod-grid-header {
-    grid-area: header;
-}
-
-.prod-grid-item {
-padding: 20px;
-} */
-
 .table-buttons {
     position: fixed;
 }
@@ -87,8 +88,8 @@ padding: 20px;
     overflow-x: scroll;
 }
 
-.table::-webkit-scrollbar {
-}
+/* .table::-webkit-scrollbar {
+} */
 
 .fixed-col {
     position: absolute;
@@ -132,11 +133,15 @@ padding: 20px;
 
 /* --- */
 
-/* table{
-    margin: 2% auto;
-    border: 1px solid black;
-    padding: 5%;
-  } */
+.gestion-titles{
+    display: inline-flex;
+    border-bottom: solid 1px black;
+    position: sticky;
+}
+
+.gestion-titles li {
+    margin: 2%;
+}
   
   tr, th, td {
     padding: 10px;
@@ -151,6 +156,10 @@ padding: 20px;
     font-weight: bold;
     border-radius: 10px;
     padding: 10px;
+
+    position: absolute;
+    display: block;
+    overflow: hidden;
   }
   
   .clickeable:hover{

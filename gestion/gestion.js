@@ -12,7 +12,6 @@ let passwordInput = document.getElementById("floatingPassword");
 
 // ENVIAR FORMULARIO
 function okLogin(e){
-    // e.preventDefault();
     login.style.display = "none";
     allTabs.style.display = "block";
     productos.style.display = "block";
@@ -32,25 +31,6 @@ function deleteLoginForm(){
 }
 
 // ------------------- FUNCIONES TABS -------------------
-
-// activated desactivated 
-
-// var triggerTabList = [].slice.call(document.querySelectorAll('#gestion-tabs a'))
-// triggerTabList.forEach(function (triggerEl) {
-//   var tabTrigger = new bootstrap.Tab(triggerEl)
-
-//   triggerEl.addEventListener('click', function (event) {
-//     event.preventDefault()
-//     tabTrigger.show()
-//   })
-// })
-
-// var triggerEl = document.querySelector('#gestion-tabs a[data-bs-target="#profile"]')
-// bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
-
-// var triggerFirstTabEl = document.querySelector('#gestion-tabs li:first-child button')
-// bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
-
 
 // TAB PRODUCTOS
 function tabProductos(){
@@ -111,13 +91,12 @@ var prodTableTitle = {
     med: 'Medida',
     stock: 'Stock',
     medida: 'Medida',
-    descBreve: 'Descripción Breve',
-    descLarga: 'Descripción Larga', 
+    descripcion: 'Descripción Breve',
     comp: 'Composición'
 };
 
 var prodTitle = document.getElementById("prod-title");
-prodTitle.innerHTML = '<th scope="col">' + prodTableTitle.cod + '</th><th scope="col">' + prodTableTitle.img + '</th><th scope="col">' + prodTableTitle.video + '</th><th scope="col">' + prodTableTitle.titulo + '</th><th scope="col">' + prodTableTitle.cat + '</th><th scope="col">' + prodTableTitle.precio + '</th><th scope="col">' + prodTableTitle.cantidad + '</th><th scope="col">' + prodTableTitle.med + '</th><th scope="col">' + prodTableTitle.stock + '</th><th scope="col">' + prodTableTitle.medida + '</th><th scope="col">' + prodTableTitle.descBreve + '</th><th scope="col">' + prodTableTitle.descLarga + '</th><th scope="col">' + prodTableTitle.comp + '</th><th></th>';
+prodTitle.innerHTML = '<div class="prod-title"><ul class="gestion-titles"><li>' + prodTableTitle.cod + '</li><li>' + prodTableTitle.img + '</li><li>' + prodTableTitle.video + '</li><li>' + prodTableTitle.titulo + '</li><li>' + prodTableTitle.cat + '</li><li>' + prodTableTitle.precio + '</li><li>' + prodTableTitle.cantidad + '</li><li>' + prodTableTitle.med + '</li><li>' + prodTableTitle.stock + '</li><li>' + prodTableTitle.medida + '</li><li>' + prodTableTitle.descripcion + '</li><li>' + prodTableTitle.comp + '</li></ul></div>';
 
 // contenidos
 var prodTableContent = [
@@ -151,22 +130,24 @@ var prodTableContent = [
     }
 ];
 
-var cardContent = document.getElementById("card-content");
+var prodContent = document.getElementById("prod-content");   
 
-for( let i = 0; i < prodTableContent.length ; i++ ){
-    cardContent.innerHTML +=
-    '<div class="visible"><table><tr><td><button onclick="openInvisible()" class="table-buttons clickeable"><i class="fas fa-plus"></i></button></td><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcion + '</td><td>' + prodTableContent[i].composicion + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr></table></div><div class="collapsable">' + prodTableContent[i].descripcion + '</div>';
-    
-    // function openInvisible(){
-    //     if(invisible.style.display === "none"){
-    //       invisible.style.display = "block";   
+for(let i=0; i < prodTableContent.length; i++){
+    prodContent.innerHTML += 
+      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + prodTableContent[i].cod + '</td><td><img class="gestion-img" src="' + prodTableContent[i].img + '"></td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + prodTableContent[i].descripcion + prodTableContent[i].composicion + '</div></td></tr>';
+      
+    var clickeable = document.getElementById('clickeable' + [i] + '');
+    var collapsable = document.getElementById('collapsable' + [i] + '');
+      
+    // funciona, pero no identifica a cual debe hacer click, el [i], ya quedó cada producto con su id empezando x 0, 1, 2, .. [i]
+    // clickeable[i].addEventListener("click", function(){
+    //     if(collapsable[i].style.display === "none"){
+    //         collapsable[i].style.display = "block";   
     //     } else {
-    //       invisible.style.display ="none"
+    //         collapsable[i].style.display ="none"
     //     }
-    //   }
+    //   });
 }
-
-
 
 // fetch api json 
 
