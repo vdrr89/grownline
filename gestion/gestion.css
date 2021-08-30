@@ -25,6 +25,19 @@
     display: block;
 }
 
+/* FILTER AND ADD SECTION */
+
+.filter-and-add-section {
+    margin: 5% auto;
+    padding: 0 5%;
+    position: relative;
+    display: inline-flex;
+}
+
+.filter{
+    margin: 10px;
+}
+
 /* GESTION TABS CONTENT */
 
 #gestion-tabs, 
@@ -116,3 +129,39 @@ padding: 20px;
     height: 100%;
     max-width: 800px;
 }
+
+/* --- */
+
+/* table{
+    margin: 2% auto;
+    border: 1px solid black;
+    padding: 5%;
+  } */
+  
+  tr, th, td {
+    padding: 10px;
+  }
+  
+  /* --- */
+  
+  .clickeable{
+    background-color: white;
+    border: 3px solid skyblue;
+    color: skyblue;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .clickeable:hover{
+    background-color: skyblue;
+    border: 3px solid skyblue;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .collapsable {
+    display: none;
+  }

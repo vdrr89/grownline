@@ -28,9 +28,29 @@ function deleteLoginForm(){
     emailInput.value = "";
     passwordInput.value = "";
     console.log("deleteLoginForm");
+    // mostrar boton con flecha para ir para atras el cual tendria link para ir para atras
 }
 
 // ------------------- FUNCIONES TABS -------------------
+
+// activated desactivated 
+
+// var triggerTabList = [].slice.call(document.querySelectorAll('#gestion-tabs a'))
+// triggerTabList.forEach(function (triggerEl) {
+//   var tabTrigger = new bootstrap.Tab(triggerEl)
+
+//   triggerEl.addEventListener('click', function (event) {
+//     event.preventDefault()
+//     tabTrigger.show()
+//   })
+// })
+
+// var triggerEl = document.querySelector('#gestion-tabs a[data-bs-target="#profile"]')
+// bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+
+// var triggerFirstTabEl = document.querySelector('#gestion-tabs li:first-child button')
+// bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+
 
 // TAB PRODUCTOS
 function tabProductos(){
@@ -41,6 +61,7 @@ function tabProductos(){
     mensajes.style.display = "none";
     ventas.style.display = "none";
     console.log("tabProductos")
+    // modificar estilo de fuente y background de tab
 }
 
 // TAB USUARIOS
@@ -78,7 +99,7 @@ function tabVentas(){
 
 // ------------------- CONTENIDO PRODUCTOS -------------------
 
-// titulos productos
+// titulos 
 var prodTableTitle = {
     img: 'img',
     video: 'video',
@@ -95,11 +116,10 @@ var prodTableTitle = {
     comp: 'Composición'
 };
 
-// inner para el título de productos
 var prodTitle = document.getElementById("prod-title");
-prodTitle.innerHTML = '<thead><tr><th scope="col">' + prodTableTitle.cod + '</th><th scope="col">' + prodTableTitle.img + '</th><th scope="col">' + prodTableTitle.video + '</th><th scope="col">' + prodTableTitle.titulo + '</th><th scope="col">' + prodTableTitle.cat + '</th><th scope="col">' + prodTableTitle.precio + '</th><th scope="col">' + prodTableTitle.cantidad + '</th><th scope="col">' + prodTableTitle.med + '</th><th scope="col">' + prodTableTitle.stock + '</th><th scope="col">' + prodTableTitle.medida + '</th><th scope="col">' + prodTableTitle.descBreve + '</th><th scope="col">' + prodTableTitle.descLarga + '</th><th scope="col">' + prodTableTitle.comp + '</th><th></th></tr></thead>';
+prodTitle.innerHTML = '<th scope="col">' + prodTableTitle.cod + '</th><th scope="col">' + prodTableTitle.img + '</th><th scope="col">' + prodTableTitle.video + '</th><th scope="col">' + prodTableTitle.titulo + '</th><th scope="col">' + prodTableTitle.cat + '</th><th scope="col">' + prodTableTitle.precio + '</th><th scope="col">' + prodTableTitle.cantidad + '</th><th scope="col">' + prodTableTitle.med + '</th><th scope="col">' + prodTableTitle.stock + '</th><th scope="col">' + prodTableTitle.medida + '</th><th scope="col">' + prodTableTitle.descBreve + '</th><th scope="col">' + prodTableTitle.descLarga + '</th><th scope="col">' + prodTableTitle.comp + '</th><th></th>';
 
-// textos contenidos
+// contenidos
 var prodTableContent = [
     {
         img: 'top-crop/top-crop-01.jpg',
@@ -112,8 +132,7 @@ var prodTableContent = [
         med: 'l',
         stock: '10',
         medida: 'u', 
-        descripcionBreve: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo.',
-        descripcionLarga: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
+        descripcion: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
         composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
     }, 
     {
@@ -127,19 +146,27 @@ var prodTableContent = [
         med: 'l',
         stock: '10',
         medida: 'u', 
-        descripcionBreve: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo.',
-        descripcionLarga: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
+        descripcion: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
         composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
     }
 ];
 
-var prodContent = document.getElementById("prod-content");
-var prodTableContentLength = prodTableContent.length;
+var cardContent = document.getElementById("card-content");
 
-for( let i = 0; i < prodTableContentLength; i++ ){
-    prodContent.innerHTML +=
-    '<tr><td>' + prodTableContent[i].cod + '</td><td><img class="table-img" src="../img/' + prodTableContent[i].img + '"></td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>stock</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td><div class="td-short"><p>' + prodTableContent[i].descripcionBreve + '</p></div></td><td><div class="td-short"><p>' + prodTableContent[i].descripcionLarga + '</p></div></td><td><div class="td-short">' + prodTableContent[i].composicion + '</div></td><td class="fixed-col1"><button class="btn btn-outline-success table-buttons"><i class="fas fa-plus"></i></button></td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr>';
+for( let i = 0; i < prodTableContent.length ; i++ ){
+    cardContent.innerHTML +=
+    '<div class="visible"><table><tr><td><button onclick="openInvisible()" class="table-buttons clickeable"><i class="fas fa-plus"></i></button></td><td>' + prodTableContent[i].cod + '</td><td>' + prodTableContent[i].img + '</td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td>' + prodTableContent[i].descripcion + '</td><td>' + prodTableContent[i].composicion + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr></table></div><div class="collapsable">' + prodTableContent[i].descripcion + '</div>';
+    
+    // function openInvisible(){
+    //     if(invisible.style.display === "none"){
+    //       invisible.style.display = "block";   
+    //     } else {
+    //       invisible.style.display ="none"
+    //     }
+    //   }
 }
+
+
 
 // fetch api json 
 
