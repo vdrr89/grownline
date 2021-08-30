@@ -62,27 +62,27 @@ var complementosSection = document.getElementById("complementos-section");
 var comidaSection = document.getElementById("comida-section");
 
 var cannabisSlides = [
-    { name:'cannabis1', src: 'img/img1.jpg' },
-    { name:'cannabis2', src: 'img/img2.jpg' }, 
-    { name:'cannabis3', src: 'img/img3.jpg' },
+    { name:'cannabis1', src: 'img/weed01.jpeg' },
+    { name:'cannabis2', src: 'img/weed02.jpeg' }, 
+    { name:'cannabis3', src: 'img/weed03.jpeg' },
 ]
 
 var tierraSlides = [
-    { name:'tierra1', src: 'img/img1.jpg' },
-    { name:'tierra2', src: 'img/img2.jpg' }, 
-    { name:'tierra3', src: 'img/img3.jpg' },
+    { name:'tierra1', src: 'img/top-crop/top-crop-1.jpg' },
+    { name:'tierra2', src: 'img/top-crop/top-crop-1.jpg' }, 
+    { name:'tierra3', src: 'img/top-crop/top-crop-1.jpg' },
 ]
 
 var complementosSlides = [
-    { name:'complementos1', src: 'img/img1.jpg' },
-    { name:'complementos2', src: 'img/img2.jpg' }, 
-    { name:'complementos3', src: 'img/img3.jpg' },
+    { name:'complementos1', src: 'img/solid-gold-post-2.jpg' },
+    { name:'complementos2', src: 'img/solid-gold-post1.jpg' }, 
+    { name:'complementos3', src: 'img/solid-gold-post-2.jpg' },
 ]
 
 var comidaSlides = [
-    { name:'comida1', src: 'img/img1.jpg' },
-    { name:'comida2', src: 'img/img2.jpg' }, 
-    { name:'comida3', src: 'img/img3.jpg' },
+    { name:'comida1', src: 'img/seeds01.jpeg' },
+    { name:'comida2', src: 'img/weed04.jpg' }, 
+    { name:'comida3', src: 'img/seeds01.jpeg' },
 ]
 
 for( let i = 0; i < cannabisSlides.length; i++ ){
