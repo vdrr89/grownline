@@ -131,3 +131,9 @@ html, body {
 
 .form-buttons{
 }
+
+/* FOOTER */
+
+.waves-background {
+    background-color: transparent;
+}

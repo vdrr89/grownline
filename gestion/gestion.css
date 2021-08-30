@@ -174,3 +174,8 @@
   .collapsable {
     display: none;
   }
+
+/* FOOTER */
+.waves-background {
+    background-color: transparent;
+}

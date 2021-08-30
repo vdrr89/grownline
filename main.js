@@ -174,28 +174,28 @@ function openMoreProducts(){
     window.open("productos/productos.html", "_self");
 }
 
-if(cannabisSection.style.display = "none"){
-    if( tierraSection.style.display = "none"){
-        if ( complementosSection.style.display = "none"){
-            if ( comidaSection.style.display = "none"){
-                sectionGroup.style.backgroundColor = "transparent";
+// este no funciona, la idea es que al estar todos los iconos de productos cerrados, tampoco se muestre la existencia del div que los contiene
+// if(cannabisSection.style.display = "none"){
+//     if( tierraSection.style.display = "none"){
+//         if ( complementosSection.style.display = "none"){
+//             if ( comidaSection.style.display = "none"){
+//                 sectionGroup.style.backgroundColor = "transparent";
 
-            }else{
-                sectionGroup.style.backgroundColor = "green";
-            }
-        } else {
-            sectionGroup.style.backgroundColor = "green";
-        }
-    } else {
-        sectionGroup.style.backgroundColor = "green";
-    }
-} else {
-    sectionGroup.style.backgroundColor = "green";
-}
+//             }else{
+//                 sectionGroup.style.backgroundColor = "green";
+//             }
+//         } else {
+//             sectionGroup.style.backgroundColor = "green";
+//         }
+//     } else {
+//         sectionGroup.style.backgroundColor = "green";
+//     }
+// } else {
+//     sectionGroup.style.backgroundColor = "green";
+// }
 
 
 // scroll horizontal para categorias del home  
-
 function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); // Delta vale 1 en scroll hacia arriba y -1 en scroll hacia abajo
@@ -220,24 +220,25 @@ function scrollHorizontally(e) {
     sectionGroup.addEventListener("DOMMouseScroll", scrollHorizontally, false);
   // } else {
     // IE 6/7/8
-    sectionGroup.attachEvent("onmousewheel", scrollHorizontally);
+    // sectionGroup.attachEvent("onmousewheel", scrollHorizontally); // este estaba jodiendo a que no apareciera el faq
   // }
 
 
 // ------------------- FAQ -------------------
 var faqList = document.getElementById("faq-list");
-var faqListContent = [
-    { titulo: "Titulo de faq", respuesta: "Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v" },
-    { titulo: "Titulo de faq", respuesta: "Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v" },
-    { titulo: "Titulo de faq", respuesta: "Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v" },
-    { titulo: "Titulo de faq", respuesta: "Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v" },
+let faqContent = [
+    { titulo: 'Titulo de faq', respuesta: 'Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v' },
+    { titulo: 'Titulo de faq', respuesta: 'Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v' },
+    { titulo: 'Titulo de faq', respuesta: 'Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v' },
+    { titulo: 'Titulo de faq', respuesta: 'Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq Respuesta extensa de faq v' }
 ];
-var faqListContentLength = faqListContent.length;
 
-for( let i = 0; i < faqListContentLength; i++ ){
+for( let j = 0; j < faqContent.length; j++ ){
     faqList.innerHTML +=
-    '<li><p class="faq-tit">' + faqListContent[i].titulo + '</p><p>' + faqListContent[i].respuesta + '</p>' 
+    '<li><p class="faq-tit">' + faqContent[j].titulo + '</p><p>' + faqContent[j].respuesta + '</p></li>' 
 }
+
+
 
 // ------------------- CONTACTO: REDES SOCIALES -------------------
 var socialNet = document.getElementById("social-networks");
