@@ -6,126 +6,28 @@ html, body {
 .create-form{
     margin: 5% auto;
     max-width: 800px;
+    height: 90%;
     border: 1px solid black;
-    padding: 5%;
+    padding: 4%;
+}
 
-    display: grid;
-    grid-template-rows: 40px 4em 40px 4em 40px 4em 40px 4em 40px 4em 40px 4em;  
-    row-gap: 5%;
-    column-gap: 3%;
+.input-group div, 
+.imgmini-input, 
+.videomini-input, 
+.input-group .form-select{
+    margin: 10px;
+}
 
+.imgmini-input, 
+.videomini-input{
+    height: 100px;
+    width: 100px;
     border: 1px solid black;
 }
 
-.cod-input{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.cat-input{
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.img-mini {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.imgurl-input{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-/* agregar HTML */
-.vid-mini{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-/* agregar HTML */
-.vid-url{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-/* agregar HTML */
-.tit{
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-/* agregar HTML */
-.mon{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.prec-input{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.cantu-input{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.medu-input{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-/* acá falta stock */
-
-.meds-input{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
-.desc-input{
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.del-btn{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.send-btn{
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 6;
-    grid-row-end: 7;
+.form-select{
+    width: 50px;
+    height: 50px;
 }
 
 

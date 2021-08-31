@@ -1,7 +1,9 @@
 // ------------------- FUNCION LOGIN -------------------
 
 let login = document.getElementById("login-form");
+
 let allTabs = document.getElementById("gestion-tabs");
+
 let productos = document.getElementById("gestion-productos");
 let usuarios = document.getElementById("gestion-usuarios");
 let mensajes = document.getElementById("gestion-mensajes");
