@@ -103,7 +103,7 @@ var prodTableContent = [
     {
         img: 'img/top-crop/top-crop-1.jpg',
         video: 'https://youtu.be/EqeYE2Ms_U0',
-        cod: '001',
+        cod: '000',
         titulo: 'Cromplete Mix',
         categoria: 'Top Crop',
         precio: '500',
@@ -130,23 +130,32 @@ var prodTableContent = [
     }
 ];
 
-var prodContent = document.getElementById("prod-content");   
 
-for(let i = 0; i < prodTableContent.length; i++){
+var prodContent = document.getElementById("prod-content");   
+var clickeable = new Array(prodTableContent.length)
+var collapsable = new Array(prodTableContent.length)
+console.log(clickeable.length)
+
+prodTableContent.forEach(function(el, i){
     prodContent.innerHTML += 
-      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + prodTableContent[i].cod + '</td><td><img class="gestion-img" src="' + prodTableContent[i].img + '"></td><td>' + prodTableContent[i].video + '</td><td>' + prodTableContent[i].titulo + '</td><td>' + prodTableContent[i].categoria + '</td><td>' + prodTableContent[i].precio + '</td><td>' + prodTableContent[i].cantidad + '</td><td>' + prodTableContent[i].med + '</td><td>' + prodTableContent[i].stock + '</td><td>' + prodTableContent[i].medida + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + prodTableContent[i].descripcion + prodTableContent[i].composicion + '</div></td></tr>';
-    
-    let clickeable = document.getElementById('clickeable' + [i] + '');
-    let collapsable = document.getElementById('collapsable' + [i] + '');
+      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + el.cod + '</td><td><img class="gestion-img" src="' + el.img + '"></td><td>' + el.video + '</td><td>' + el.titulo + '</td><td>' + el.categoria + '</td><td>' + el.precio + '</td><td>' + el.cantidad + '</td><td>' + el.med + '</td><td>' + el.stock + '</td><td>' + el.medida + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.descripcion + el.composicion + '</div></td></tr>';
+     
       
+    })
+    
+for(let i = 0; i < prodTableContent.length; i++){
+
+    clickeable[i] = document.getElementById('clickeable' + [i]);
+    collapsable[i] = document.getElementById('collapsable' + [i]);
+    collapsable[i].style.display = "none"
     // funciona, pero no identifica a cual debe hacer click, el [i], ya quedó cada producto con su id empezando x 0, 1, 2, .. [i]
     clickeable[i].addEventListener("click", function(){
-        if(collapsable[i].style.display === "none"){
+        if(collapsable[i].style.display == "none"){
             collapsable[i].style.display = "block"; 
-            console.log("clickeable i if", collapsable.style.display)  
+            console.log("clickeable " + [i] + " if", collapsable[i].style.display)  
         } else {
             collapsable[i].style.display ="none";
-            console.log("clickeable i else", collapsable.style.display)  
+            console.log("clickeable " + [i] + " else", collapsable[i].style.display)  
         }
       });
 
@@ -163,9 +172,10 @@ for(let i = 0; i < prodTableContent.length; i++){
 }
 
 // fetch api json 
-
+/*
 fetch('/productos.json')
   .then(response => response.json())
   .then(data => console.log(data));
 // hasta acá manda la información al console log, la manda bien
 
+*/
