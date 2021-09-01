@@ -47,6 +47,10 @@
     margin: 10px;
 }
 
+#productos-filter-add{
+    display: block;
+}
+
 /* GESTION TABS CONTENT */
 
 #gestion-tabs, 

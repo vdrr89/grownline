@@ -1,4 +1,16 @@
-  /* FOOTER */
+.see-more{
+  display: block;
+}
+
+.card-cart-section{
+  display: inline-block;
+}
+
+.card-cart-section > input {
+  width: 70px;
+}
+
+/* FOOTER */
   .waves-background {
     background-color: transparent;
 }

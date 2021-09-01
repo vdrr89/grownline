@@ -20,14 +20,6 @@
 </head>
 <body>
     
-    <!-- ------------------- Titulo ------------------- -->
-    <div id="titulo" class="title">
-        <a href="../../index.html"> 
-            <div class="title-txt"></div>
-        </a>
-        <p id="titulo-subtitulo" class="subtitle special"></p>
-    </div>
-
     <!-- ------------------- NavBar ------------------- -->
 
     <nav class="vr-navbar">
@@ -53,96 +45,105 @@
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
             <button class="btn btn-green-inverted" type="submit">Buscar</button>
-            <a href=""><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a> 
+            <a href="../gestion.html"><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a> 
         </form>
     </nav>
 
     <!-- ------------------- Create Product Form ------------------- -->
 
     <div id="create-form" class="create-form">
-        <!-- codigo -->
-        <div id="cod-input" class="form-floating mb-3">
-            <input type="number" class="form-control" id="codigo" placeholder="código">
-            <label for="codigo">Código</label>
+
+        <div class="input-group">
+             <!-- codigo -->
+            <div id="cod-input" class="form-floating mb-3">
+                <input type="number" class="form-control" id="codigo" placeholder="código">
+                <label for="codigo">Código</label>
+            </div>
+            <span class="input-group-addon"></span>
+            <!-- categoría -->
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
         </div>
-        <!-- image mini -->
-        <div id="imgmini-input"  class="imgmini-input">
-        </div>
-        <!-- image url -->
-        <div id="imgurl-input"  class="form-floating">
-            <input type="text" class="form-control" id="imageurl" placeholder="imagen url">
-            <label for="imageurl">Imagen URL</label>
-        </div>
-        <!-- video mini -->
-        <div id="videomini-input"  class="videomini-input">
-        </div>
-        <!-- video url -->
-        <div id="videourl-input"  class="form-floating">
-            <input type="text" class="form-control" id="videourl" placeholder="video url">
-            <label for="videourl">Video URL</label>
-        </div>
+
         <!-- titulo -->
         <div id="titulo"  class="form-floating">
-            <input type="text" class="form-control" id="titulo" placeholder="Título">
-            <label for="titulo">Imagen URL</label>
+            <input type="text" class="form-control" id="titulo-input" placeholder="Título">
+            <label for="titulo-input">Titulo</label>
         </div>
-        <!-- categoria -->
-        <div id="cat-input" class="form-floating mb-3">
-            <input type="text" class="form-control" id="categoria" placeholder="Categoría">
-            <label for="categoria">Categoría</label>
+
+        <div class="input-group">
+            <!-- image mini -->
+            <span class="input-group-addon"></span>
+            <div id="imgmini-input"  class="imgmini-input">
+                <img id="imgmini-input-img" src="" alt="">
+            </div>
+            <span class="input-group-addon"></span>
+            <!-- image url -->
+            <div id="imgurl-input"  class="form-floating">
+                <input type="text" class="form-control" id="imageurl" placeholder="imagen url">
+                <label for="imageurl">Imagen URL</label>
+            </div>
+            <span class="input-group-addon"></span>
+            <!-- video mini -->
+            <div id="videomini-input"  class="videomini-input">
+                <video id="videomini-input-video" src=""></video>
+            </div>
+            <!-- video url -->
+            <div id="videourl-input"  class="form-floating">
+                <input type="text" class="form-control" id="videourl" placeholder="video url">
+                <label for="videourl">Video URL</label>
+            </div>
         </div>
-        <!-- moneda -->
-        <div id="moneda" class="moneda">
+
+        <div class="input-group">
+            <!-- precio -->
+            <div id="prec-input" class="form-floating mb-3">
+                <input type="number" class="form-control" id="precio" placeholder="Precio">
+                <label for="precio">Precio</label>
+            </div>
+            <span class="input-group-addon"></span>
+            <!-- presentacion -->
+            <div id="cantu-input" class="form-floating mb-3">
+                <input type="number" class="form-control" id="cantidadu" placeholder="Cantidad / Unidad">
+                <label for="cantidadu">Presentacion</label>
+            </div>
+            <span class="input-group-addon"></span>
+            <span class="input-group-addon"></span>
+            <!-- stock -->
+            <div id="stock-input" class="form-floating mb-3">
+                <input type="number" class="form-control" id="stock" placeholder="Stock">
+                <label for="stock">Stock</label>
+            </div>
         </div>
-        <!-- precio -->
-        <div id="prec-input" class="form-floating mb-3">
-            <input type="number" class="form-control" id="precio" placeholder="Precio">
-            <label for="precio">Precio</label>
-        </div>
-        <!-- cantidad unidad -->
-        <div id="cantu-input" class="form-floating mb-3">
-            <input type="number" class="form-control" id="cantidadu" placeholder="Cantidad / Unidad">
-            <label for="cantidadu">Cantidad / Unidad</label>
-        </div>
-        <!-- medida -->
-        <div id="medu-input" class="form-floating mb-3">
-            <input type="text" class="form-control" id="medidau" placeholder="Medida / Unidad">
-            <label for="medidau">Medida / Unidad</label>
-        </div>
-        <!-- stock -->
-        <div id="stock-input" class="form-floating mb-3">
-            <input type="number" class="form-control" id="stock" placeholder="Stock">
-            <label for="stock">Stock</label>
-        </div>
-        <!-- medida -->
-        <div id="meds-input" class="form-floating mb-3">
-            <input type="text" class="form-control" id="medidas" placeholder="Medida / Unidad">
-            <label for="medidas">Medida / Unidad</label>
-        </div>
+
         <!-- descripcion -->
         <div id="desc-input" class="form-floating">
             <textarea class="form-control" placeholder="Descripción" id="descripcion" style="height: 100px"></textarea>
             <label for="descripcion">Descripción</label>
         </div>
 
+        <!-- go back -->
+        <a href="../gestion.html">
+            <button id="btn-back" type="button" class="btn btn-outline-danger btn-left btn-back"><i class="fas fa-reply"></i></button>
+        </a>
         <!-- eliminar -->
+        <button id="btn-delete" type="button" class="btn btn-outline-danger btn-left btn-delete"><i class="bi bi-trash-fill"></i></button>
+        <!-- enviar -->
+        <button id="btn-send" type="button" class="btn btn-outline-success btn-right btn-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+
         <button id="del-btn" class="btn btn-outline-danger btn-left">
             <i class="fas fa-trash-alt" aria-hidden="true"></i>
         </button>
-        <!-- enviar -->
         <button id="send-btn" class="btn btn-outline-success btn-right">
             <i class="fas fa-paper-plane" aria-hidden="true"></i>
         </button>
 
-
-        <!-- <div id="form-buttons" class="form-buttons">
-            <button class="btn btn-outline-danger btn-left">
-                <i class="fas fa-trash-alt" aria-hidden="true"></i>
-            </button>
-            <button class="btn btn-outline-success btn-right">
-                <i class="fas fa-paper-plane" aria-hidden="true"></i>
-            </button>
-        </div> -->
     </div>
 
     <!-- ------------------- FOOTER ------------------- -->
