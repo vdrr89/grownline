@@ -30,9 +30,14 @@ html, body {
     height: 50px;
 }
 
-
-.form-buttons{
+.btn-back{
+    display: block;
 }
+
+.btn-delete{
+    display: none;
+}
+
 
 /* FOOTER */
 

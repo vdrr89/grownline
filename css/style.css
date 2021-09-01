@@ -281,7 +281,7 @@ max-width: 800px;
 
   .title-txt{
       display: inline-grid;
-      background-image: url(../img/grownline-logo-02-02.svg); 
+      background-image: url(../img/grownline-logo-white-03.svg); 
       background-repeat: no-repeat;
       width: 100%;
       height: 50%;
@@ -357,7 +357,7 @@ max-width: 800px;
 
   .navbar-logo {
     display: inline-grid;
-    background-image: url(../img/grownline-logo-02-02.svg); 
+    background-image: url(../img/grownline-logo-white-03.svg); 
     background-repeat: no-repeat;
     width: 13%;
     height: 4%;

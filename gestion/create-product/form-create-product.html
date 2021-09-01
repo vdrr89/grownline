@@ -20,14 +20,6 @@
 </head>
 <body>
     
-    <!-- ------------------- Titulo ------------------- -->
-    <div id="titulo" class="title">
-        <a href="../../index.html"> 
-            <div class="title-txt"></div>
-        </a>
-        <p id="titulo-subtitulo" class="subtitle special"></p>
-    </div>
-
     <!-- ------------------- NavBar ------------------- -->
 
     <nav class="vr-navbar">
@@ -80,15 +72,15 @@
 
         <!-- titulo -->
         <div id="titulo"  class="form-floating">
-            <input type="text" class="form-control" id="titulo" placeholder="Título">
-            <label for="titulo">Titulo</label>
+            <input type="text" class="form-control" id="titulo-input" placeholder="Título">
+            <label for="titulo-input">Titulo</label>
         </div>
 
         <div class="input-group">
             <!-- image mini -->
             <span class="input-group-addon"></span>
             <div id="imgmini-input"  class="imgmini-input">
-                <img src="" alt="">
+                <img id="imgmini-input-img" src="" alt="">
             </div>
             <span class="input-group-addon"></span>
             <!-- image url -->
@@ -99,7 +91,7 @@
             <span class="input-group-addon"></span>
             <!-- video mini -->
             <div id="videomini-input"  class="videomini-input">
-                <video src=""></video>
+                <video id="videomini-input-video" src=""></video>
             </div>
             <!-- video url -->
             <div id="videourl-input"  class="form-floating">
@@ -135,11 +127,19 @@
             <label for="descripcion">Descripción</label>
         </div>
 
+        <!-- go back -->
+        <a href="../gestion.html">
+            <button id="btn-back" type="button" class="btn btn-outline-danger btn-left btn-back"><i class="fas fa-reply"></i></button>
+        </a>
         <!-- eliminar -->
+        <button id="btn-delete" type="button" class="btn btn-outline-danger btn-left btn-delete"><i class="bi bi-trash-fill"></i></button>
+        <!-- enviar -->
+        <button id="btn-send" type="button" class="btn btn-outline-success btn-right btn-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+
         <button id="del-btn" class="btn btn-outline-danger btn-left">
             <i class="fas fa-trash-alt" aria-hidden="true"></i>
         </button>
-        <!-- enviar -->
         <button id="send-btn" class="btn btn-outline-success btn-right">
             <i class="fas fa-paper-plane" aria-hidden="true"></i>
         </button>
