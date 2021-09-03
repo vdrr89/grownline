@@ -4,19 +4,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;800&display=swap');
 /* font-family: 'Raleway', sans-serif; */
 
+/* ====================== COLORES ====================== */
+
+:root{
+  --main-light-green-color: #6e911b;
+  --main-green-color: #4E6005;
+  --main-dark-green-color: #2b4102;
+  --main-green-fluor-transp-40-color: #2ee59d66;
+  --main-green-btn-color: #4CAF50;
+  --main-red-btn-color: #BF0404;
+  --main-blue-link-color: #2eaaff;
+  --main-skyblue-btn-color: skyblue;
+  --main-white-color: white;
+  --main-lightgray-color: lightgray;
+  --main-almost-black: #1f1f1f;
+  --main-black-color: black;
+  --main-black-transp-80-color: #00000080;
+  --main-black-transp-10-color: #0000001a;
+  --main-gray-transp-30-color: #63636346;
+}
+
+/* ======================  ====================== */
+
+
 /* ---------------------- HACHES ---------------------- */
   
 h1, h2, h3, h4 {
-    color: #39911b;
-    text-shadow: 2px 2px #ffffff;
+    color: var(--main-green-color);
+    text-shadow: 2px 2px var(--main-white-color);
     font-size: 3rem;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
   }
 
 h5, h6 {  /* es igual pero más chiquito */
-  color: #39911b;
-  text-shadow: 2px 2px #ffffff;
+  color: var(--main-green-color);
+  text-shadow: 2px 2px var(--main-white-color);
   font-size: 2rem;
   font-weight: 800;
   font-family: 'Raleway', sans-serif;
@@ -25,7 +48,7 @@ h5, h6 {  /* es igual pero más chiquito */
 /* ---------------------- PES ---------------------- */
 
 p, li, td, blockquote {
-  color: #1f1f1f;
+  color: var(--main-almost-black);
   font-size: 1.2rem;
   line-height: 1.8rem;
   font-family: 'Raleway', sans-serif;
@@ -37,7 +60,7 @@ p, li, td, blockquote {
   font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  text-shadow: 1px 1px #c1bcbc;
+  text-shadow: 1px 1px var(--main-lightgray-color);
 }
 
 th, button {
@@ -46,12 +69,12 @@ th, button {
   line-height: 1.8rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  text-shadow: 2px 2px 2px #63636346;
+  text-shadow: 2px 2px 2px var(--main-gray-transp-30-color);
 }
 
 .small {
   font-family: 'Raleway', sans-serif;
-  color: #1f1f1f; 
+  color: var(--main-almost-black); 
   font-weight: 400; 
   font-size: 0.7rem;
   line-height: 1.8em;
@@ -92,7 +115,7 @@ a{
 
 a, 
 .small-a{
-  color: #2eaaff;
+  color: var(--main-blue-link-color);
   line-height: 1.8rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -102,12 +125,12 @@ a,
 a:visited, 
 .small-a:visited {
   text-decoration: underline;
-  color: #375009;
+  color: var(--main-green-color);
 }
 
 a:hover, 
 .small-a:hover {
   text-decoration: underline;
-  color:#9ee022;
+  color:var(--main-light-green-color);
   text-shadow: none;
 }

@@ -16,6 +16,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/fuentes.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/responsive.css" type="text/css">
 
     </head>
     <body>
@@ -33,7 +34,11 @@
         <!-- ------------------- NavBar ------------------- -->
 
         <nav class="vr-navbar">
-            <ul>
+            <div id="responsive-btns" class="responsive-btns">
+                <div id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
+                <div id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
+            </div>
+            <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
 
                 <li><a class="vr-nav-link active special" href="#about">Quienes somos</a></li>

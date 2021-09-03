@@ -1,0 +1,15 @@
+@media screen and (max-width: 840px){
+
+    /* ----------------- TITLE ----------------- */
+
+    .title img {
+        height: 100%;
+    }
+
+    /* ----------------- NAVBAR ----------------- */
+
+    .responsive-btns{
+        display: fixed;
+    }
+
+}
