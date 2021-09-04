@@ -1,26 +1,7 @@
-*::selection {
-    background-color: var(--main-light-green-color);
-    }
+@import url(colores.css);
 
-    :root{
-      --main-mega-light-green-color: #c0dab3;
-      --main-light-green-color: #6e911b;
-      --main-green-color: #4E6005;
-      --main-dark-green-color: #2b4102;
-      --main-green-fluor-transp-40-color: #2ee59d66;
-      --main-green-btn-color: #4CAF50;
-      --main-light-red-color: #f0c0c0;
-      --main-red-btn-color: #BF0404;
-      --main-blue-link-color: #2eaaff;
-      --main-skyblue-btn-color: skyblue;
-      --main-light-blue-color: #abd2e2;
-      --main-white-color: white;
-      --main-lightgray-color: lightgray;
-      --main-almost-black: #1f1f1f;
-      --main-black-color: black;
-      --main-black-transp-80-color: #00000080;
-      --main-black-transp-10-color: #0000001a;
-      --main-gray-transp-30-color: #63636346;
+*::selection {
+    background-color: var(--green-light-color);
     }
 
 html, 
@@ -34,7 +15,7 @@ body {
 #about, 
 #faq {
     min-height: 80vh;
-    background-color: var(--main-white-color);
+    background-color: var(--white-color);
     min-width: 100%;
   }
 
@@ -63,7 +44,7 @@ body {
 #contacto >h3::selection, 
 .footer-content > h1::selection, 
 .faq-tit::selection {
-    background-color: var(--main-black-color);
+    background-color: var(--black-color);
     text-shadow: none;
 }
 
@@ -71,15 +52,15 @@ body {
 #contacto, 
 #productos {
     min-height: 50vh;
-    background-color: var(--main-green-color);
+    background-color: var(--green-color);
     padding: 5%;
 }
 
 /* titulos de fondo de color */
 #productos h3,
 #contacto h3 {
-  color: var(--main-white-color);
-  text-shadow: 3px 3px var(--main-black-color);
+  color: var(--white-color);
+  text-shadow: 3px 3px var(--black-color);
 }
 
 .about,  
@@ -98,33 +79,39 @@ max-width: 800px;
   background-repeat: repeat-x;
   width: 100%;
   height: 5%;
-  background-color: var(--main-white-color);
+  background-color: var(--white-color);
 }
 
 .chala-border-down{
   transform: rotate(180deg);
-  background-color: var(--main-white-color);
+  background-color: var(--white-color);
 }
 
 /* ------------------- ALERTAS ------------------- */
 .alert {
   padding: 5%;
   margin: 5%;
-  color: var(--main-almost-black);
+  color: var(--gray90-color);
   border-radius: 10px;
   vertical-align: middle;
 }
 
 .red-alert {
-  background-color: var(--main-light-red-color);
+  color: var(--red-alert-font-color);
+  background-color: var(--red-alert-background-color);
+  border-color: var(--red-alert-border-color);
 }
 
 .green-alert {
-  background-color: var(--main-mega-light-green-color);
+  color: var(--green-alert-font-color);
+  background-color: var(--green-alert-background-color);
+  border-color: var(--green-alert-border-color);
 }
 
 .blue-alert {
-  background-color: var(--main-light-blue-color);
+  color: var(--blue-alert-font-color);
+  background-color: var(--blue-alert-background-color);
+  border-color: var(--blue-alert-border-color);
 }
 
 /* ------------------- BOTONES ------------------- */
@@ -139,11 +126,11 @@ max-width: 800px;
 
 /* el botón de categorias en home */
   .cat-btn{
-    box-shadow: 2px 8px 10px var(--main-black-color);
+    box-shadow: 2px 8px 10px var(--black-color);
     background-color: transparent;
     border-radius:20px;
-    border: 4px solid var(--main-white-color);
-    color: var(--main-white-color);
+    border: 4px solid var(--white-color);
+    color: var(--white-color);
   
     text-shadow:1px 1px 3px var(--main-black-transp-80-color);
   
@@ -151,7 +138,7 @@ max-width: 800px;
   }
   
   .cat-btn:hover{
-    background-color: var(--main-white-color);
+    background-color: var(--white-color);
   }
   
   .cat-i {
@@ -162,7 +149,7 @@ max-width: 800px;
   }
   
   .cat-i:hover {
-      color: var(--main-green-color);
+      color: var(--green-color);
       transform: translateY(7px);
   }
 
@@ -194,51 +181,51 @@ max-width: 800px;
     cursor: pointer;
     border-radius: 45px;
     transition: all 0.3s ease 0s;
-    box-shadow: 0px 8px 15px var(--main-black-transp-10-color);
+    box-shadow: 0px 8px 15px var(--black-transp10-color);
   }
   .btn-rounded:hover {
-    box-shadow: 0px 15px 20px var(--main-green-fluor-transp-40-color);
+    box-shadow: 0px 15px 20px var(--green-fluor-transp-40-color);
     transform: translateY(7px);
   }
 
   .btn-full-green {
-    background-color: var(--main-green-btn-color);
-    color: var(--main-white-color);
+    background-color: var(--green-btn-color);
+    color: var(--white-color);
   }
 
   .btn-full-green:hover {
-    background-color: var(--main-green-color);
-    color: var(--main-lightgray-color);
+    background-color: var(--green-color);
+    color: var(--gray10-color);
   }
 
   .btn-green-inverted {
-    background-color: var(--main-white-color);
-    color: var(--main-green-btn-color);
+    background-color: var(--white-color);
+    color: var(--green-btn-color);
   }
 
   .btn-green-inverted:hover {
-    background-color: var(--main-lightgray-color);
-    color: var(--main-green-btn-color);
+    background-color: var(--gray10-color);
+    color: var(--green-btn-color);
   }
 
   .btn-full-red {
-    background-color: var(--main-red-btn-color);
-    color: var(--main-white-color);
+    background-color: var(--red-btn-color);
+    color: var(--white-color);
   }
 
   .btn-full-red:hover {
-    background-color: var(--main-red-btn-color);
-    color: var(--main-lightgray-color);
+    background-color: var(--red-btn-color);
+    color: var(--gray10-color);
   }
 
   .btn-red-inverted {
-    background-color: var(--main-white-color);
-    color: var(--main-red-btn-color);
+    background-color: var(--white-color);
+    color: var(--red-btn-color);
   }
 
   .btn-red-inverted:hover {
-    background-color: var(--main-lightgray-color);
-    color: var(--main-red-btn-color);
+    background-color: var(--gray10-color);
+    color: var(--red-btn-color);
   }
 
 /* ------------------- FORMULARIOS ------------------- */
@@ -253,7 +240,7 @@ max-width: 800px;
 /* ------------------- SECCIONES ENCUADRADAS ------------------- */
 
 .section-group{
-  background-color: var(--main-dark-green-color);
+  background-color: var(--green-dark-color);
   max-height: 500px;
   display:flex;
   width: 100%;
@@ -270,13 +257,13 @@ max-width: 800px;
 
 .section-group::-webkit-scrollbar-track {
   border-radius: 4px;
-  background-color: var(--main-dark-green-color);
+  background-color: var(--green-dark-color);
   margin: 1% auto;
 }
 
 .section-group::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: var(--main-light-green-color);
+  background-color: var(--green-light-color);
   margin: 1% auto;
 }
 
@@ -285,8 +272,8 @@ max-width: 800px;
   box-sizing: border-box;
   flex: 0 0 auto;
   display: inline-block;
-  background-color: var(--main-green-color);
-  border: 6px solid var(--main-black-color);
+  background-color: var(--green-color);
+  border: 6px solid var(--black-color);
   border-radius: 10px;
   margin: 0 1%;
 }
@@ -340,11 +327,11 @@ max-width: 800px;
     display: block;
     top: 60%;
     left: 30%;
-    color: var(--main-white-color);
+    color: var(--white-color);
     font-size: 2rem;
     font-weight: 500;
     /* background-color: black; */
-    text-shadow: 4px 4px 4px var(--main-black-color);
+    text-shadow: 4px 4px 4px var(--black-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     z-index: -10;;
@@ -353,9 +340,9 @@ max-width: 800px;
   /* ------------------- NAVBAR ------------------- */
 
   .vr-navbar {
-    background-color: var(--main-green-color); /* ojo que está determinado en main.js*/
+    background-color: var(--green-color); /* ojo que está determinado en main.js*/
     padding: 1%; 
-    box-shadow: var(--main-black-color) 0px 5px 10px;
+    box-shadow: var(--black-color) 0px 5px 10px;
     position: sticky;
     position: -webkit-sticky;
     top: 0; /* required */
@@ -372,6 +359,20 @@ max-width: 800px;
     margin: 0 1%;
   } 
 
+  .navbar-logo {
+    display: inline-grid;
+    background-image: url(../img/grownline-logo-white-03.svg); 
+    background-repeat: no-repeat;
+    width: 13%;
+    height: 4%;
+  }
+
+  /* responsive */
+  .responsive-btns{
+    display: none;
+  }
+
+  /* login y button */
   .vr-navbar > form{
       float: right;
       margin: -5 auto;
@@ -385,33 +386,25 @@ max-width: 800px;
  
   .vr-nav-link, 
   .vr-nav-link a {
-    color: var(--main-white-color);
+    color: var(--white-color);
   }
 
   .vr-nav-link:hover, 
   .vr-nav-link a:hover {
-    color: var(--main-skyblue-btn-color);
+    color: var(--skyblue-btn-color);
   }
 
   .vr-nav-link:visited, 
   .vr-nav-link a:visited {
-    color: var(--main-lightgray-color);
+    color: var(--gray10-color);
   }
 
 
-  .navbar-logo {
-    display: inline-grid;
-    background-image: url(../img/grownline-logo-white-03.svg); 
-    background-repeat: no-repeat;
-    width: 13%;
-    height: 4%;
-  }
-
-.responsive-btns{
-  display: none;
+.navbar-username{
+  text-align: center;
 }
 
-/* --- login dropdown --- */
+/* --- login navbar --- */
 
 .login-form{
   width: 25%;
@@ -419,10 +412,18 @@ max-width: 800px;
   margin: 0 2% 0 73%;
   display: grid;
   position: absolute;
-  background-color: var(--main-dark-green-color);
+  background-color: var(--green-dark-color);
   text-align: center;
   border-radius: 10px;
-  border: 3px solid var(--main-black-color);
+  border: 3px solid var(--black-color);
+}
+
+#login-form {
+  display: none;
+}
+
+#user-form{
+  display: none;
 }
 
 
@@ -443,7 +444,7 @@ max-width: 800px;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 2%;
-    color: var(--main-green-color);
+    color: var(--green-color);
 }
 
 /* ------------------- CONTACTO ------------------- */
@@ -468,13 +469,13 @@ max-width: 800px;
   }
   
 .footer-content{
-    background-color: var(--main-black-color);
+    background-color: var(--black-color);
 }
 
 .footer-title{
     text-shadow: none;
     font-size: 2rem;
-    color: var(--main-white-color);
+    color: var(--white-color);
 }
 
 .footer-ul {
@@ -493,13 +494,13 @@ display: inline-block;
 }
 
 .footer-icon:hover{
-    color: var(--main-green-color);
+    color: var(--green-color);
 }
 
 /* FOOTER WAVES */
 
 .waves-background{
-  background-color: var(--main-green-color);
+  background-color: var(--green-color);
 }
 
 .flex-waves-content { /*Flexbox for containers*/
