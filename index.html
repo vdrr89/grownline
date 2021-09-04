@@ -44,29 +44,31 @@
             <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
 
-                <li><a class="vr-nav-link active special" href="#about">Quienes somos</a></li>
+                <li><a class="active vr-nav-link" href="#about">Sobre Nosotros</a></li>
 
-                <li class="vr-nav-item dropdown">
-                    <a class="vr-nav-link dropdown-toggle special" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="dropdown vr-nav-item">
+                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Productos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria1</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria2</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria3</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
                     </ul>
                   </li>
 
-                <li><a class="special" href="#contacto">Contacto</a></li>
-                <li><a class="special" href="#faq">FAQ</a></li>
+                <li><a class="vr-nav-link" href="#contacto">Contacto</a></li>
+                <li><a class="vr-nav-link" href="#faq">FAQ</a></li>
+                <li><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></li>
             </ul>
             <!-- buscar y login btn -->
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">             <span class="input-group-addon"></span>
-                <span class="input-group-addon"></span>
-                <button class="btn btn-green-inverted" type="submit">Buscar</button>
-                <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button>
-                <p class="navbar-username">Usuario</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Buscar">             
+                    <span class="input-group-text btn btn-green-inverted"><i class="fas fa-search"></i></span>
+                </div>
+                <!-- <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"><i class="fas fa-user"></i></button> --> <!-- DARIO ESTE SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
+                <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"><img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic"></button>
             </form>
 
             <!-- Login pop up -->
@@ -105,13 +107,24 @@
             </div>
 
             <div id="user-form" class="all-form login-form">
-                <img src="" alt="user-profile-pic">
-                <p>UserName</p>
+                <div class="nav-bar-pop-up-user-info">
+                    <img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic">
+                    <p>UserName</p>
+                </div>
                 <div id="login-successful-alert" class="alert blue-alert" role="alert">
                     Ha iniciado sesión exitosamente!
                 </div>
-                <button>Settings</button>
-                <button>Cerrar sesión</button>
+                <div class="login-success-btns">
+                    <div class="user-settings">
+                        <button class="btn-simple-rounded user-settings-btn"><i class="fas fa-cog"></i></button>
+                        <div class="hint-container"><p class="hint">Configuración</p></div>
+                    </div>
+                    <div class="user-log-out">
+                        <button class="btn-simple-rounded user-settings-btn"><i class="fas fa-sign-out-alt"></i></button>
+                        <div class="hint-container"><p class="hint">Cerrar Sesión</p></div>
+                    </div>
+                </div>
+
             </div>
         </nav>
 

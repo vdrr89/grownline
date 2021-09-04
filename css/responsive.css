@@ -1,5 +1,18 @@
+/* small computers */
+@media screen and (min-width: 769px) and (max-width: 1024px){
 
-@media screen and (max-width: 840px){
+    .vr-navbar > form{
+        position: relative;
+        height: 5vh;
+        margin-top: 0.1vh;        
+    }
+
+
+}
+
+
+/* phones and tablets */
+@media screen and (max-width: 768px){
 
     /* ----------------- TITLE ----------------- */
 

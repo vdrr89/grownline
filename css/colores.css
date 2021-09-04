@@ -10,7 +10,8 @@ y en caso de cambiarlos, solo se cambia acá
 
     /* verdes principales */
     --green-light-color: #6e911b;
-    --green-color: #4E6005; /* este es el principal */
+    --green-logo-color: #4E6005;
+    --green-color: #78930e; /* este es el principal */
     --green-dark-color: #2b4102;
     --green-fluor-transp-40-color: #2ee59d66; /* abrillantado para efecto en botones */
 
