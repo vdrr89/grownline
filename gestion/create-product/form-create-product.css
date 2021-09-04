@@ -1,20 +1,4 @@
-:root{
-    --main-light-green-color: #6e911b;
-    --main-green-color: #4E6005;
-    --main-dark-green-color: #2b4102;
-    --main-green-fluor-transp-40-color: #2ee59d66;
-    --main-green-btn-color: #4CAF50;
-    --main-red-btn-color: #BF0404;
-    --main-blue-link-color: #2eaaff;
-    --main-skyblue-btn-color: skyblue;
-    --main-white-color: white;
-    --main-lightgray-color: lightgray;
-    --main-almost-black: #1f1f1f;
-    --main-black-color: black;
-    --main-black-transp-80-color: #00000080;
-    --main-black-transp-10-color: #0000001a;
-    --main-gray-transp-30-color: #63636346;
-  }
+@import url(../../css/colores.css);
 
 html, body {
     width: 100%;
@@ -25,7 +9,7 @@ html, body {
     margin: 5% auto;
     max-width: 800px;
     height: 90%;
-    border: 1px solid var(--main-black-color);
+    border: 1px solid var(--black-color);
     padding: 4%;
 }
 
@@ -40,7 +24,7 @@ html, body {
 .videomini-input{
     height: 100px;
     width: 100px;
-    border: 1px solid var(--main-black-color);
+    border: 1px solid var(--black-color);
 }
 
 .form-select{
