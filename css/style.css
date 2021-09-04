@@ -511,7 +511,7 @@ max-width: 800px;
   margin: 5%;
 }
 
-.login-success-btns > .user-settings, 
+.login-success-btns > a > .user-settings, 
 .login-success-btns > .user-log-out {
   margin: 0 5%;
 }
@@ -524,11 +524,11 @@ max-width: 800px;
   color: var(--red-btn-color);
 }
 
-.login-success-btns > .user-settings > button {
+.login-success-btns > a > .user-settings > button {
   border-color: var(--gray90-color);
 }
 
-.login-success-btns > .user-settings > button > i {
+.login-success-btns > a > .user-settings > button > i {
   color: var(--gray90-color);
 }
 
