@@ -426,6 +426,23 @@ max-width: 800px;
   display: none;
 }
 
+#login-successful-alert {
+  display: none;
+}
+
+.open-successfult-login-alert {
+  display: block;
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 
 /* ------------------- CAROUSEL ------------------- */
 

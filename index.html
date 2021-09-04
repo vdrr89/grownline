@@ -60,16 +60,12 @@
                 <li><a class="special" href="#contacto">Contacto</a></li>
                 <li><a class="special" href="#faq">FAQ</a></li>
             </ul>
-<<<<<<< HEAD
-           
-=======
             <!-- buscar y login btn -->
->>>>>>> 1e201fadc44746339be49e388d720967ad466530
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">             <span class="input-group-addon"></span>
                 <span class="input-group-addon"></span>
                 <button class="btn btn-green-inverted" type="submit">Buscar</button>
-                <a href="gestion/gestion.html"><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a>
+                <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button>
                 <p class="navbar-username">Usuario</p>
             </form>
 
@@ -111,6 +107,9 @@
             <div id="user-form" class="all-form login-form">
                 <img src="" alt="user-profile-pic">
                 <p>UserName</p>
+                <div id="login-successful-alert" class="alert blue-alert" role="alert">
+                    Ha iniciado sesión exitosamente!
+                </div>
                 <button>Settings</button>
                 <button>Cerrar sesión</button>
             </div>
