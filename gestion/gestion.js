@@ -14,13 +14,25 @@ let passwordInput = document.getElementById("floatingPassword");
 
 // ENVIAR FORMULARIO
 function okLogin(e){
-    login.style.display = "none";
+  /*  login.style.display = "none";
     allTabs.style.display = "block";
     productos.style.display = "block";
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "none";
-    console.log("okLogin")
+    console.log("okLogin") */
+    console.log("mierda")
+    $.ajax({
+        url: '../api/login.php',
+        type: 'POST',
+        success: function(response)  {
+         // const tasks = JSON.parse(response);
+         console.log("devuelto")
+         console.log(response)
+         //console.log(response.nombre)
+         
+           }
+      })
 }
 //agregar en okLogin enviar formulario y verificar
 
