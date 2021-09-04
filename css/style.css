@@ -452,10 +452,10 @@ max-width: 800px;
 
 /* login dropdown o pop up */
 .login-form{
-  width: 25%;
+  /* width: 25%; */
   align-items: left;
-  margin: 0 2% 0 73%;
-  display: grid;
+  margin: 0 -2% 0 -73%;
+    display: grid;
   position: absolute;
   background-color: var(--green-color);
   text-align: center;
