@@ -33,32 +33,53 @@
         
         <!-- ------------------- NavBar ------------------- -->
 
-        <nav class="vr-navbar">
+        <div id="responsive-nav" class="responsive-nav">
             <!-- hamburguer menu icons -->
-            <div id="responsive-btns" class="responsive-btns">
-                <div id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
-                <div id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
+                <div onclick="openMenu()" id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
+                <div onclick="closeMenu()" id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
             </div>
 
+            <!-- responsive navbar menu -->
+            <div id="responsive-menu" class="responsive-menu">
+                <div class="navbar-logo"></div>
+                <div><a class="vr-nav-link" href="#about">Sobre Nosotros</a></div>
+                <div>
+                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
+                    </ul>
+                </div>
+                <div><a class="vr-nav-link" href="#contacto">Contacto</a></div>
+                <div>><a class="vr-nav-link" href="#faq">FAQ</a></div>
+                <div><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></div>
+            </div>
+        </div>
+
+        <nav class="vr-navbar">
             <!-- menu list -->
             <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
 
-                <li><a class="vr-nav-link active special" href="#about">Quienes somos</a></li>
+                <li><a class="active vr-nav-link" href="#about">Sobre Nosotros</a></li>
 
-                <li class="vr-nav-item dropdown">
-                    <a class="vr-nav-link dropdown-toggle special" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="dropdown vr-nav-item">
+                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Productos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria1</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria2</a></li> 
-                      <li><a class="vr-nav-item dropdown-item special" href="">Categoria3</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
+                      <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
                     </ul>
                   </li>
 
-                <li><a class="special" href="#contacto">Contacto</a></li>
-                <li><a class="special" href="#faq">FAQ</a></li>
+                <li><a class="vr-nav-link" href="#contacto">Contacto</a></li>
+                <li><a class="vr-nav-link" href="#faq">FAQ</a></li>
+                <li><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></li>
             </ul>
 <<<<<<< HEAD
 
@@ -68,11 +89,12 @@
             <!-- buscar y login btn -->
 >>>>>>> e304bfd3b73f41ec1fe7f54cbc8fc121573d4d6a
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">             <span class="input-group-addon"></span>
-                <span class="input-group-addon"></span>
-                <button class="btn btn-green-inverted" type="submit">Buscar</button>
-                <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button>
-                <p class="navbar-username">Usuario</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Buscar">             
+                    <span class="input-group-text btn btn-green-inverted"><i class="fas fa-search"></i></span>
+                </div>
+                <!-- <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"><i class="fas fa-user"></i></button> --> <!-- DARIO ESTE SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
+                <div onclick="loginSuccessful()" id="login-btn" type="button"><img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic"></button>
             </form>
 
             <!-- Login pop up -->
@@ -84,8 +106,8 @@
         
                 <div class="all-login-form">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
-                        <label for="floatingInput">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="email@email.com">
+                        <label for="emailInput">Email</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
@@ -111,13 +133,26 @@
             </div>
 
             <div id="user-form" class="all-form login-form">
-                <img src="" alt="user-profile-pic">
-                <p>UserName</p>
+                <div class="nav-bar-pop-up-user-info">
+                    <img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic">
+                    <p>UserName</p>
+                </div>
                 <div id="login-successful-alert" class="alert blue-alert" role="alert">
                     Ha iniciado sesión exitosamente!
                 </div>
-                <button>Settings</button>
-                <button>Cerrar sesión</button>
+                <div class="login-success-btns">
+                    <div class="user-settings">
+                        <a href="gestion-cuenta-cliente/gestion-cuenta-cliente.html">
+                            <button class="btn-simple-rounded user-settings-btn"><i class="fas fa-cog"></i></button>
+                        </a>
+                        <div class="hint-container"><p class="hint">Configuración</p></div>
+                    </div>
+                    <div class="user-log-out">
+                        <button class="btn-simple-rounded user-settings-btn"><i class="fas fa-sign-out-alt"></i></button>
+                        <div class="hint-container"><p class="hint">Cerrar Sesión</p></div>
+                    </div>
+                </div>
+
             </div>
         </nav>
 
@@ -249,5 +284,6 @@
         <script src="app.js"></script>
         <script src="main.js"></script>
         <script src="gestion/gestion.js"></script>
+        <script src="js/responsive.js"></script>
     </body>
 </html>
