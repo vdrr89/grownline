@@ -1,5 +1,26 @@
 *::selection {
-    background-color: #39911b;
+    background-color: var(--main-light-green-color);
+    }
+
+    :root{
+      --main-mega-light-green-color: #c0dab3;
+      --main-light-green-color: #6e911b;
+      --main-green-color: #4E6005;
+      --main-dark-green-color: #2b4102;
+      --main-green-fluor-transp-40-color: #2ee59d66;
+      --main-green-btn-color: #4CAF50;
+      --main-light-red-color: #f0c0c0;
+      --main-red-btn-color: #BF0404;
+      --main-blue-link-color: #2eaaff;
+      --main-skyblue-btn-color: skyblue;
+      --main-light-blue-color: #abd2e2;
+      --main-white-color: white;
+      --main-lightgray-color: lightgray;
+      --main-almost-black: #1f1f1f;
+      --main-black-color: black;
+      --main-black-transp-80-color: #00000080;
+      --main-black-transp-10-color: #0000001a;
+      --main-gray-transp-30-color: #63636346;
     }
 
 html, 
@@ -13,7 +34,7 @@ body {
 #about, 
 #faq {
     min-height: 80vh;
-    background-color: white;
+    background-color: var(--main-white-color);
     min-width: 100%;
   }
 
@@ -42,7 +63,7 @@ body {
 #contacto >h3::selection, 
 .footer-content > h1::selection, 
 .faq-tit::selection {
-    background-color: black;
+    background-color: var(--main-black-color);
     text-shadow: none;
 }
 
@@ -50,15 +71,15 @@ body {
 #contacto, 
 #productos {
     min-height: 50vh;
-    background-color: #39911b;
+    background-color: var(--main-green-color);
     padding: 5%;
 }
 
 /* titulos de fondo de color */
 #productos h3,
 #contacto h3 {
-  color: white;
-  text-shadow: 3px 3px black;
+  color: var(--main-white-color);
+  text-shadow: 3px 3px var(--main-black-color);
 }
 
 .about,  
@@ -77,12 +98,33 @@ max-width: 800px;
   background-repeat: repeat-x;
   width: 100%;
   height: 5%;
-  background-color: white;
+  background-color: var(--main-white-color);
 }
 
 .chala-border-down{
   transform: rotate(180deg);
-  background-color: white;
+  background-color: var(--main-white-color);
+}
+
+/* ------------------- ALERTAS ------------------- */
+.alert {
+  padding: 5%;
+  margin: 5%;
+  color: var(--main-almost-black);
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.red-alert {
+  background-color: var(--main-light-red-color);
+}
+
+.green-alert {
+  background-color: var(--main-mega-light-green-color);
+}
+
+.blue-alert {
+  background-color: var(--main-light-blue-color);
 }
 
 /* ------------------- BOTONES ------------------- */
@@ -97,19 +139,19 @@ max-width: 800px;
 
 /* el botón de categorias en home */
   .cat-btn{
-    box-shadow: 2px 8px 10px #00000080;
+    box-shadow: 2px 8px 10px var(--main-black-color);
     background-color: transparent;
     border-radius:20px;
-    border: 4px solid #fff;
-    color: #fff;
+    border: 4px solid var(--main-white-color);
+    color: var(--main-white-color);
   
-    text-shadow:1px 1px 3px #00000080;
+    text-shadow:1px 1px 3px var(--main-black-transp-80-color);
   
     cursor:pointer;
   }
   
   .cat-btn:hover{
-    background-color: #fff;
+    background-color: var(--main-white-color);
   }
   
   .cat-i {
@@ -120,7 +162,7 @@ max-width: 800px;
   }
   
   .cat-i:hover {
-      color: #39911b;
+      color: var(--main-green-color);
       transform: translateY(7px);
   }
 
@@ -152,51 +194,51 @@ max-width: 800px;
     cursor: pointer;
     border-radius: 45px;
     transition: all 0.3s ease 0s;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px var(--main-black-transp-10-color);
   }
   .btn-rounded:hover {
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    box-shadow: 0px 15px 20px var(--main-green-fluor-transp-40-color);
     transform: translateY(7px);
   }
 
   .btn-full-green {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--main-green-btn-color);
+    color: var(--main-white-color);
   }
 
   .btn-full-green:hover {
-    background-color: #367c39;
-    color: lightgrey;
+    background-color: var(--main-green-color);
+    color: var(--main-lightgray-color);
   }
 
   .btn-green-inverted {
-    background-color: white;
-    color: #4CAF50;
+    background-color: var(--main-white-color);
+    color: var(--main-green-btn-color);
   }
 
   .btn-green-inverted:hover {
-    background-color: lightgrey;
-    color: #367c39;
+    background-color: var(--main-lightgray-color);
+    color: var(--main-green-btn-color);
   }
 
   .btn-full-red {
-    background-color: #BF0404;
-    color: white;
+    background-color: var(--main-red-btn-color);
+    color: var(--main-white-color);
   }
 
   .btn-full-red:hover {
-    background-color: #a30303;
-    color: lightgray;
+    background-color: var(--main-red-btn-color);
+    color: var(--main-lightgray-color);
   }
 
   .btn-red-inverted {
-    background-color: white;
-    color: #BF0404;
+    background-color: var(--main-white-color);
+    color: var(--main-red-btn-color);
   }
 
   .btn-red-inverted:hover {
-    background-color: lightgray;
-    color: #a30303;
+    background-color: var(--main-lightgray-color);
+    color: var(--main-red-btn-color);
   }
 
 /* ------------------- FORMULARIOS ------------------- */
@@ -211,7 +253,7 @@ max-width: 800px;
 /* ------------------- SECCIONES ENCUADRADAS ------------------- */
 
 .section-group{
-  background-color: green;
+  background-color: var(--main-dark-green-color);
   max-height: 500px;
   display:flex;
   width: 100%;
@@ -228,32 +270,23 @@ max-width: 800px;
 
 .section-group::-webkit-scrollbar-track {
   border-radius: 4px;
-  background-color: darkgreen;
+  background-color: var(--main-dark-green-color);
   margin: 1% auto;
 }
 
 .section-group::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: lightgreen;
+  background-color: var(--main-light-green-color);
   margin: 1% auto;
 }
-
-/* scroll bar hidden */
-/* .section-group::-webkit-scrollbar, 
-.section-group::-webkit-scrollbar-track, 
-.section-group::-webkit-scrollbar-thumb, 
-.section-group::-webkit-scrollbar-button {
-  display: none;
-} */
-
 
 .products-slide{
   padding: 0%;
   box-sizing: border-box;
   flex: 0 0 auto;
   display: inline-block;
-  background-color: green;
-  border: 6px solid black;
+  background-color: var(--main-green-color);
+  border: 6px solid var(--main-black-color);
   border-radius: 10px;
   margin: 0 1%;
 }
@@ -307,11 +340,11 @@ max-width: 800px;
     display: block;
     top: 60%;
     left: 30%;
-    color: white;
+    color: var(--main-white-color);
     font-size: 2rem;
     font-weight: 500;
     /* background-color: black; */
-    text-shadow: 4px 4px 4px #000;
+    text-shadow: 4px 4px 4px var(--main-black-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     z-index: -10;;
@@ -320,9 +353,9 @@ max-width: 800px;
   /* ------------------- NAVBAR ------------------- */
 
   .vr-navbar {
-    background-color: #39911b;
+    background-color: var(--main-green-color); /* ojo que está determinado en main.js*/
     padding: 1%; 
-    box-shadow: #000 0px 5px 10px;
+    box-shadow: var(--main-black-color) 0px 5px 10px;
     position: sticky;
     position: -webkit-sticky;
     top: 0; /* required */
@@ -352,8 +385,19 @@ max-width: 800px;
  
   .vr-nav-link, 
   .vr-nav-link a {
-    color: white;
+    color: var(--main-white-color);
   }
+
+  .vr-nav-link:hover, 
+  .vr-nav-link a:hover {
+    color: var(--main-skyblue-btn-color);
+  }
+
+  .vr-nav-link:visited, 
+  .vr-nav-link a:visited {
+    color: var(--main-lightgray-color);
+  }
+
 
   .navbar-logo {
     display: inline-grid;
@@ -362,6 +406,25 @@ max-width: 800px;
     width: 13%;
     height: 4%;
   }
+
+.responsive-btns{
+  display: none;
+}
+
+/* --- login dropdown --- */
+
+.login-form{
+  width: 25%;
+  align-items: left;
+  margin: 0 2% 0 73%;
+  display: grid;
+  position: absolute;
+  background-color: var(--main-dark-green-color);
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid var(--main-black-color);
+}
+
 
 /* ------------------- CAROUSEL ------------------- */
 
@@ -380,7 +443,7 @@ max-width: 800px;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 2%;
-    color: #39911b;
+    color: var(--main-green-color);
 }
 
 /* ------------------- CONTACTO ------------------- */
@@ -405,13 +468,13 @@ max-width: 800px;
   }
   
 .footer-content{
-    background-color: black;
+    background-color: var(--main-black-color);
 }
 
 .footer-title{
     text-shadow: none;
     font-size: 2rem;
-    color: white;
+    color: var(--main-white-color);
 }
 
 .footer-ul {
@@ -430,13 +493,13 @@ display: inline-block;
 }
 
 .footer-icon:hover{
-    color: #d93b95;
+    color: var(--main-green-color);
 }
 
 /* FOOTER WAVES */
 
 .waves-background{
-  background-color: #39911b;
+  background-color: var(--main-green-color);
 }
 
 .flex-waves-content { /*Flexbox for containers*/

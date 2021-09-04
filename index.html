@@ -16,6 +16,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/fuentes.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/responsive.css" type="text/css">
 
     </head>
     <body>
@@ -33,7 +34,14 @@
         <!-- ------------------- NavBar ------------------- -->
 
         <nav class="vr-navbar">
-            <ul>
+            <!-- hamburguer menu icons -->
+            <div id="responsive-btns" class="responsive-btns">
+                <div id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
+                <div id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
+            </div>
+
+            <!-- menu list -->
+            <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
 
                 <li><a class="vr-nav-link active special" href="#about">Quienes somos</a></li>
@@ -52,13 +60,59 @@
                 <li><a class="special" href="#contacto">Contacto</a></li>
                 <li><a class="special" href="#faq">FAQ</a></li>
             </ul>
+<<<<<<< HEAD
            
+=======
+            <!-- buscar y login btn -->
+>>>>>>> 1e201fadc44746339be49e388d720967ad466530
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">             <span class="input-group-addon"></span>
                 <span class="input-group-addon"></span>
                 <button class="btn btn-green-inverted" type="submit">Buscar</button>
                 <a href="gestion/gestion.html"><button type="button" class="btn btn-green-inverted"><i class="fas fa-user"></i></button></a>
             </form>
+
+            <!-- Login pop up -->
+            <div id="login-form" class="all-form login-form">
+
+                <div class="alert blue-alert" role="alert">
+                    Inicia Sesión para gestionar la tienda.
+                </div>
+        
+                <div class="all-login-form">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
+                        <label for="floatingInput">Email</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+
+                    <div class="forget">
+                        <p class="small-a"><a href="reset-password/reset-password.html"></a>Olvidé mi contraseña</a></p> 
+                        <p class="small white-font">No tienes usuario? <br>puedes <a class="small-a" href="create-user/create-user.html">registrarte aquí</a></p> 
+                    </div>
+                    <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success btn-right"><i class="fas fa-paper-plane"></i></button>
+                    <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger btn-left"><i class="fas fa-trash-alt"></i></button>
+                </div>
+        
+                <div class="alert red-alert" role="alert">
+                    Usuario o contraseña incorrecta. 
+                </div>
+        
+                <div class="alert red-alert" role="alert">
+                    El usuario no existe, desea <a href="create-user/create-user.html"> crear un usuario nuevo?</a> 
+                </div>
+        
+            </div>
+
+            <div id="user-form" class="all-form login-form">
+                <img src="" alt="user-profile-pic">
+                <p>UserName</p>
+                <button>Settings</button>
+                <button>Cerrar sesión</button>
+            </div>
         </nav>
 
         <!-- ------------------- Carousel ------------------- -->

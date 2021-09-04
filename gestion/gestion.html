@@ -20,16 +20,6 @@
 </head>
 <body>
 
-    <!-- ------------------- Titulo ------------------- -->
-<!--     
-    <div id="titulo" class="title">
-        <img src="img/chala-color.jpeg" alt="">
-        <a href="">  
-            <div class="title-txt"></div>
-        </a>
-        <p id="titulo-subtitulo" class="subtitle"></p>
-    </div> -->
-
     <!-- ------------------- NavBar ------------------- -->
 
     <nav class="vr-navbar">
@@ -62,7 +52,7 @@
     <!-- ------------------- Login Form ------------------- -->
     <div id="login-form" class="all-form section">
 
-        <div class="alert alert-primary" role="alert">
+        <div class="alert blue-alert" role="alert">
             Inicia Sesión para gestionar la tienda.
         </div>
 
@@ -78,19 +68,19 @@
                 </div>
             </div>
             <div class="forget">
-                <p class="small"><a class="small-a" href="reset-password/reset-password.html">Olvidé mi contraseña</a></p> 
-                <p class="small">No tienes usuario? puedes <a class="small-a" href="create-user/create-user.html">registrarte aquí</a></p> 
+                <p class="small-a"><a class="small-a" href="reset-password/reset-password.html">Olvidé mi contraseña</a></p> 
+                <p class="small almost-black-font">No tienes usuario? puedes <a class="small-a" href="create-user/create-user.html">registrarte aquí</a></p> 
             </div>
             <button onclick="okLogin()" id ="send-login" type="button" class="send btn btn-outline-success btn-right"><i class="fas fa-paper-plane"></i></button>
             <button onclick="deleteLoginForm()" type="button" class="cancel btn btn-outline-danger btn-left"><i class="fas fa-trash-alt"></i></button>
         </div>
 
-        <div class="alert alert-danger login-incorrect" role="alert">
+        <div class="alert red-alert" role="alert">
             Usuario o contraseña incorrecta. 
         </div>
 
-        <div class="alert alert-danger login-ghost" role="alert">
-            El usuario no existe, desea <a href=""> crear un usuario nuevo?</a> 
+        <div class="alert red-alert" role="alert">
+            El usuario no existe, desea <a href="create-user/create-user.html"> crear un usuario nuevo?</a> 
         </div>
 
     </div>

@@ -1,3 +1,21 @@
+:root{
+    --main-light-green-color: #6e911b;
+    --main-green-color: #4E6005;
+    --main-dark-green-color: #2b4102;
+    --main-green-fluor-transp-40-color: #2ee59d66;
+    --main-green-btn-color: #4CAF50;
+    --main-red-btn-color: #BF0404;
+    --main-blue-link-color: #2eaaff;
+    --main-skyblue-btn-color: skyblue;
+    --main-white-color: white;
+    --main-lightgray-color: lightgray;
+    --main-almost-black: #1f1f1f;
+    --main-black-color: black;
+    --main-black-transp-80-color: #00000080;
+    --main-black-transp-10-color: #0000001a;
+    --main-gray-transp-30-color: #63636346;
+  }
+
 /* HEADER */
 
 .title-txt{
@@ -21,9 +39,10 @@
     display: none;
 }
 
-.all-login-form {
+/* sustituido en style cssa */
+/* .all-login-form {
     margin: 5% auto;
-}
+} */
 
 .forget{
     text-align: center;
@@ -32,6 +51,10 @@
 
 #login-form{
     display: block;
+}
+
+.forget > p {
+    color: var(--main-white-color);
 }
 
 /* FILTER AND ADD SECTION */
@@ -48,7 +71,7 @@
 }
 
 #productos-filter-add{
-    display: block;
+    display: inline-flex
 }
 
 /* GESTION TABS CONTENT */
@@ -107,13 +130,12 @@
 .fixed-col2, 
 .fixed-col3 {
     position: absolute;
-    display: block;
     overflow: hidden;
     padding: 0 50px;
 }
 
 .fixed-col2{
-    right: 5%;
+    /* right: 5%; */
 }
 
 /* delete button en tabla */
@@ -139,7 +161,7 @@
 
 .gestion-titles{
     display: inline-flex;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px var(--main-black-color);
     position: sticky;
 }
 
@@ -154,22 +176,25 @@
   /* --- */
   
   .clickeable{
-    background-color: white;
-    border: 3px solid skyblue;
-    color: skyblue;
+    background-color: var(--main-white-color);
+    border: 3px solid var(--main-skyblue-btn-color);
+    color: var(--main-skyblue-btn-color);
     font-weight: bold;
     border-radius: 10px;
     padding: 10px;
 
-    position: absolute;
     display: block;
     overflow: hidden;
+
+    /* quitando el display block y colocando lo de abajo queda fijo y pero al correr de los renglones no qued bien */
+    /* position: absolute;
+    margin-top: -25px; */
   }
   
   .clickeable:hover{
-    background-color: skyblue;
-    border: 3px solid skyblue;
-    color: white;
+    background-color: var(--main-skyblue-btn-color);
+    border: 3px solid var(--main-skyblue-btn-color);
+    color: var(--main-white-color);
     font-weight: bold;
     border-radius: 10px;
     padding: 10px;
