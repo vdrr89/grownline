@@ -339,7 +339,7 @@ max-width: 800px;
 }
 
 .title img{
-  z-index: -10;
+  z-index: -20;
   display: block;
   position: fixed;
   width: 100%;
@@ -360,7 +360,7 @@ max-width: 800px;
   text-shadow: 4px 4px 4px var(--black-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  z-index: -10;;
+  z-index: -10;
 }
 
 /* ------------------- NAVBAR ------------------- */
@@ -443,11 +443,11 @@ max-width: 800px;
   color: var(--blue-link-color);
 }
 
-/* responsive btns */
-.responsive-btns{
+/* responsive nav */
+.responsive-nav, 
+.responsive-menu {
   display: none;
 }
-
 
 
 /* login dropdown o pop up */
