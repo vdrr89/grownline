@@ -3,14 +3,17 @@
     }
 
     :root{
+      --main-mega-light-green-color: #c0dab3;
       --main-light-green-color: #6e911b;
       --main-green-color: #4E6005;
       --main-dark-green-color: #2b4102;
       --main-green-fluor-transp-40-color: #2ee59d66;
       --main-green-btn-color: #4CAF50;
+      --main-light-red-color: #f0c0c0;
       --main-red-btn-color: #BF0404;
       --main-blue-link-color: #2eaaff;
       --main-skyblue-btn-color: skyblue;
+      --main-light-blue-color: #abd2e2;
       --main-white-color: white;
       --main-lightgray-color: lightgray;
       --main-almost-black: #1f1f1f;
@@ -101,6 +104,27 @@ max-width: 800px;
 .chala-border-down{
   transform: rotate(180deg);
   background-color: var(--main-white-color);
+}
+
+/* ------------------- ALERTAS ------------------- */
+.alert {
+  padding: 5%;
+  margin: 5%;
+  color: var(--main-almost-black);
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.red-alert {
+  background-color: var(--main-light-red-color);
+}
+
+.green-alert {
+  background-color: var(--main-mega-light-green-color);
+}
+
+.blue-alert {
+  background-color: var(--main-light-blue-color);
 }
 
 /* ------------------- BOTONES ------------------- */
@@ -386,6 +410,22 @@ max-width: 800px;
 .responsive-btns{
   display: none;
 }
+
+/* --- login dropdown --- */
+
+.login-form{
+  width: 25%;
+  align-items: left;
+  margin: 0 2% 0 73%;
+  display: grid;
+  position: absolute;
+  background-color: var(--main-dark-green-color);
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid var(--main-black-color);
+}
+
+
 /* ------------------- CAROUSEL ------------------- */
 
 

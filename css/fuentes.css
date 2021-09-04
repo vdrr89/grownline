@@ -72,12 +72,20 @@ th, button {
   text-shadow: 2px 2px 2px var(--main-gray-transp-30-color);
 }
 
-.small {
+.small { /* poner con color de fuente x ej clases almost-black-font o white-font */
   font-family: 'Raleway', sans-serif;
-  color: var(--main-almost-black); 
   font-weight: 400; 
   font-size: 0.7rem;
   line-height: 1.8em;
+}
+
+.almost-black-font{
+  color: var(--main-almost-black); 
+
+}
+
+.white-font {
+  color: var(--main-white-color);
 }
 
 .longText{
