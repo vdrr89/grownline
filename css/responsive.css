@@ -1,13 +1,14 @@
+@import url(../css/colores.css);
+
 /* small computers */
 @media screen and (min-width: 769px) and (max-width: 1024px){
 
+    /* navbar search and login right group */
     .vr-navbar > form{
         position: relative;
         height: 5vh;
         margin-top: 0.1vh;        
     }
-
-
 }
 
 
@@ -22,8 +23,39 @@
 
     /* ----------------- NAVBAR ----------------- */
 
-    .responsive-btns{
-        display: fixed;
+    /* div contenedor de menu buttons */
+    .responsive-nav{
+        position: fixed;
+        z-index: 100;
+        top: 5px;
+        left: 5px;
+    }
+
+    /* botón abrir y cerrar menu */
+    .responsive-nav > div {
+        margin: 2% auto auto 2%;
+        text-shadow: 2px 2px 2px black;
+        color: var(--white-color);
+        font-size: 40;
+    }
+
+    .hamburguer-menu-icon {
+        display: block;
+    }
+
+    .x-menu-icon{
+        display: none;
+    }
+
+    /* lista del menu en el responsive */
+    .responsive-menu {
+        display: none;
+    }
+
+    /* navbar list for bigger screens */
+    #navbar-list, 
+    .vr-navbar {
+        display: none;
     }
 
 }

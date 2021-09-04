@@ -33,13 +33,33 @@
         
         <!-- ------------------- NavBar ------------------- -->
 
-        <nav class="vr-navbar">
+        <div id="responsive-nav" class="responsive-nav">
             <!-- hamburguer menu icons -->
-            <div id="responsive-btns" class="responsive-btns">
-                <div id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
-                <div id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
+                <div onclick="openMenu()" id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
+                <div onclick="closeMenu()" id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
             </div>
 
+            <!-- responsive navbar menu -->
+            <div id="responsive-menu" class="responsive-menu">
+                <div class="navbar-logo"></div>
+                <div><a class="vr-nav-link" href="#about">Sobre Nosotros</a></div>
+                <div>
+                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
+                    <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
+                    </ul>
+                </div>
+                <div><a class="vr-nav-link" href="#contacto">Contacto</a></div>
+                <div>><a class="vr-nav-link" href="#faq">FAQ</a></div>
+                <div><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></div>
+            </div>
+        </div>
+
+        <nav class="vr-navbar">
             <!-- menu list -->
             <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
@@ -80,8 +100,8 @@
         
                 <div class="all-login-form">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="email@email.com">
-                        <label for="floatingInput">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="email@email.com">
+                        <label for="emailInput">Email</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
@@ -258,5 +278,6 @@
         <script src="app.js"></script>
         <script src="main.js"></script>
         <script src="gestion/gestion.js"></script>
+        <script src="js/responsive.js"></script>
     </body>
 </html>
