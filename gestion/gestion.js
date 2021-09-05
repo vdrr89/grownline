@@ -14,13 +14,13 @@ let passwordInput = document.getElementById("floatingPassword");
 
 // ENVIAR FORMULARIO
 function okLogin(e){
-  /*  login.style.display = "none";
+   login.style.display = "none";
     allTabs.style.display = "block";
     productos.style.display = "block";
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "none";
-    console.log("okLogin") */
+    console.log("okLogin") 
     console.log("mierda")
     $.ajax({
         url: '../api/login.php',

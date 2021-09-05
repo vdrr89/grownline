@@ -1,3 +1,5 @@
+let sesion
+
 $(document).ready(function() {
     $.ajax({
         url: 'api/usr.php',
@@ -6,9 +8,9 @@ $(document).ready(function() {
          // const tasks = JSON.parse(response);
          console.log(response)
          //console.log(response.nombre)
-         console.log(response.usr)
+         sesion = response.usr
          let template = `${response.usr}`
-         $('#usuario').html(template)
+         $('#nombre-de-usuario').html(sesion)
          
    
          
