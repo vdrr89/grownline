@@ -27,7 +27,7 @@ function okLogin(e){
         type: 'POST',
         success: function(response)  {
          // const tasks = JSON.parse(response);
-         console.log("devuelto")
+         console.log("iniciada la sesion")
          console.log(response)
          //console.log(response.nombre)
          
@@ -42,6 +42,17 @@ function deleteLoginForm(){
     passwordInput.value = "";
     console.log("deleteLoginForm");
     // mostrar boton con flecha para ir para atras el cual tendria link para ir para atras
+    $.ajax({
+        url: '../api/cerrar-sesion.php',
+        type: 'POST',
+        success: function(response)  {
+         // const tasks = JSON.parse(response);
+         console.log("sesion cerrada")
+         console.log(response)
+         //console.log(response.nombre)
+         
+           }
+      })
 }
 
 // ------------------- FUNCIONES TABS -------------------

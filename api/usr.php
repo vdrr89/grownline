@@ -7,7 +7,7 @@ if(isset($_SESSION['usr'])){
     $jsonstring = json_encode($json[0]);
     echo $jsonstring;
 }elseif(!isset($_SESSION['usr'])){
-    $json[] = array('usr' => 'invitado1');
+    $json[] = array('usr' => 'invitado');
     $jsonstring = json_encode($json[0]);
     echo $jsonstring;
 }
