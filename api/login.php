@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['usr'] = "usrx";
-//header("Location: ../index.html");
+
+$usr = $_POST['nom_usr'];
+$_SESSION['usr'] = $usr;
 
 ?>
