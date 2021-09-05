@@ -9,7 +9,7 @@ $(document).ready(function() {
          console.log(response)
          //console.log(response.nombre)
          sesion = response.usr
-         let template = `${response.usr}`
+         //let template = `${response.usr}`
          $('#nombre-de-usuario').html(sesion)
          
    
