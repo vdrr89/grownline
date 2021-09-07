@@ -113,6 +113,7 @@ var prodTitle = document.getElementById("prod-title");
 prodTitle.innerHTML = '<div class="prod-title"><ul class="gestion-titles"><li>' + prodTableTitle.cod + '</li><li>' + prodTableTitle.img + '</li><li>' + prodTableTitle.video + '</li><li>' + prodTableTitle.titulo + '</li><li>' + prodTableTitle.cat + '</li><li>' + prodTableTitle.precio + '</li><li>' + prodTableTitle.cantidad + '</li><li>' + prodTableTitle.med + '</li><li>' + prodTableTitle.stock + '</li><li>' + prodTableTitle.medida + '</li><li>' + prodTableTitle.descripcion + '</li><li>' + prodTableTitle.comp + '</li></ul></div>';
 
 // contenidos
+/*
 var prodTableContent = [
     {
         img: 'img/top-crop/top-crop-1.jpg',
@@ -143,16 +144,29 @@ var prodTableContent = [
         composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
     }
 ];
+*/
+$(document).ready(function() {
 
+    var prodTableContent = new Array()
 
 var prodContent = document.getElementById("prod-content");   
 var clickeable = new Array(prodTableContent.length)
 var collapsable = new Array(prodTableContent.length)
 console.log(clickeable.length)
 
-prodTableContent.forEach(function(el, i){
+
+ 
+        $.ajax({
+          url: '../api/productos.php',
+          type: 'GET',
+          success: function(res) {
+              console.log(res)
+              prodTableContent = res
+
+
+res.forEach(function(el, i){
     prodContent.innerHTML += 
-      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + el.cod + '</td><td><img class="gestion-img" src="' + el.img + '"></td><td>' + el.video + '</td><td>' + el.titulo + '</td><td>' + el.categoria + '</td><td>' + el.precio + '</td><td>' + el.cantidad + '</td><td>' + el.med + '</td><td>' + el.stock + '</td><td>' + el.medida + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.descripcion + el.composicion + '</div></td></tr>';
+      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + el.id + '</td><td><img class="gestion-img" src="' + el.lnk_img + '"></td><td>' + "sin video" + '</td><td>' + el.nombre + '</td><td>' + "sin categoria" + '</td><td>' + el.precio + '</td><td>' + el.cantidad + '</td><td>' + "no hay med"+ '</td><td>' + el.cantidad + '</td><td>' + "no hay medida" + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.descripcion + "sin composicion" + '</div></td></tr>';
      
       
     })
@@ -173,6 +187,14 @@ for(let i = 0; i < prodTableContent.length; i++){
         }
       });
 
+    }
+}
+
+});
+
+});
+
+
     // funciona pero solo me abre el collapsable1 y no el 0, osea, es como si no usara el [i]
     // usar con onclick=(openCollapsable())
     // function openCollapsable(){
@@ -182,8 +204,6 @@ for(let i = 0; i < prodTableContent.length; i++){
     //         collapsable.style.display ="none"
     //     }
     // }
-
-}
 
 // fetch api json 
 /*

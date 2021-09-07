@@ -2,7 +2,7 @@
 session_start();
 
 function guardar($sent){
-    $link = mysqli_connect("localhost", "usr1", "pass1", "usuarios");
+    $link = mysqli_connect("localhost", "usr1", "pass1", "tienda_passe");
     if (mysqli_connect_errno()) {
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
@@ -16,7 +16,7 @@ function guardar($sent){
 }
 
 function obtener($sent){
-    $link = mysqli_connect("localhost", "usr1", "pass1", "usuarios");
+    $link = mysqli_connect("localhost", "usr1", "pass1", "tienda_passe");
     if (mysqli_connect_errno()) {
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
