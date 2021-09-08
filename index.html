@@ -34,35 +34,35 @@
         
         <!-- ------------------- NavBar ------------------- -->
 
+        <!-- hamburguer menu icons -->
         <div id="responsive-nav" class="responsive-nav">
-            <!-- hamburguer menu icons -->
-                <div onclick="openMenu()" id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
-                <div onclick="closeMenu()" id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
-            </div>
-
-            <!-- responsive navbar menu -->
-            <div id="responsive-menu" class="responsive-menu">
-                <div class="navbar-logo"></div>
-                <div><a class="vr-nav-link" href="#about">Sobre Nosotros</a></div>
-                <div>
-                    <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
-                    <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
-                    <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
-                    </ul>
-                </div>
-                <div><a class="vr-nav-link" href="#contacto">Contacto</a></div>
-                <div>><a class="vr-nav-link" href="#faq">FAQ</a></div>
-                <div><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></div>
-            </div>
-            <div id="responsive-menu-cover" class="responsive-menu-cover"></div>
+            <div onclick="openMenu()" id="hamburguer-menu-icon" class="hamburguer-menu-icon"><i class="bi bi-list"></i></div>
+            <div onclick="closeMenu()" id="x-menu-icon" class="x-menu-icon"><i class="bi bi-x-lg"></i></div>
         </div>
 
+        <!-- responsive navbar menu -->
+        <div id="responsive-menu" class="responsive-menu">
+            <div class="navbar-logo"></div>
+            <div><a class="vr-nav-link" href="#about">Sobre Nosotros</a></div>
+            <div>
+                <a class="vr-nav-link dropdown-toggle" href="#productos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Productos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item vr-nav-link" href="">Categoria1</a></li> 
+                <li><a class="dropdown-item vr-nav-link" href="">Categoria2</a></li> 
+                <li><a class="dropdown-item vr-nav-link" href="">Categoria3</a></li> 
+                </ul>
+            </div>
+            <div><a class="vr-nav-link" href="#contacto">Contacto</a></div>
+            <div>><a class="vr-nav-link" href="#faq">FAQ</a></div>
+            <div><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></div>
+        </div>
+        <div id="responsive-menu-cover" class="responsive-menu-cover"></div> <!-- responsive-menu-cover sirve para cuando click en menu => fondo negro para no ver la página y solo ver el menu -->
 
+        <!-- nav bar para desktop -->
         <nav class="vr-navbar">
+
             <!-- menu list -->
             <ul id="navbar-list">
                 <a href=""><li class="navbar-logo"></li></a> 
@@ -86,14 +86,18 @@
             </ul>
 
             <!-- buscar y login btn -->
-
             <form class="d-flex">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search" aria-label="Buscar">             
                     <span class="input-group-text btn btn-green-inverted"><i class="fas fa-search"></i></span>
                 </div>
-                <!-- <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"><i class="fas fa-user"></i></button> --> <!-- DARIO ESTE SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
-                <div onclick="loginSuccessful()" id="login-btn" type="button"><img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic"></button>
+                <!-- DARIO ESTE DE ABAJO SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
+                <!-- <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"> 
+                    <i class="fas fa-user"></i>
+                </button> --> 
+                <div onclick="loginSuccessful()" id="login-btn" type="button">
+                    <img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic">
+                </div>
             </form>
 
             <!-- Login pop up -->
