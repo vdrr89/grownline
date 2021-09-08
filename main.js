@@ -11,11 +11,11 @@ tituloSubtitulo.innerHTML = "Tu tienda de cultivo online!";
 
 // ------------------- NAVBAR -------------------
 var loginBtn = document.getElementById("login-btn");
-var userForm = document.getElementById("user-form");
+//var userForm = document.getElementById("user-form");
 var loginSuccessfulAlert = document.getElementById("login-successful-alert");
 
 // loginBtn.addEventListener("click", loginSuccessful());
-
+/*
 function loginSuccessful(){
     if(userForm.style.display === "none"){
         userForm.style.display = "block";
@@ -30,7 +30,7 @@ function loginSuccessful(){
         loginSuccessfulAlert.style.display = "none";
         console.log("loginSuccessful else")
     }
-}
+} */
 
 // ------------------- ABOUT -------------------
 var aboutTxt = document.getElementById("about");
