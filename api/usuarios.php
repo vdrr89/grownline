@@ -1,36 +1,36 @@
 <?php
-//hola
-//ALTER TABLE `usuarios` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+// DARIO estuve toqueteando toda esta página, fijate si está todo en orden
 include_once 'db.php';
 header("Content-Type: application/json");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_POST = json_decode(file_get_contents('php://input'), true);
-    $sent = "insert into usuarios (nombre, apellido, fechaNac, pais) values 
-    ('".$_POST['nombre']."', '".$_POST['apellido']."', '".$_POST['fechaNac']."', '".$_POST['pais']."') ";
+    $sent = "insert into usuarios (username, email, profilepic, nombre, apellido, fechaNac, pais, categoria) values 
+    ('".$_POST['username']."', '".$_POST['email']."', '".$_POST['profilepic']."', '".$_POST['nombre']."', '".$_POST['apellido']."', '".$_POST['fechaNac']."', '".$_POST['pais']."', '".$_POST['categoria']."') ";
     guardar($sent);
          
 }elseif($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(isset($_GET['id'])){
-        $sent = "select * from usuarios where id = " . $_GET['id'];
+        $sent = "select * from usu where id = " . $_GET['id'];
         $result = obtener($sent);
         echo json_encode(mysqli_fetch_assoc($result));
     } elseif (!isset($_GET['id'])){
-        $sent = "select * from usuarios";
+        $sent = "select * from usu";
         $result = obtener($sent);
         
         $json = array();
         while($row = mysqli_fetch_array($result)) {
           $json[] = array(
-            'id' => $row['id'], // DARIO agregué este, agregar a BD
-            'username' => $row['username'], // DARIO agregué este, agregar a BD
-            'email' => $row['email'], // DARIO agregué este, agregar a BD
-            'profilepic' => $row['profilepic'] // DARIO agregué este, agregar a BD
+            'username' => $row['username'], 
+            'email' => $row['email'], 
+            'profilepic' => $row['profilepic'] 
             'nombre' => $row['nombre'],
             'apellido' => $row['apellido'],
-            'fechaNac' => $row['fechaNac'], // DARIO creo que agregué este
+            'fechaNac' => $row['fechaNac'], 
+            'telefono' => $row['telefono'], 
+            'direccion' => $row['direccion'],
             'pais' => $row['pais'], 
-            'categoria' => $row['categoria'] // DARIO agregué este, agregar a BD
+            'categoria' => $row['categoria'] 
           );
         }
         $jsonstring = json_encode($json);
@@ -39,13 +39,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }elseif($_SERVER['REQUEST_METHOD'] == 'PUT'){
     $put = json_decode(file_get_contents('php://input'), true);
-    $sent = "update usuarios set nombre = '" .$put['nombre']. "', 
-    apellido = '" .$put['apellido']. "', fechaNac = '" .$put['fechaNac'].
-    "', pais = '".$put['pais']. "' where id = " . $_GET['id'];
+    $sent = "update usuarios set username = '" .$put['username']. "', 
+    profilepic = '" .$put['profilepic']. "', nombre = '" .$put['nombre'].
+    "', apellido = '".$put['apellido']. "', fechaNac = '" .$put['fechaNac']. 
+    "', pais = '".$put['pais']. "', categoria = '" .$put['categoria'] "' where id = " . $_GET['id'];
     guardar($sent);
     
 }elseif($_SERVER['REQUEST_METHOD'] == 'DELETE'){
-    $sent = "delete from usuarios where id = " . $_GET['id'];
+    $sent = "delete from usu where id = " . $_GET['id'];
     guardar($sent);
 }
 

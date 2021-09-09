@@ -8,6 +8,8 @@ let productos = document.getElementById("gestion-productos");
 let usuarios = document.getElementById("gestion-usuarios");
 let mensajes = document.getElementById("gestion-mensajes");
 let ventas = document.getElementById("gestion-ventas");
+let posts = document.getElementById("gesion-posts");
+let pagina = document.getElementById("gesion-pagina");
 
 let emailInput = document.getElementById("floatingInput");
 let passwordInput = document.getElementById("floatingPassword");
@@ -55,6 +57,8 @@ function tabProductos(){
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabProductos")
     // VDRR89 modificar estilo de fuente y background de tab
 }
@@ -67,6 +71,8 @@ function tabUsuarios(){
     usuarios.style.display = "block";
     mensajes.style.display = "none";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabUsuarios")
 }
 
@@ -78,6 +84,8 @@ function tabMensajes(){
     usuarios.style.display = "none";
     mensajes.style.display = "block";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabMensajes")
 }
 
@@ -89,7 +97,35 @@ function tabVentas(){
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "block";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabVentas")
+}
+
+// TAB POSTS
+function tabPosts(){
+    login.style.display = "none";
+    allTabs.style.display = "block";
+    productos.style.display = "none";
+    usuarios.style.display = "none";
+    mensajes.style.display = "none";
+    ventas.style.display = "none";
+    posts.style.display = "block";
+    pagina.style.display = "none";
+    console.log("tabPosts")
+}
+
+// TAB PAGINA
+function tabPagina(){
+    login.style.display = "none";
+    allTabs.style.display = "block";
+    productos.style.display = "none";
+    usuarios.style.display = "none";
+    mensajes.style.display = "none";
+    ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "block";
+    console.log("tabPagina")
 }
 
 // ------------------- CONTENIDO PRODUCTOS -------------------
