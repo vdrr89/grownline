@@ -145,13 +145,16 @@ var prodTableContent = [
     }
 ];
 */
+let editar = false
 $(document).ready(function() {
 
     var prodTableContent = new Array()
 
-var prodContent = document.getElementById("prod-content");   
-var clickeable = new Array(prodTableContent.length)
-var collapsable = new Array(prodTableContent.length)
+let prodContent = document.getElementById("prod-content");   
+let clickeable = new Array(prodTableContent.length)
+let collapsable = new Array(prodTableContent.length)
+let btn_edit = new Array(prodTableContent.length)
+let btn_del = new Array(prodTableContent.length)
 console.log(clickeable.length)
 
 
