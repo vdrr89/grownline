@@ -22,10 +22,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $json = array();
         while($row = mysqli_fetch_array($result)) {
           $json[] = array(
+            'id' => $row['id'], // DARIO agregué este, agregar a BD
+            'username' => $row['username'], // DARIO agregué este, agregar a BD
+            'email' => $row['email'], // DARIO agregué este, agregar a BD
+            'profilepic' => $row['profilepic'] // DARIO agregué este, agregar a BD
             'nombre' => $row['nombre'],
             'apellido' => $row['apellido'],
-            'fechaNac' => $row['fechaNac'],
-            'pais' => $row['pais']
+            'fechaNac' => $row['fechaNac'], // DARIO creo que agregué este
+            'pais' => $row['pais'], 
+            'categoria' => $row['categoria'] // DARIO agregué este, agregar a BD
           );
         }
         $jsonstring = json_encode($json);

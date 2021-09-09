@@ -12,7 +12,8 @@ let ventas = document.getElementById("gestion-ventas");
 let emailInput = document.getElementById("floatingInput");
 let passwordInput = document.getElementById("floatingPassword");
 
-// ENVIAR FORMULARIO
+// ------------------- FORMULARIO -------------------
+//  ENVIAR FORMULARIO 
 function okLogin(e){
    login.style.display = "none";
     allTabs.style.display = "block";
@@ -30,18 +31,18 @@ function okLogin(e){
          console.log("devuelto")
          console.log(response)
          //console.log(response.nombre)
-         
-           }
-      })
+        }
+      }
+    )
 }
-//agregar en okLogin enviar formulario y verificar
+// agregar en okLogin enviar formulario y verificar
 
-//BORRAR FORMULARIO
+// BORRAR FORMULARIO 
 function deleteLoginForm(){
     emailInput.value = "";
     passwordInput.value = "";
     console.log("deleteLoginForm");
-    // mostrar boton con flecha para ir para atras el cual tendria link para ir para atras
+    // VDRR89 mostrar boton con flecha para ir para atras el cual tendria link para ir para atras
 }
 
 // ------------------- FUNCIONES TABS -------------------
@@ -55,7 +56,7 @@ function tabProductos(){
     mensajes.style.display = "none";
     ventas.style.display = "none";
     console.log("tabProductos")
-    // modificar estilo de fuente y background de tab
+    // VDRR89 modificar estilo de fuente y background de tab
 }
 
 // TAB USUARIOS
@@ -113,97 +114,164 @@ var prodTitle = document.getElementById("prod-title");
 prodTitle.innerHTML = '<div class="prod-title"><ul class="gestion-titles"><li>' + prodTableTitle.cod + '</li><li>' + prodTableTitle.img + '</li><li>' + prodTableTitle.video + '</li><li>' + prodTableTitle.titulo + '</li><li>' + prodTableTitle.cat + '</li><li>' + prodTableTitle.precio + '</li><li>' + prodTableTitle.cantidad + '</li><li>' + prodTableTitle.med + '</li><li>' + prodTableTitle.stock + '</li><li>' + prodTableTitle.medida + '</li><li>' + prodTableTitle.descripcion + '</li><li>' + prodTableTitle.comp + '</li></ul></div>';
 
 // contenidos
-/*
-var prodTableContent = [
-    {
-        img: 'img/top-crop/top-crop-1.jpg',
-        video: 'https://youtu.be/EqeYE2Ms_U0',
-        cod: '000',
-        titulo: 'Cromplete Mix',
-        categoria: 'Top Crop',
-        precio: '500',
-        cantidad: '50',
-        med: 'l',
-        stock: '10',
-        medida: 'u', 
-        descripcion: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
-        composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
-    }, 
-    {
-        img: 'img/top-crop/top-crop-1.jpg',
-        video: 'https://youtu.be/EqeYE2Ms_U0',
-        cod: '001',
-        titulo: 'Cromplete Mix',
-        categoria: 'Top Crop',
-        precio: '500',
-        cantidad: '50',
-        med: 'l',
-        stock: '10',
-        medida: 'u', 
-        descripcion: 'Complete Mix de Top Crop es un sustrato de primerísima calidad que proporciona excelentes resultados para la fase vegetativa de tu planta, facilitando un desarrollo radicular óptimo. <br><br> Complete Mix presume de ser uno de los sustratos más esponjosos del mercado gracias a su composición, muy rica en fibra de coco. Además, contiene humus de lombriz, ideal para el crecimiento de raíces fuertes y sanas.<br><br>Gracias a su composición especial te evitarás el uso de fertilizantes durante las tres primeras semanas de vida de la planta.<br><br>Complete Mix es un sustrato con un buen aireado y retención de humedad media ideal para climas templados (ni mucho frío ni mucho calor) y cultivos de interior. Además, la retención de agua es duradera contribuyendo a una mayor velocidad de desarrollo de la planta en comparación con otros sustratos.<br><br>Puedes añadir en tu Complete Mix otros sustratos como Nitroguano, Superguano y Top Vulcan.<br><br>FORMATO<br><br>Encontrarás Complete MIX en el formato de 50 litros.',
-        composicion: 'Fibra de coco, Turba de Sphagnum (H2-H4)-Rubia y Compost Vegetal, con:<br><br>Perlita (5g/l)<br><br>Mezcla sólida de macro y micro nutrientes (3g/l)Leonardita (2g/l)<br><br>Materia orgánica sobre materia seca 76.2%<br><br>Conductividad eléctrica en agua (1:5 V/V)<br><br>CE: 520 µS/cm (25ºC). [(1:1.5 V/V) CE: 1000 µS/cm]<br><br>Densidad aparente seca: 135.3g/L<br><br>pH en agua (1/5 V/V): 6.5'
+$(document).ready(
+    function() {
+
+        var prodTableContent = new Array();
+
+        var prodContent = document.getElementById("prod-content");   
+        var clickeable = new Array(prodTableContent.length);
+        var collapsable = new Array(prodTableContent.length);
+        console.log(clickeable.length);
+        $.ajax(
+            {
+                url: '../api/productos.php',
+                type: 'GET',
+                success: function(res) {
+                    console.log(res)
+                    prodTableContent = res
+
+                    res.forEach(function(el, i){
+                        prodContent.innerHTML += 
+                            '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + el.id + '</td><td><img class="gestion-img" src="' + el.lnk_img + '"></td><td>' + "sin video" + '</td><td>' + el.nombre + '</td><td>' + "sin categoria" + '</td><td>' + el.precio + '</td><td>' + el.cantidad + '</td><td>' + "no hay med"+ '</td><td>' + el.cantidad + '</td><td>' + "no hay medida" + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.descripcion + "sin composicion" + '</div></td></tr>';
+                        }
+                    )
+        
+                    for(let i = 0; i < prodTableContent.length; i++){
+
+                        clickeable[i] = document.getElementById('clickeable' + [i]);
+                        collapsable[i] = document.getElementById('collapsable' + [i]);
+                        collapsable[i].style.display = "none";
+
+                        clickeable[i].addEventListener(
+                            "click", function(){
+                                if(collapsable[i].style.display == "none"){
+                                    collapsable[i].style.display = "block"; 
+                                    console.log("clickeable " + [i] + " if", collapsable[i].style.display)  
+                                } else {
+                                    collapsable[i].style.display ="none";
+                                    console.log("clickeable " + [i] + " else", collapsable[i].style.display)  
+                                }
+                            }
+                        );
+                    }
+                }
+            }
+        );
     }
-];
-*/
-$(document).ready(function() {
-
-    var prodTableContent = new Array()
-
-var prodContent = document.getElementById("prod-content");   
-var clickeable = new Array(prodTableContent.length)
-var collapsable = new Array(prodTableContent.length)
-console.log(clickeable.length)
+);
 
 
- 
-        $.ajax({
-          url: '../api/productos.php',
-          type: 'GET',
-          success: function(res) {
-              console.log(res)
-              prodTableContent = res
+// ------------------- CONTENIDO USUARIOS -------------------
 
+// titulos 
+var usuTableTitle = {
+    username: 'img',
+    nombre: 'video',
+    apellido: 'Cod',
+    email: 'Titulo',
+    telefono: 'Categoria',
+    direccion: 'Precio (UYU)', 
+    fechanac: 'Fecha Nacimiento'
+};
 
-res.forEach(function(el, i){
-    prodContent.innerHTML += 
-      '<tr><td><button class="clickeable" id="clickeable' + [i] + '">+</button></td><td>' + el.id + '</td><td><img class="gestion-img" src="' + el.lnk_img + '"></td><td>' + "sin video" + '</td><td>' + el.nombre + '</td><td>' + "sin categoria" + '</td><td>' + el.precio + '</td><td>' + el.cantidad + '</td><td>' + "no hay med"+ '</td><td>' + el.cantidad + '</td><td>' + "no hay medida" + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.descripcion + "sin composicion" + '</div></td></tr>';
-     
-      
-    })
+var usuTitle = document.getElementById("usu-title");
+usuTitle.innerHTML = '<div class="usu-title"><ul class="gestion-titles"><li>' + usuTableTitle.username + '</li><li>' + usuTableTitle.nombre + '</li><li>' + usuTableTitle.apellido + '</li><li>' + usuTableTitle.email + '</li><li>' + usuTableTitle.telefono + '</li><li>' + usuTableTitle.direccion + '</li><li>' + prodTableTitle.fechanac + '</li></ul></div>';
+
+// contenidos
+$(document).ready(
+    function() {
+
+        var usuTableContent = new Array()
+
+        var usuContent = document.getElementById("usu-content");   
+        var usuClickeable = new Array(usuTableContent.length);
+        var usuCollapsable = new Array(usuTableContent.length);
+        console.log(usuClickeable.length);
+
+        $.ajax(
+            {
+                url: '../api/usuarios.php',
+                type: 'GET',
+                success: function(res) {
+                    console.log(res)
+                    prodTableContent = res
+
+                    res.forEach(function(el, i){
+                        usuContent.innerHTML += 
+                        '<tr><td><button class="clickeable" id="usu-clickeable' + [i] + '">+</button></td><td>' + el.id + '</td><td><img class="gestion-img" src="' + el.profilepic + '"></td><td>' + el.username + '</td><td>' + el.email + '</td><td>' + el.categoria + '</td><td>' + el.nombre + '</td><td>' + el.apellido + '</td><td>' + el.fechaNac + '</td><td>' + el.pais + '</td><td class="fixed-col2"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td><td class="fixed-col3"><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td></tr>';
+                        }
+                    )
+                }
+            }
+        );
+
+    }
+);
+
+// ------------------- CONTENIDO MENSAJES -------------------
+
+// titulos 
+var mensajesTableTitle = {
+    remitente: 'remitente',
+    asunto: 'asunto',
+    fecha: 'fecha',
+    mensaje: 'mensaje'
+};
+
+var mensajesTitle = document.getElementById("mensaje-title");
+mensajesTitle.innerHTML = '<div class="mensaje-title"><ul class="gestion-titles"><li>' + mensajesTableTitle.remitente + '</li><li>' + mensajesTableTitle.asunto + '</li><li>' + mensajesTableTitle.fecha + '</li><li>' + mensajesTableTitle.mensaje + '</li><div class="mensajes-title-collapsable"><button>Eliminar Todos</button><button>Marcar como Leídos</button><button>Marcar como No Leidos</button></div></ul></div>';
+
+// contenidos
+$(document).ready(
+    function() {
+
+        var mensajesTableContent = new Array();
+
+        var mensajesContent = document.getElementById("mensaje-content");   
+        var mensajesClickeable = new Array(prodTableContent.length);
+        var mensajesCollapsable = new Array(prodTableContent.length);
+        console.log(mensajesClickeable.length);
+        $.ajax(
+            {
+                url: '../api/productos.php',
+                type: 'GET',
+                success: function(res) {
+                    console.log(res)
+                    mensajesTableContent = res
+
+                    res.forEach(function(el, i){
+                        mensajesContent.innerHTML += 
+                            '<tr><td><button class="clickeable" id="mensajes-clickeable' + [i] + '">+</button></td><td>' + el.remitente + '</td><td>' + el.asunto + '</td><td>' + el.fecha + '</td></tr><tr><td colspan="10"><div id="collapsable' + [i] + '" class="collapsable">' + el.mensaje + "sin composicion" + '</div></td></tr><tr><td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td><td><button class="btn btn-outline-success">Responder</button></td></tr>';
+                        }
+                    )
+        
+                    for(let i = 0; i < mensajesTableContent.length; i++){
+
+                        mensajesClickeable[i] = document.getElementById('mensajes-clickeable' + [i]);
+                        mensajesCollapsable[i] = document.getElementById('mensajes-collapsable' + [i]);
+                        mensajesCollapsable[i].style.display = "none";
+
+                        clickeable[i].addEventListener(
+                            "click", function(){
+                                if(collapsable[i].style.display == "none"){
+                                    collapsable[i].style.display = "block"; 
+                                    console.log("clickeable " + [i] + " if", collapsable[i].style.display)  
+                                } else {
+                                    collapsable[i].style.display ="none";
+                                    console.log("clickeable " + [i] + " else", collapsable[i].style.display)  
+                                }
+                            }
+                        );
+                    }
+                }
+            }
+        );
+    }
+);
     
-for(let i = 0; i < prodTableContent.length; i++){
-
-    clickeable[i] = document.getElementById('clickeable' + [i]);
-    collapsable[i] = document.getElementById('collapsable' + [i]);
-    collapsable[i].style.display = "none"
-    // funciona, pero no identifica a cual debe hacer click, el [i], ya quedó cada producto con su id empezando x 0, 1, 2, .. [i]
-    clickeable[i].addEventListener("click", function(){
-        if(collapsable[i].style.display == "none"){
-            collapsable[i].style.display = "block"; 
-            console.log("clickeable " + [i] + " if", collapsable[i].style.display)  
-        } else {
-            collapsable[i].style.display ="none";
-            console.log("clickeable " + [i] + " else", collapsable[i].style.display)  
-        }
-      });
-
-    }
-}
-
-});
-
-});
 
 
-    // funciona pero solo me abre el collapsable1 y no el 0, osea, es como si no usara el [i]
-    // usar con onclick=(openCollapsable())
-    // function openCollapsable(){
-    //     if(collapsable.style.display === "none"){
-    //         collapsable.style.display = "block";   
-    //     } else {
-    //         collapsable.style.display ="none"
-    //     }
-    // }
 
 // fetch api json 
 /*
