@@ -103,6 +103,12 @@
                 <li class="nav-item" role="presentation">
                     <a onclick="tabVentas()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Ventas</a> 
                 </li>
+                <li class="nav-item" role="presentation">
+                    <a onclick="tabPosts()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Posts</a> 
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a onclick="tabPagina()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Página</a> 
+                </li>
             </ul>
         </div>
 
@@ -151,39 +157,6 @@
                 <table id="usu-content"></table>
             </div>
 
-            <!-- <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">username</th>
-                        <th scope="col">mail</th>
-                        <th scope="col">nombre</th>
-                        <th scope="col">categoria</th>
-                        <th scope="col">telefono</th>
-                        <th scope="col">direccion</th>
-                        <th scope="col">otros datos</th>
-                        <th scope="col"><button class="btn btn-outline-success"><i class="fas fa-plus"></i></button></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="btns-table">
-                <tr>
-                    <td><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
-                </tr>
-            </table> -->
         </div>
 
         <!-- ------------------- Mensajes ------------------- -->
@@ -260,6 +233,53 @@
                 </tr>
             </table>
         </div>
+
+        <!-- ------------------- Posts ------------------- -->
+        <div id="gestion-posts" class="section">
+
+            <div id="posts-filter-add" class="filter-and-add-section">
+
+                <div class="input-group mb-3 filter">
+                    <span class="input-group-text"><i class="bi bi-filter"></i></span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                </div>
+
+                <a href="">
+                    <button class="btn btn-outline-success btn-right"><i class="fas fa-plus"></i></button>
+                </a>
+            </div>
+
+            <div id="posts-title"></div>
+            <div>
+                <table id="posts-content"></table>
+            </div>
+
+        </div>
+
+        <!-- ------------------- Pagina ------------------- -->
+        <div id="gestion-pagina" class="section">
+
+            <div id="pagina-filter-add" class="filter-and-add-section">
+
+                <div class="input-group mb-3 filter">
+                    <span class="input-group-text"><i class="bi bi-filter"></i></span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                </div>
+
+                <a href="">
+                    <button class="btn btn-outline-success btn-right"><i class="fas fa-plus"></i></button>
+                </a>
+            </div>
+
+            <div id="pagina-title"></div>
+            <div>
+                <table id="pagina-content"></table>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- ------------------- FOOTER ------------------- -->

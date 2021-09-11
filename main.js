@@ -11,26 +11,7 @@ tituloSubtitulo.innerHTML = "Tu tienda de cultivo online!";
 
 // ------------------- NAVBAR -------------------
 var loginBtn = document.getElementById("login-btn");
-//var userForm = document.getElementById("user-form");
 var loginSuccessfulAlert = document.getElementById("login-successful-alert");
-
-// loginBtn.addEventListener("click", loginSuccessful());
-/*
-function loginSuccessful(){
-    if(userForm.style.display === "none"){
-        userForm.style.display = "block";
-        loginSuccessfulAlert.className = "open-successfult-login-alert";
-        // setTimeout(function(){
-        //     loginSuccessfulAlert.style.display = "block";
-        // }, 3000);
-        console.log("loginSuccessful if");
-    } else { 
-        userForm.style.display = "none";
-        loginSuccessfulAlert.style.display = "none";
-        loginSuccessfulAlert.style.display = "none";
-        console.log("loginSuccessful else")
-    }
-} */
 
 // ------------------- ABOUT -------------------
 var aboutTxt = document.getElementById("about");
@@ -197,27 +178,6 @@ function openMoreProducts(){
     window.open("productos/productos.html", "_self");
 }
 
-// este no funciona, la idea es que al estar todos los iconos de productos cerrados, tampoco se muestre la existencia del div que los contiene
-// if(cannabisSection.style.display = "none"){
-//     if( tierraSection.style.display = "none"){
-//         if ( complementosSection.style.display = "none"){
-//             if ( comidaSection.style.display = "none"){
-//                 sectionGroup.style.backgroundColor = "transparent";
-
-//             }else{
-//                 sectionGroup.style.backgroundColor = "green";
-//             }
-//         } else {
-//             sectionGroup.style.backgroundColor = "green";
-//         }
-//     } else {
-//         sectionGroup.style.backgroundColor = "green";
-//     }
-// } else {
-//     sectionGroup.style.backgroundColor = "green";
-// }
-
-
 // scroll horizontal para categorias del home  
 function scrollHorizontally(e) {
     e = window.event || e;
@@ -268,8 +228,8 @@ var socialNet = document.getElementById("social-networks");
 var socialNetworks = [
     { name: "facebook", icon: "fab fa-facebook", link: "" },
     { name: "instagram", icon: "fab fa-instagram", link: "" },
-    { name: "mail", icon: "bi bi-envelope-fill", link: "" },
-    { name: "whatsapp", icon: "bi bi-whatsapp", link: "" }
+    { name: "mail", icon: "bi bi-envelope-fill", link: "mailto:grownline@hotmail.com" },
+    { name: "whatsapp", icon: "bi bi-whatsapp", link: "https://api.whatsapp.com/send?phone=59892219472" }
 ];
 var socialNetworksLength = socialNetworks.length;
 

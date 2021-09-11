@@ -8,6 +8,8 @@ let productos = document.getElementById("gestion-productos");
 let usuarios = document.getElementById("gestion-usuarios");
 let mensajes = document.getElementById("gestion-mensajes");
 let ventas = document.getElementById("gestion-ventas");
+let posts = document.getElementById("gestion-posts");
+let pagina = document.getElementById("gestion-pagina");
 
 let emailInput = document.getElementById("floatingInput");
 let passwordInput = document.getElementById("floatingPassword");
@@ -55,6 +57,10 @@ function tabProductos(){
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
+    postsFilterAdd.style.display = "none";
+    paginaFilterAdd.style.display = "none";
     console.log("tabProductos")
     // VDRR89 modificar estilo de fuente y background de tab
 }
@@ -67,6 +73,8 @@ function tabUsuarios(){
     usuarios.style.display = "block";
     mensajes.style.display = "none";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabUsuarios")
 }
 
@@ -78,6 +86,8 @@ function tabMensajes(){
     usuarios.style.display = "none";
     mensajes.style.display = "block";
     ventas.style.display = "none";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabMensajes")
 }
 
@@ -89,6 +99,8 @@ function tabVentas(){
     usuarios.style.display = "none";
     mensajes.style.display = "none";
     ventas.style.display = "block";
+    posts.style.display = "none";
+    pagina.style.display = "none";
     console.log("tabVentas")
 }
 
