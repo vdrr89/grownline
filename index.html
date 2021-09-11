@@ -82,7 +82,7 @@
 
                 <li><a class="vr-nav-link" href="#contacto">Contacto</a></li>
                 <li><a class="vr-nav-link" href="#faq">FAQ</a></li>
-                <li><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></li>
+                <li id="gestion"><a class="vr-nav-link" href="gestion/gestion.html">GESTIÓN</a></li>
             </ul>
 
             <!-- buscar y login btn -->
@@ -91,8 +91,8 @@
                     <input type="text" class="form-control" placeholder="Search" aria-label="Buscar">             
                     <span class="input-group-text btn btn-green-inverted"><i class="fas fa-search"></i></span>
                 </div>
-                <!-- <button onclick="loginSuccessful()" id="login-btn" type="button" class="btn btn-green-inverted btn-login"><i class="fas fa-user"></i></button> --> <!-- DARIO ESTE SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
-                <button id="login-btn" type="button"><img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic"></button>
+                <button onclick="loginSuccessful()" id="login-btn-sin-sesion" type="button" class="btn btn-green-inverted btn-login"><i class="fas fa-user"></i></button>  <!-- DARIO ESTE SE TIENE QUE MOSTRAR CUANDO USUARIO NO INCIÓ SESIÓN -->
+                <button id="login-btn-con-sesion" type="button"><img class="user-prof-mini" src="img/chala-color.jpeg" alt="user-profile-pic"></button>
             </form>
 
             <!-- Login pop up -->
@@ -281,7 +281,7 @@
         <!-- ------------------- Mis scripts ------------------- -->
         <script src="jquery.js"></script>
         <script src="app.js"></script>
-        <script src="main.js"></script>
+         <script src="main.js"></script>
         <script src="gestion/gestion.js"></script>
         <script src="js/responsive.js"></script>
     </body>
