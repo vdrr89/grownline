@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'id' => $row['id'], // DARIO agregué este, agregar a BD
             'username' => $row['username'], // DARIO agregué este, agregar a BD
             'email' => $row['email'], // DARIO agregué este, agregar a BD
-            'profilepic' => $row['profilepic'] // DARIO agregué este, agregar a BD
+            'profilepic' => $row['profilepic'], // DARIO agregué este, agregar a BD
             'nombre' => $row['nombre'],
             'apellido' => $row['apellido'],
             'fechaNac' => $row['fechaNac'], // DARIO creo que agregué este

@@ -1,43 +1,44 @@
-function cerrarSesion() {
-    $.ajax({
-      url: 'api/cerrar-sesion.php',
-      type: 'GET',
-      success: function(response) {
-       
-        console.log("sesion cerrada")
-    
+let admin;
+let usr;    
+let comp = "invitado";
+let frm_login = document.getElementById("login-form-popup")
+let frm_usr_lgd = document.getElementById("user-form-logueado")
 
-      }
-    });
-  }
-
-
+//var login_Btn = document.getElementById("login-btn");
+let btn_login = document.getElementById("send-login")
+let btn_logout = document.getElementById("btn-logout")
+let login_btn_sin_sesion = document.getElementById("login-btn-sin-sesion")
+let login_btn_con_sesion = document.getElementById("login-btn-con-sesion")
 
 $(document).ready(function() {
-    let sesion 
-    let comp = "invitado"
-    let frm_login = document.getElementById("login-form-popup")
-    let frm_usr_lgd = document.getElementById("user-form-logueado")
-   
-    var login_Btn = document.getElementById("login-btn");
-    let btn_login = document.getElementById("send-login")
-    let btn_logout = document.getElementById("btn-logout")
-    let nombre_usuario = document.getElementById("emailInput")
 
+    login_btn_sin_sesion.style.display = "none"
+    login_btn_con_sesion.style.display = "none"
     frm_login.style.display = "none"
     frm_usr_lgd.style.display = "none"
+   
+
 
 
     $.ajax({
         url: 'api/usr.php',
         type: 'GET',
         success: function(response){
-            sesion = response.usr
-            $('#nombre-de-usuario').html(sesion)
+            console.log(response)
+             
+            usr = response[0].usr 
+            admin = response[0].admin
+            $('#nombre-de-usuario').html(usr)
+            
+            console.log(admin)
+        
 
-            if(sesion == comp){
+            if(usr == comp){
                 console.log("sesion de invitado")
-                login_Btn.addEventListener("click", function(){
+                
+                login_btn_sin_sesion.style.display = "block"
+
+                login_btn_sin_sesion.addEventListener("click", function(){
                     if(frm_login.style.display === "none"){
                         frm_login.style.display = "block"
                     }else{
@@ -47,51 +48,63 @@ $(document).ready(function() {
             
             }else{
                 console.log("hay usuario logeadooo")
-                console.log(sesion)
+                console.log(usr)
+                console.log(admin)
+                login_btn_con_sesion.style.display = "block"
             
-                login_Btn.addEventListener("click", function(){
+                login_btn_con_sesion.addEventListener("click", function(){
+                    console.log("boton clikeado")
                     if(frm_usr_lgd.style.display === "none"){
                         frm_usr_lgd.style.display = "block"
                     }else{
                         frm_usr_lgd.style.display = "none"
                     }
-
                 })
+                if(admin == 'v'){
+                   
+                }
             }
-
-         
+        },
+        error: function(){
+            console.log("error en ajax")
         }
-
-
     }); 
 
+
+
+
     btn_login.addEventListener("click", function(){
-        console.log("boton logIN clickeado!!")
-        let nom_usr = $('#emailInput').val()
-        console.log(nom_usr)
+        const postDatos = {
+            nom_usr: $('#emailInput').val(),
+            pass: $('#floatingPassword').val(),
+        };
+
         $.ajax({
             url: 'api/login.php',
+            data: postDatos,
             type: 'POST',
-            data: {nom_usr},
-            success: function(){
-             
-              console.log("enviado datos")
-          
-      
+            success: function (response){
+                console.log(response)
+                document.location.href = "index.html"
+            },
+            error: function(resp){
+                console.log("errorrrrr al ajax")
             }
-          });
-
+        })
     })
+
+
 
     btn_logout.addEventListener("click", function(){
         console.log("boton logOUT clickeado!!")
-        console.log(sesion)
-        cerrarSesion()
-
-
-    })
-
-     
-
-    
+       
+        $.ajax({
+            url: 'api/cerrar-sesion.php',
+            type: 'GET',
+            success: function(response) {
+                document.location.href = "index.html"
+                console.log("sesion cerrada")
+            }
+          });
+    })   
 })
