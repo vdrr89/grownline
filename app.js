@@ -1,10 +1,8 @@
 let admin;
 let usr;    
-let comp = "invitado";
 let frm_login = document.getElementById("login-form-popup")
 let frm_usr_lgd = document.getElementById("user-form-logueado")
 
-//var login_Btn = document.getElementById("login-btn");
 let btn_login = document.getElementById("send-login")
 let btn_logout = document.getElementById("btn-logout")
 let login_btn_sin_sesion = document.getElementById("login-btn-sin-sesion")
@@ -16,26 +14,17 @@ $(document).ready(function() {
     login_btn_con_sesion.style.display = "none"
     frm_login.style.display = "none"
     frm_usr_lgd.style.display = "none"
-   
-
-
 
     $.ajax({
         url: 'api/usr.php',
         type: 'GET',
         success: function(response){
-            console.log(response)
-             
             usr = response[0].usr 
             admin = response[0].admin
             $('#nombre-de-usuario').html(usr)
             
-            console.log(admin)
-        
-
-            if(usr == comp){
+            if(usr == "invitado"){
                 console.log("sesion de invitado")
-                
                 login_btn_sin_sesion.style.display = "block"
 
                 login_btn_sin_sesion.addEventListener("click", function(){
@@ -48,12 +37,9 @@ $(document).ready(function() {
             
             }else{
                 console.log("hay usuario logeadooo")
-                console.log(usr)
-                console.log(admin)
                 login_btn_con_sesion.style.display = "block"
             
                 login_btn_con_sesion.addEventListener("click", function(){
-                    console.log("boton clikeado")
                     if(frm_usr_lgd.style.display === "none"){
                         frm_usr_lgd.style.display = "block"
                     }else{
@@ -61,7 +47,34 @@ $(document).ready(function() {
                     }
                 })
                 if(admin == 'v'){
-                   
+                    if(screen.width <= 768){
+                        let template = `
+                            <div>
+                                <a class="vr-nav-link" href="gestion/gestion.html">
+                                    GESTIÓN
+                                </a>
+                            </div> `;
+                            $("#responsive-menu").append(template)
+
+                    } else if(screen.width > 768){
+                        let template = `
+                        <li id="gestion">
+                            <a class="vr-nav-link" href="gestion/gestion.html">
+                                GESTIÓN
+                            </a>
+                        </li> `;
+                       $("#navbar-list").append(template)
+
+                    }
+
+
+
+
+
+
+
+                   //alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height)
+                               
                 }
             }
         },
@@ -69,9 +82,6 @@ $(document).ready(function() {
             console.log("error en ajax")
         }
     }); 
-
-
-
 
     btn_login.addEventListener("click", function(){
         const postDatos = {
@@ -87,23 +97,18 @@ $(document).ready(function() {
                 console.log(response)
                 document.location.href = "index.html"
             },
-            error: function(resp){
+            error: function(){
                 console.log("errorrrrr al ajax")
             }
         })
     })
 
-
-
     btn_logout.addEventListener("click", function(){
-        console.log("boton logOUT clickeado!!")
-       
         $.ajax({
             url: 'api/cerrar-sesion.php',
             type: 'GET',
-            success: function(response) {
+            success: function() {
                 document.location.href = "index.html"
-                console.log("sesion cerrada")
             }
           });
     })   
