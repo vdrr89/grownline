@@ -8,8 +8,8 @@ let productos = document.getElementById("gestion-productos");
 let usuarios = document.getElementById("gestion-usuarios");
 let mensajes = document.getElementById("gestion-mensajes");
 let ventas = document.getElementById("gestion-ventas");
-let posts = document.getElementById("gesion-posts");
-let pagina = document.getElementById("gesion-pagina");
+let posts = document.getElementById("gestion-posts");
+let pagina = document.getElementById("gestion-pagina");
 
 let emailInput = document.getElementById("floatingInput");
 let passwordInput = document.getElementById("floatingPassword");
@@ -59,6 +59,8 @@ function tabProductos(){
     ventas.style.display = "none";
     posts.style.display = "none";
     pagina.style.display = "none";
+    postsFilterAdd.style.display = "none";
+    paginaFilterAdd.style.display = "none";
     console.log("tabProductos")
     // VDRR89 modificar estilo de fuente y background de tab
 }
@@ -306,6 +308,48 @@ $(document).ready(
     }
 );
     
+
+
+// ------------------- CONTENIDO VENTAS -------------------
+
+// titulos 
+var ventasTableTitle = {
+    remitente: 'remitente',
+    asunto: 'asunto',
+    fecha: 'fecha',
+    mensaje: 'mensaje'
+};
+
+var venasTitle = document.getElementById("mensaje-title");
+ventasTitle.innerHTML = '<div class="mensaje-title"><ul class="gestion-titles"><li>' + mensajesTableTitle.remitente + '</li><li>' + mensajesTableTitle.asunto + '</li><li>' + mensajesTableTitle.fecha + '</li><li>' + mensajesTableTitle.mensaje + '</li><div class="mensajes-title-collapsable"><button>Eliminar Todos</button><button>Marcar como Leídos</button><button>Marcar como No Leidos</button></div></ul></div>';
+
+
+// ------------------- CONTENIDO POSTS -------------------
+
+// titulos 
+var ventasTableTitle = {
+    remitente: 'remitente',
+    asunto: 'asunto',
+    fecha: 'fecha',
+    mensaje: 'mensaje'
+};
+
+var venasTitle = document.getElementById("mensaje-title");
+ventasTitle.innerHTML = '<div class="mensaje-title"><ul class="gestion-titles"><li>' + mensajesTableTitle.remitente + '</li><li>' + mensajesTableTitle.asunto + '</li><li>' + mensajesTableTitle.fecha + '</li><li>' + mensajesTableTitle.mensaje + '</li><div class="mensajes-title-collapsable"><button>Eliminar Todos</button><button>Marcar como Leídos</button><button>Marcar como No Leidos</button></div></ul></div>';
+
+
+// ------------------- CONTENIDO PAGINA -------------------
+
+// titulos 
+var ventasTableTitle = {
+    remitente: 'remitente',
+    asunto: 'asunto',
+    fecha: 'fecha',
+    mensaje: 'mensaje'
+};
+
+var venasTitle = document.getElementById("mensaje-title");
+ventasTitle.innerHTML = '<div class="mensaje-title"><ul class="gestion-titles"><li>' + mensajesTableTitle.remitente + '</li><li>' + mensajesTableTitle.asunto + '</li><li>' + mensajesTableTitle.fecha + '</li><li>' + mensajesTableTitle.mensaje + '</li><div class="mensajes-title-collapsable"><button>Eliminar Todos</button><button>Marcar como Leídos</button><button>Marcar como No Leidos</button></div></ul></div>';
 
 
 

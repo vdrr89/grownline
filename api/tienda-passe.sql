@@ -1,10 +1,15 @@
 create table prod(
     id integer not null auto_increment primary key,
+    codigo varchar(50),
     lnk_img varchar(256),
+    imgprod varbinary(max), 
+    video_prod_url varchar(256),
+    videoprod varbinary(max), 
     nombre varchar (48),
-    descripcion varchar(256),
+    categoria varchar (100),
     precio integer,
-    cantidad integer
+    stock integer,
+    descripcion varchar(256)
 );
 
 create table usu(
@@ -20,3 +25,4 @@ create table usu(
     pais varchar(100), 
     categoria varchar(100)
 );
+

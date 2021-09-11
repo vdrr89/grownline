@@ -228,8 +228,8 @@ var socialNet = document.getElementById("social-networks");
 var socialNetworks = [
     { name: "facebook", icon: "fab fa-facebook", link: "" },
     { name: "instagram", icon: "fab fa-instagram", link: "" },
-    { name: "mail", icon: "bi bi-envelope-fill", link: "" },
-    { name: "whatsapp", icon: "bi bi-whatsapp", link: "" }
+    { name: "mail", icon: "bi bi-envelope-fill", link: "mailto:grownline@hotmail.com" },
+    { name: "whatsapp", icon: "bi bi-whatsapp", link: "https://api.whatsapp.com/send?phone=59892219472" }
 ];
 var socialNetworksLength = socialNetworks.length;
 
