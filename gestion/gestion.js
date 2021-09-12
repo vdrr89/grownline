@@ -25,17 +25,6 @@ function okLogin(e){
     ventas.style.display = "none";
     console.log("okLogin") 
     console.log("mierda")
-    $.ajax({
-        url: '../api/login.php',
-        type: 'POST',
-        success: function(response)  {
-         // const tasks = JSON.parse(response);
-         console.log("devuelto")
-         console.log(response)
-         //console.log(response.nombre)
-        }
-      }
-    )
 }
 // agregar en okLogin enviar formulario y verificar
 
@@ -302,3 +291,22 @@ fetch('/productos.json')
 // hasta acá manda la información al console log, la manda bien
 
 */
+$(document).ready(function() {
+    tabProductos()
+    /*
+    $.ajax({
+        url: '../api/usr.php',
+        type: 'GET',
+        success: function(response)  {
+            usr = response.usr
+            admin = response.admin
+            console.log ("usr: " + usr + "  admin: " + admin)
+            if (admin == 'v'){
+                okLogin()
+            }
+        }
+    })
+    */
+})
+    
+

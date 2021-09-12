@@ -7,12 +7,15 @@ function guardar($sent){
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
     }
-    if (!mysqli_query($link, $sent)) {
+    if ($res = mysqli_query($link, $sent)) {
+        mysqli_close($link);
+        return $res;
+    }else {
         printf("Errormessage: %s\n", mysqli_error($link));
         echo mysql_errno($link) . ": " . mysql_error($link) . "\n";
         mysqli_close($link);
     }
-    mysqli_close($link);
+    
 }
 
 function obtener($sent){
