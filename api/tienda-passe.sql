@@ -26,3 +26,35 @@ create table usu(
     categoria varchar(100)
 );
 
+create table ventas(
+    id integer not null auto_increment primary key, 
+    entregado varchar(20),
+    usuario varchar(100), 
+    nombre varchar(100),
+    telefono numeric(20,0),
+    direccion varchar(100),
+    pais varchar(100), 
+    productos integer, 
+    fechapedido integer, 
+    fechaentrega integer, 
+    notasenvio varchar(200)
+);
+
+create table posts(
+    id integer not null auto_increment primary key,
+    titulo varchar(200), 
+    brevedesc varchar(500),
+    descripcion integer
+)
+
+create table page(
+    id integer not null auto_increment primary key,
+    imgfile varbinary(max), 
+    imgsrc varchar(500),
+    imglink varchar(500),
+    abouttxt integer,
+    whatsappnumber numeric(20,0),
+    mail varchar(500),
+    facebook varchar(500),
+    instagram varchar(500)
+)
