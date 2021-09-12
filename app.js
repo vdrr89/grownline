@@ -23,7 +23,7 @@ $(document).ready(function() {
             admin = response[0].admin
             $('#nombre-de-usuario').html(usr)
             
-            if(usr == "invitado"){
+            if(usr == "invitado" && admin == 'f'){
                 console.log("sesion de invitado")
                 login_btn_sin_sesion.style.display = "block"
 
@@ -34,8 +34,27 @@ $(document).ready(function() {
                         frm_login.style.display = "none"
                     }
                 });
+                if(screen.width <= 768){
+                    let template = `
+                        <div>
+                            <a class="vr-nav-link" href="#">
+                                INVITADO
+                            </a>
+                        </div> `;
+                    $("#responsive-menu").append(template);
+
+                } else if(screen.width > 768){
+                    let template = `
+                        <li id="gestion">
+                            <a class="vr-nav-link" href="#">
+                                INVITADO
+                            </a>
+                        </li> `;
+                   $("#navbar-list").append(template)
+
+                }
             
-            }else{
+            }else if(usr != "invitado" && admin == 'f'){
                 console.log("hay usuario logeadooo")
                 login_btn_con_sesion.style.display = "block"
             
@@ -46,37 +65,59 @@ $(document).ready(function() {
                         frm_usr_lgd.style.display = "none"
                     }
                 })
-                if(admin == 'v'){
-                    if(screen.width <= 768){
-                        let template = `
-                            <div>
-                                <a class="vr-nav-link" href="gestion/gestion.html">
-                                    GESTIÓN
-                                </a>
-                            </div> `;
-                            $("#responsive-menu").append(template)
+                if(screen.width <= 768){
+                    let template = `
+                        <div>
+                            <a class="vr-nav-link" href="#">
+                                Bvdo: ${usr}
+                            </a>
+                        </div> `;
+                        $("#responsive-menu").append(template)
 
-                    } else if(screen.width > 768){
-                        let template = `
+                } else if(screen.width > 768){
+                    let template = `
+                    <li id="gestion">
+                        <a class="vr-nav-link" href="gestion/gestion.html">
+                            Bvdo: ${usr}
+                        </a>
+                    </li> `;
+                   $("#navbar-list").append(template)
+
+                }
+            }else if(usr != "invitado" && admin == 'v'){
+                login_btn_con_sesion.style.display = "block"
+            
+                login_btn_con_sesion.addEventListener("click", function(){
+                    if(frm_usr_lgd.style.display === "none"){
+                        frm_usr_lgd.style.display = "block"
+                    }else{
+                        frm_usr_lgd.style.display = "none"
+                    }
+                })                
+                
+                if(screen.width <= 768){
+                    let template = `
+                        <div>
+                            <a class="vr-nav-link" href="gestion/gestion.html">
+                                GESTIÓN ADMIN
+                            </a>
+                        </div> `;
+                        $("#responsive-menu").append(template)
+
+                } else if(screen.width > 768){
+                    let template = `
                         <li id="gestion">
                             <a class="vr-nav-link" href="gestion/gestion.html">
-                                GESTIÓN
+                                GESTIÓN ADMIN
                             </a>
                         </li> `;
                        $("#navbar-list").append(template)
 
-                    }
-
-
-
-
-
-
-
-                   //alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height)
-                               
                 }
+                //alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height)
+                               
             }
+            
         },
         error: function(){
             console.log("error en ajax")
