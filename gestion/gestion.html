@@ -92,22 +92,19 @@
         <div id="gestion-tabs">
             <ul class="nav nav-tabs gestion-tabs"  role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a onclick="tabProductos()" class="nav-link active" aria-selected="true" data-bs-toggle="tab" aria-current="page" role="tab">Productos</a>
+                    <a onclick="tabProductos()" class="nav-link active" aria-selected="true" data-bs-toggle="tab" aria-current="page" role="tab"><i class="fas fa-seedling"></i>Productos</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a onclick="tabUsuarios()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Usuarios</a>
+                    <a onclick="tabUsuarios()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab"><i class="fas fa-user"></i>Usuarios</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a onclick="tabMensajes()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Mensajes</a>
+                    <a onclick="tabVentas()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab"><i class="fas fa-store-alt"></i>Ventas</a> 
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a onclick="tabVentas()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Ventas</a> 
+                    <a onclick="tabPosts()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab"><i class="fas fa-newspaper"></i>Posts</a> 
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a onclick="tabPosts()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Posts</a> 
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a onclick="tabPagina()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab">Página</a> 
+                    <a onclick="tabPagina()" class="nav-link" aria-selected="false" data-bs-toggle="tab" role="tab"><i class="fas fa-pencil-ruler"></i>Página</a> 
                 </li>
             </ul>
         </div>
@@ -159,29 +156,6 @@
 
         </div>
 
-        <!-- ------------------- Mensajes ------------------- -->
-        <div id="gestion-mensajes" class="section">
-
-            <div id="mensajes-filter-add" class="filter-and-add-section">
-
-                <div class="input-group mb-3 filter">
-                    <span class="input-group-text"><i class="bi bi-filter"></i></span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text"><i class="bi bi-search"></i></span>
-                </div>
-    
-                <a href="">
-                    <button class="btn btn-outline-success btn-right"><i class="fas fa-plus"></i></button>
-                </a>
-            </div>
-
-            <div id="mensaje-title"></div>
-            <div>
-                <table id="mensaje-content"></table>
-            </div>
-
-        </div>
-
         <!-- ------------------- Ventas ------------------- -->
         <div id="gestion-ventas" class="section">
 
@@ -198,40 +172,12 @@
                 </a>
             </div>
 
-            <table class="table" >
-            <thead>
-                <tr>
-                    <th scope="col">enviado retirado / no enviado retirado</th>
-                    <th scope="col">fecha envío</th>
-                    <th scope="col">fecha compra</th>
-                    <th scope="col">user</th>
-                    <th scope="col">telefono</th>
-                    <th scope="col">productos</th>
-                    <th scope="col">precio total</th>
-                    <th scope="col">retira o envia</th>
-                    <th><button class="btn btn-outline-success"><i class="fas fa-plus"></i></button></th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Check here</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="btns-table">
-                <tr>
-                    <td><button class="btn btn-outline-success table-buttons"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></td>
-                    <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
-                </tr>
-            </table>
+            
+            <div id="ventas-title"></div>
+            <div>
+                <table id="ventas-content"></table>
+            </div>
+
         </div>
 
         <!-- ------------------- Posts ------------------- -->
@@ -249,7 +195,7 @@
                     <button class="btn btn-outline-success btn-right"><i class="fas fa-plus"></i></button>
                 </a>
             </div>
-
+            
             <div id="posts-title"></div>
             <div>
                 <table id="posts-content"></table>
@@ -259,19 +205,6 @@
 
         <!-- ------------------- Pagina ------------------- -->
         <div id="gestion-pagina" class="section">
-
-            <div id="pagina-filter-add" class="filter-and-add-section">
-
-                <div class="input-group mb-3 filter">
-                    <span class="input-group-text"><i class="bi bi-filter"></i></span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text"><i class="bi bi-search"></i></span>
-                </div>
-
-                <a href="">
-                    <button class="btn btn-outline-success btn-right"><i class="fas fa-plus"></i></button>
-                </a>
-            </div>
 
             <div id="pagina-title"></div>
             <div>

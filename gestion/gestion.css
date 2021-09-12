@@ -152,6 +152,12 @@
 
 .gestion-titles li {
     margin: 2%;
+    color: var(--green-color);
+    font-weight: 800;
+}
+
+.gestion-titles li::selection{
+    background-color: var(--gray90-color);
 }
   
   tr, th, td {
