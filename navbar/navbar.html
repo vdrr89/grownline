@@ -1,26 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grownline</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<style>
+    .vr-navbar {
+    background-color: #1abc9c;
+    padding: 1%; 
+    box-shadow: #0005 0px 5px 8px;   
+  }
 
-    <!-- Icons: 1 Bootstrap - 2 Fontawesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/a9f99944df.js" crossorigin="anonymous"></script>
+  .vr-navbar > ul{
+    list-style-type: none;
+    display: inline;
+  }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <link rel="stylesheet" href="../css/fuentes.css" type="text/css">
-    <link rel="stylesheet" href="productos.css" type="text/css">
-</head>
-<body>
+  .vr-navbar > ul > li{
+    display: inline;
+    margin: 0 1%;
+  } 
 
-    <!-- ------------------- NavBar ------------------- -->
+  .vr-navbar > form{
+      float: right;
+      margin: -5 auto;
+  }
+
+  .vr-nav-link,  
+  .vr-nav-link > a {
+    color: white;
+  }
+
+  .vr-nav-link:hover, 
+  .vr-nav-link > a:hover {
+      color:grey;
+  }
+</style>
+
+<!-- ------------------- NavBar ------------------- -->
 
 <!-- hamburguer menu icons -->
 <div id="responsive-nav" class="responsive-nav">
@@ -144,59 +156,3 @@
 
     </div>
 </nav>
-
-    <!-- ------------------- PRODUCTS CARDS ------------------- -->
-
-    <div class="card products-slide" style="width: 18rem;">
-        <img src="../img/weed01.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary see-more"><i class="bi bi-eye-fill"></i></a>
-          <div class="card-cart-section">
-            <button><i class="bi bi-trash-fill"></i></button>
-            <button><i class="bi bi-dash-lg"></i></button>
-            <input type="number" maxlength="4" size="4">
-            <button><i class="bi bi-plus-lg"></i></button>
-            <button><i class="bi bi-cart-fill"></i></button>
-          </div>
-        </div>
-      </div>
-
-    <!-- ------------------- FOOTER ------------------- -->
-    <div id="footer" class="flex-waves-content content-waves">
-
-        <!--Waves Container-->
-        <div class="waves-background">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
-                </g>
-            </svg>
-        </div>
-
-        <div class="footer-content">
-            <h3 class="footer-title">Seguinos en nuestras redes!</h3><br>
-            <ul id="social-networks" class="footer-ul">
-            </ul>  
-        </div>
-
-    </div>
-
-    <!-- Bootstrap Js and Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-    <!-- Mis scripts -->
-    <script src="../main.js"></script> 
-    <script src="productos.js"></script>
-    
-</body>
-</html>

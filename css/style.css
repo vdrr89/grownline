@@ -388,8 +388,6 @@ max-width: 800px;
 /* navbar buttons */
 .navbar-logo {
   display: inline-grid;
-  background-image: url(../img/grownline-logo-white-03.svg); 
-  background-repeat: no-repeat;
   width: 13%;
   height: 4%;
 }
