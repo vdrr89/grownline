@@ -113,99 +113,11 @@ function tabPagina(){
     console.log("tabPagina")
 }
 
-// ------------------- CONTENIDO PRODUCTOS -------------------
-
-// titulos
-var prodTableTitle = {
-    codigo: 'codigo',
-    lnkimg: 'lnk_img',
-    imgprod: 'imgprod',
-    videoProdUrl: 'video_prod_url',
-    videoprod: 'videoprod',
-    nombre: 'nombre',
-    categoria: 'categoria',
-    precio: 'precio',
-    stock: 'stock',
-    descripcion: 'descripcion'
-};
-
-var prodTitle = document.getElementById("prod-title");
-prodTitle.innerHTML = '<div class="prod-title"><ul class="gestion-titles"><li>' + prodTableTitle.codigo + '</li><li>' + prodTableTitle.lnkimg + '</li><li>' + prodTableTitle.imgprod + '</li><li>' + prodTableTitle.videoProdUrl + '</li><li>' + prodTableTitle.videoprod + '</li><li>' + prodTableTitle.nombre + '</li><li>' + prodTableTitle.categoria + '</li><li>' + prodTableTitle.precio + '</li><li>' + prodTableTitle.stock + '</li><li>' + prodTableTitle.descripcion + '</li></ul></div>';
-
-
-
-// ------------------- CONTENIDO USUARIOS -------------------
-
-// titulos
-var usuTableTitle = {
-    username: 'img',
-    nombre: 'video',
-    apellido: 'Cod',
-    email: 'Titulo',
-    profilepic: 'Foto de Perfil',
-    telefono: 'Categoria',
-    direccion: 'Precio (UYU)',
-    pais: 'País',
-    fechanac: 'Fecha Nacimiento'
-};
-
-var usuTitle = document.getElementById("usu-title");
-usuTitle.innerHTML = '<div class="usu-title"><ul class="gestion-titles"><li>' + usuTableTitle.username + '</li><li>' + usuTableTitle.profilepic + '</li><li>' + usuTableTitle.nombre + '</li><li>' + usuTableTitle.apellido + '</li><li>' + usuTableTitle.email + '</li><li>' + usuTableTitle.telefono + '</li><li>' + usuTableTitle.direccion + '</li><li>' + usuTableTitle.pais + '</li><li>' + prodTableTitle.fechanac + '</li></ul></div>';
-
-
-// ------------------- CONTENIDO VENTAS -------------------
-
-// titulos
-var ventasTableTitle = {
-    entregado: 'entregado',
-    usuario: 'usuario',
-    nombre: 'nombre',
-    telefono: 'telefono',
-    direccion: 'direccion',
-    pais: 'pais',
-    productos: 'productos',
-    fechapedido: 'fechapedido',
-    fechaentrega: 'fechaentrega',
-    notasenvio: 'notasenvio'
-};
-
-var ventasTitle = document.getElementById("ventas-title");
-ventasTitle.innerHTML = '<div class="ventas-title"><ul class="gestion-titles"><li>' + ventasTableTitle.entregado + '</li><li>' + ventasTableTitle.usuario + '</li><li>' + ventasTableTitle.nombre + '</li><li>' + ventasTableTitle.telefono + '</li><li>' + ventasTableTitle.direccion + '</li><li>' + ventasTableTitle.pais + '</li><li>' + ventasTableTitle.productos + '</li><li>' + ventasTableTitle.fechapedido + '</li><li>' + ventasTableTitle.fechaentrega + '</li><li>' + ventasTableTitle.notasenvio + '</li></ul></div>';
-
-
-// ------------------- CONTENIDO POSTS -------------------
-
-// titulos
-var postTableTitle = {
-    titulo: 'titulo',
-    brevedesc: 'brevedesc',
-    descripcion: 'descripcion'
-};
-
-var postTitle = document.getElementById("posts-title");
-postTitle.innerHTML = '<div class="post-title"><ul class="gestion-titles"><li>' + postTableTitle.titulo + '</li><li>' + postTableTitle.brevedesc + '</li></ul></div>';
-
-
-// ------------------- CONTENIDO PAGINA -------------------
-
-// titulos
-var paginaTableTitle = {
-    imgfile: 'remitente',
-    imgsrc: 'asunto',
-    imglink: 'fecha',
-    abouttxt: 'mensaje',
-    whatsappnumber: 'whatsappnumber',
-    mail: 'mail',
-    facebook: 'facebook',
-    instagram: 'instagram'
-};
-
-var paginaTitle = document.getElementById("pagina-title");
-paginaTitle.innerHTML = '<div class="pagina-title"><ul class="gestion-titles"><li>' + paginaTableTitle.imgfile + '</li><li>' + paginaTableTitle.imgsrc + '</li><li>' + paginaTableTitle.imglink + '</li><li>' + paginaTableTitle.abouttxt + '</li><li>' + paginaTableTitle.whatsappnumber + '</li><li>' + paginaTableTitle.mail + '</li><li>' + paginaTableTitle.facebook + '</li><li>' + paginaTableTitle.instagram + '</li></ul></div>';
-
-
 $(document).ready(function() {
+
+  
     tabProductos()
+    console.log("algoo")
     /*
     $.ajax({
         url: '../api/usr.php',

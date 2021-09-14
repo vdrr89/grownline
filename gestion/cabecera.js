@@ -16,7 +16,7 @@ $(document).ready(function() {
     frm_usr_lgd.style.display = "none"
 
     $.ajax({
-        url: 'api/usr.php',
+        url: '../api/usr.php',
         type: 'GET',
         success: function(response){
             usr = response[0].usr 
@@ -97,7 +97,7 @@ $(document).ready(function() {
         };
 
         $.ajax({
-            url: 'api/login.php',
+            url: '../api/login.php',
             data: postDatos,
             type: 'POST',
             success: function (response){
@@ -112,10 +112,10 @@ $(document).ready(function() {
 
     btn_logout.addEventListener("click", function(){
         $.ajax({
-            url: 'api/cerrar-sesion.php',
+            url: '../api/cerrar-sesion.php',
             type: 'GET',
             success: function() {
-                document.location.href = "index.html"
+                document.location.href = "../index.html"
             }
           });
     })   
