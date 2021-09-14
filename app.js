@@ -22,6 +22,8 @@ $(document).ready(function() {
             usr = response[0].usr 
             admin = response[0].admin
             $('#nombre-de-usuario').html(usr)
+            console.log("usuario: " + usr)
+            console.log("admin: " + admin)
             
             if(usr == "invitado" && admin == 'f'){
                 console.log("sesion de invitado")
@@ -77,7 +79,7 @@ $(document).ready(function() {
                 } else if(screen.width > 768){
                     let template = `
                     <li id="gestion">
-                        <a class="vr-nav-link" href="gestion/gestion.html">
+                        <a class="vr-nav-link" href="#">
                             Bvdo: ${usr}
                         </a>
                     </li> `;

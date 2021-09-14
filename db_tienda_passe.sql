@@ -31,4 +31,4 @@ create table usrs (
 INSERT INTO `usrs` (`usr`, `pass`, `admin`) VALUES
 ('usr1', 'pass', 'f'),
 ('usr2','pass', 'f'),
-('admin1', 'pass', 'f');
+('admin1', 'pass', 'v');
