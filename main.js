@@ -226,8 +226,8 @@ for( let j = 0; j < faqContent.length; j++ ){
 // ------------------- CONTACTO: REDES SOCIALES -------------------
 var socialNet = document.getElementById("social-networks");
 var socialNetworks = [
-    { name: "facebook", icon: "fab fa-facebook", link: "" },
-    { name: "instagram", icon: "fab fa-instagram", link: "" },
+    { name: "facebook", icon: "fab fa-facebook", link: "https://www.facebook.com/LinndorfoCorteza" },
+    { name: "instagram", icon: "fab fa-instagram", link: "https://www.instagram.com/tu_tienda_de_cultivos/" },
     { name: "mail", icon: "bi bi-envelope-fill", link: "mailto:grownline@hotmail.com" },
     { name: "whatsapp", icon: "bi bi-whatsapp", link: "https://api.whatsapp.com/send?phone=59892219472" }
 ];
